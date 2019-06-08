@@ -172,8 +172,8 @@ namespace QuanLyThuVien
                 rbHetHan.Checked = true;
 
             //xử lí thể loại sách
-            string theloai = grvDocGia.GetRowCellValue(grvDocGia.FocusedRowHandle, grvDocGia.Columns[2]).ToString();
-            cbLoaiDG.SelectedValue = theloai;
+            string loaiDG = grvDocGia.GetRowCellValue(grvDocGia.FocusedRowHandle, grvDocGia.Columns[2]).ToString();
+            cbLoaiDG.SelectedValue = loaiDG;
             
             
             Lock(true);

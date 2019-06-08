@@ -81,6 +81,7 @@
     <Compile Include="BLL\BaoCaoTheoTheLoaiBLL.cs" />
     <Compile Include="BLL\DocGiaBLL.cs" />
     <Compile Include="BLL\LoaiDocGiaBLL.cs" />
+    <Compile Include="BLL\NhanVienBLL.cs" />
     <Compile Include="BLL\PhieuMuonBLL.cs" />
     <Compile Include="BLL\PhieuPhatBLL.cs" />
     <Compile Include="BLL\PhieuTraBLL.cs" />
@@ -95,6 +96,7 @@
     <Compile Include="DAL\DatabaseAccess.cs" />
     <Compile Include="DAL\DocGiaDAL.cs" />
     <Compile Include="DAL\LoaiDocGiaDAL.cs" />
+    <Compile Include="DAL\NhanVienDAL.cs" />
     <Compile Include="DAL\PhieuMuonDAL.cs" />
     <Compile Include="DAL\PhieuPhatDAL.cs" />
     <Compile Include="DAL\PhieuTraDAL.cs" />

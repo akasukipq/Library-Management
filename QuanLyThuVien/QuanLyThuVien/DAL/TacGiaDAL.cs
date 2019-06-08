@@ -66,6 +66,36 @@ namespace QuanLyThuVien.DAL
             return dt;
 
         }
+        public bool SaveTacGia(string MaTG, string TenTG)
+        {
+            string query = "USP_SAVETACGIA @MaTG , @TenTG";
+
+            int ret = DatabaseAcess.Instance.ExecuteNonQuery(query, new object[] { MaTG, TenTG });
+            if (ret > 0)
+                return true;
+            else
+                return false;
+        }
+        public bool UpdateTacGia(string MaTG, string TenTG)
+        {
+            string query = "USP_UPDATETACGIA @MaTG , @TenTG";
+            int ret = DatabaseAcess.Instance.ExecuteNonQuery(query, new object[] { MaTG, TenTG });
+            if (ret > 0)
+                return true;
+            else
+                return false;
+        }
+
+        public bool DeleteTacGia(string MaTG)
+        {
+            string query = "delete from TACGIA where MaTG ='" + MaTG + "'";
+            int ret = DatabaseAcess.Instance.ExecuteNonQuery(query);
+
+            if (ret > 0)
+                return true;
+            else
+                return false;
+        }
 
         //public DataTable LoadTacGia(int i = 0)
         //{

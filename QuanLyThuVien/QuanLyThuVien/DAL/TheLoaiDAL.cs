@@ -43,7 +43,6 @@ namespace QuanLyThuVien.DAL
                 TheLoaiDTO theloai = new TheLoaiDTO(row);
                 list.Add(theloai);
             }
-            DatabaseAcess.Instance.CloseConnection();
             return list;
         }
 
@@ -66,7 +65,37 @@ namespace QuanLyThuVien.DAL
             return dt;
 
         }
+        public bool SaveTheLoai(string MaTL, string TenTL)
+        {
+            string query = "USP_SAVETHELOAI @MaTL , @TenTL";
 
-             #endregion
+            int ret = DatabaseAcess.Instance.ExecuteNonQuery(query, new object[] { MaTL, TenTL });
+            if (ret > 0)
+                return true;
+            else
+                return false;
+        }
+        public bool UpdateTheLoai(string MaTL, string TenTL)
+        {
+            string query = "USP_UPDATETHELOAI @MaTL , @TenTL";
+            int ret = DatabaseAcess.Instance.ExecuteNonQuery(query, new object[] { MaTL, TenTL });
+            if (ret > 0)
+                return true;
+            else
+                return false;
+        }
+
+        public bool DeleteTheLoai(string MaTL)
+        {
+            string query = "delete from THELOAI where MaTL ='" + MaTL + "'";
+            int ret = DatabaseAcess.Instance.ExecuteNonQuery(query);
+
+            if (ret > 0)
+                return true;
+            else
+                return false;
+        }
+
+        #endregion
     }
 }

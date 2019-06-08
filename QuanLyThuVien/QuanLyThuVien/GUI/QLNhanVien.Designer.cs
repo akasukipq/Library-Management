@@ -43,7 +43,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.txtTaiKhoan = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtChucVu = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtTenNV = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -57,6 +56,7 @@
             this.ChucVu = new DevExpress.XtraGrid.Columns.GridColumn();
             this.TaiKhoan = new DevExpress.XtraGrid.Columns.GridColumn();
             this.MatKhau = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.cbChucVu = new System.Windows.Forms.ComboBox();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grChucNang)).BeginInit();
             this.grChucNang.SuspendLayout();
@@ -128,6 +128,7 @@
             this.btnLuu.Size = new System.Drawing.Size(107, 34);
             this.btnLuu.TabIndex = 5;
             this.btnLuu.Text = "Lưu";
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnXoa
             // 
@@ -155,6 +156,7 @@
             this.btnXoa.Size = new System.Drawing.Size(107, 34);
             this.btnXoa.TabIndex = 4;
             this.btnXoa.Text = "Xóa";
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnThem
             // 
@@ -183,6 +185,7 @@
             this.btnThem.Size = new System.Drawing.Size(107, 34);
             this.btnThem.TabIndex = 2;
             this.btnThem.Text = "Thêm";
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnSua
             // 
@@ -210,6 +213,7 @@
             this.btnSua.Size = new System.Drawing.Size(107, 34);
             this.btnSua.TabIndex = 3;
             this.btnSua.Text = "Sửa";
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // groupControl1
             // 
@@ -224,12 +228,12 @@
             // 
             // panel6
             // 
+            this.panel6.Controls.Add(this.cbChucVu);
             this.panel6.Controls.Add(this.label6);
             this.panel6.Controls.Add(this.txtMatKhau);
             this.panel6.Controls.Add(this.label5);
             this.panel6.Controls.Add(this.txtTaiKhoan);
             this.panel6.Controls.Add(this.label4);
-            this.panel6.Controls.Add(this.txtChucVu);
             this.panel6.Controls.Add(this.label3);
             this.panel6.Controls.Add(this.txtTenNV);
             this.panel6.Controls.Add(this.label2);
@@ -299,18 +303,6 @@
             this.label4.TabIndex = 8;
             this.label4.Text = "Chức vụ:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // txtChucVu
-            // 
-            this.txtChucVu.BackColor = System.Drawing.Color.White;
-            this.txtChucVu.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtChucVu.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtChucVu.ForeColor = System.Drawing.Color.Black;
-            this.txtChucVu.Location = new System.Drawing.Point(133, 104);
-            this.txtChucVu.Name = "txtChucVu";
-            this.txtChucVu.Size = new System.Drawing.Size(163, 16);
-            this.txtChucVu.TabIndex = 7;
-            this.txtChucVu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label3
             // 
@@ -395,6 +387,7 @@
             this.gridNhanVien.TabIndex = 12;
             this.gridNhanVien.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grvNhanVien});
+            this.gridNhanVien.Click += new System.EventHandler(this.gridNhanVien_Click);
             // 
             // grvNhanVien
             // 
@@ -448,6 +441,14 @@
             this.MatKhau.VisibleIndex = 4;
             this.MatKhau.Width = 301;
             // 
+            // cbChucVu
+            // 
+            this.cbChucVu.FormattingEnabled = true;
+            this.cbChucVu.Location = new System.Drawing.Point(133, 107);
+            this.cbChucVu.Name = "cbChucVu";
+            this.cbChucVu.Size = new System.Drawing.Size(163, 21);
+            this.cbChucVu.TabIndex = 13;
+            // 
             // QLNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -497,10 +498,10 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtTaiKhoan;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtChucVu;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtTenNV;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtMaNV;
+        private System.Windows.Forms.ComboBox cbChucVu;
     }
 }

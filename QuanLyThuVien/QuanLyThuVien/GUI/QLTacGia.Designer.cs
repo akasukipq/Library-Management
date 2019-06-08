@@ -1,4 +1,4 @@
-﻿namespace QuanLyThuVien.GUI
+﻿namespace QuanLyThuVien
 {
     partial class QLTacGia
     {
@@ -36,9 +36,9 @@
             this.gridTacGia = new DevExpress.XtraGrid.GridControl();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtMaTG = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtTenTG = new System.Windows.Forms.TextBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -89,6 +89,7 @@
             this.btnLuu.Size = new System.Drawing.Size(107, 34);
             this.btnLuu.TabIndex = 5;
             this.btnLuu.Text = "Lưu";
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // MaTG
             // 
@@ -123,6 +124,7 @@
             this.gridTacGia.TabIndex = 0;
             this.gridTacGia.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grvTacGia});
+            this.gridTacGia.Click += new System.EventHandler(this.gridTacGia_Click);
             // 
             // panel2
             // 
@@ -145,17 +147,17 @@
             this.label2.Text = "Mã tác giả:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // textBox1
+            // txtMaTG
             // 
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.Gray;
-            this.textBox1.Location = new System.Drawing.Point(259, 31);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(206, 22);
-            this.textBox1.TabIndex = 3;
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtMaTG.BackColor = System.Drawing.Color.White;
+            this.txtMaTG.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtMaTG.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaTG.ForeColor = System.Drawing.Color.Gray;
+            this.txtMaTG.Location = new System.Drawing.Point(259, 31);
+            this.txtMaTG.Name = "txtMaTG";
+            this.txtMaTG.Size = new System.Drawing.Size(206, 22);
+            this.txtMaTG.TabIndex = 3;
+            this.txtMaTG.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label3
             // 
@@ -169,24 +171,24 @@
             this.label3.Text = "Tên tác giả:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // textBox2
+            // txtTenTG
             // 
-            this.textBox2.BackColor = System.Drawing.Color.White;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.Gray;
-            this.textBox2.Location = new System.Drawing.Point(259, 83);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(206, 22);
-            this.textBox2.TabIndex = 5;
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtTenTG.BackColor = System.Drawing.Color.White;
+            this.txtTenTG.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTenTG.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenTG.ForeColor = System.Drawing.Color.Gray;
+            this.txtTenTG.Location = new System.Drawing.Point(259, 83);
+            this.txtTenTG.Name = "txtTenTG";
+            this.txtTenTG.Size = new System.Drawing.Size(206, 22);
+            this.txtTenTG.TabIndex = 5;
+            this.txtTenTG.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // panel6
             // 
             this.panel6.Controls.Add(this.label2);
-            this.panel6.Controls.Add(this.textBox1);
+            this.panel6.Controls.Add(this.txtMaTG);
             this.panel6.Controls.Add(this.label3);
-            this.panel6.Controls.Add(this.textBox2);
+            this.panel6.Controls.Add(this.txtTenTG);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel6.Location = new System.Drawing.Point(2, 27);
             this.panel6.Name = "panel6";
@@ -242,6 +244,7 @@
             this.btnXoa.Size = new System.Drawing.Size(107, 34);
             this.btnXoa.TabIndex = 4;
             this.btnXoa.Text = "Xóa";
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnThem
             // 
@@ -270,6 +273,7 @@
             this.btnThem.Size = new System.Drawing.Size(107, 34);
             this.btnThem.TabIndex = 2;
             this.btnThem.Text = "Thêm";
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnSua
             // 
@@ -297,6 +301,7 @@
             this.btnSua.Size = new System.Drawing.Size(107, 34);
             this.btnSua.TabIndex = 3;
             this.btnSua.Text = "Sửa";
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // grChucNang
             // 
@@ -377,9 +382,9 @@
         private DevExpress.XtraGrid.GridControl gridTacGia;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtMaTG;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtTenTG;
         private System.Windows.Forms.Panel panel6;
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private System.Windows.Forms.Panel panel3;

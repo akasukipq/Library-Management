@@ -41,12 +41,12 @@
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtMaTL = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtTenTL = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.grTheLoai = new DevExpress.XtraGrid.GridControl();
-            this.grdTheLoai = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridTheLoai = new DevExpress.XtraGrid.GridControl();
+            this.grvTheLoai = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.MaTL = new DevExpress.XtraGrid.Columns.GridColumn();
             this.TenTL = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panel1.SuspendLayout();
@@ -58,8 +58,8 @@
             this.groupControl1.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grTheLoai)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grdTheLoai)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridTheLoai)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grvTheLoai)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -114,6 +114,7 @@
             this.btnThem.Size = new System.Drawing.Size(107, 34);
             this.btnThem.TabIndex = 2;
             this.btnThem.Text = "Thêm";
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnSua
             // 
@@ -141,6 +142,7 @@
             this.btnSua.Size = new System.Drawing.Size(107, 34);
             this.btnSua.TabIndex = 3;
             this.btnSua.Text = "Sửa";
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnXoa
             // 
@@ -168,6 +170,7 @@
             this.btnXoa.Size = new System.Drawing.Size(107, 34);
             this.btnXoa.TabIndex = 4;
             this.btnXoa.Text = "Xóa";
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // panel4
             // 
@@ -228,6 +231,7 @@
             this.btnLuu.Size = new System.Drawing.Size(107, 34);
             this.btnLuu.TabIndex = 5;
             this.btnLuu.Text = "Lưu";
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // groupControl1
             // 
@@ -243,9 +247,9 @@
             // panel6
             // 
             this.panel6.Controls.Add(this.label2);
-            this.panel6.Controls.Add(this.textBox1);
+            this.panel6.Controls.Add(this.txtMaTL);
             this.panel6.Controls.Add(this.label3);
-            this.panel6.Controls.Add(this.textBox2);
+            this.panel6.Controls.Add(this.txtTenTL);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel6.Location = new System.Drawing.Point(2, 27);
             this.panel6.Name = "panel6";
@@ -264,17 +268,17 @@
             this.label2.Text = "Mã thể loại:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // textBox1
+            // txtMaTL
             // 
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.Gray;
-            this.textBox1.Location = new System.Drawing.Point(259, 31);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(206, 22);
-            this.textBox1.TabIndex = 3;
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtMaTL.BackColor = System.Drawing.Color.White;
+            this.txtMaTL.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtMaTL.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaTL.ForeColor = System.Drawing.Color.Gray;
+            this.txtMaTL.Location = new System.Drawing.Point(259, 31);
+            this.txtMaTL.Name = "txtMaTL";
+            this.txtMaTL.Size = new System.Drawing.Size(206, 22);
+            this.txtMaTL.TabIndex = 3;
+            this.txtMaTL.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label3
             // 
@@ -288,46 +292,47 @@
             this.label3.Text = "Tên thể loại:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // textBox2
+            // txtTenTL
             // 
-            this.textBox2.BackColor = System.Drawing.Color.White;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.Gray;
-            this.textBox2.Location = new System.Drawing.Point(259, 83);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(206, 22);
-            this.textBox2.TabIndex = 5;
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtTenTL.BackColor = System.Drawing.Color.White;
+            this.txtTenTL.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTenTL.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenTL.ForeColor = System.Drawing.Color.Gray;
+            this.txtTenTL.Location = new System.Drawing.Point(259, 83);
+            this.txtTenTL.Name = "txtTenTL";
+            this.txtTenTL.Size = new System.Drawing.Size(206, 22);
+            this.txtTenTL.TabIndex = 5;
+            this.txtTenTL.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.grTheLoai);
+            this.panel2.Controls.Add(this.gridTheLoai);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 67);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1144, 449);
             this.panel2.TabIndex = 6;
             // 
-            // grTheLoai
+            // gridTheLoai
             // 
-            this.grTheLoai.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grTheLoai.Location = new System.Drawing.Point(0, 0);
-            this.grTheLoai.MainView = this.grdTheLoai;
-            this.grTheLoai.Name = "grTheLoai";
-            this.grTheLoai.Size = new System.Drawing.Size(1144, 449);
-            this.grTheLoai.TabIndex = 0;
-            this.grTheLoai.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.grdTheLoai});
+            this.gridTheLoai.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridTheLoai.Location = new System.Drawing.Point(0, 0);
+            this.gridTheLoai.MainView = this.grvTheLoai;
+            this.gridTheLoai.Name = "gridTheLoai";
+            this.gridTheLoai.Size = new System.Drawing.Size(1144, 449);
+            this.gridTheLoai.TabIndex = 0;
+            this.gridTheLoai.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.grvTheLoai});
+            this.gridTheLoai.Click += new System.EventHandler(this.gridTheLoai_Click);
             // 
-            // grdTheLoai
+            // grvTheLoai
             // 
-            this.grdTheLoai.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.grvTheLoai.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.MaTL,
             this.TenTL});
-            this.grdTheLoai.GridControl = this.grTheLoai;
-            this.grdTheLoai.Name = "grdTheLoai";
-            this.grdTheLoai.OptionsView.ShowGroupPanel = false;
+            this.grvTheLoai.GridControl = this.gridTheLoai;
+            this.grvTheLoai.Name = "grvTheLoai";
+            this.grvTheLoai.OptionsView.ShowGroupPanel = false;
             // 
             // MaTL
             // 
@@ -362,8 +367,8 @@
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.grTheLoai)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grdTheLoai)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridTheLoai)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grvTheLoai)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -378,14 +383,14 @@
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtMaTL;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtTenTL;
         private DevExpress.XtraEditors.GroupControl grChucNang;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
-        private DevExpress.XtraGrid.GridControl grTheLoai;
-        private DevExpress.XtraGrid.Views.Grid.GridView grdTheLoai;
+        private DevExpress.XtraGrid.GridControl gridTheLoai;
+        private DevExpress.XtraGrid.Views.Grid.GridView grvTheLoai;
         private DevExpress.XtraGrid.Columns.GridColumn MaTL;
         private DevExpress.XtraGrid.Columns.GridColumn TenTL;
         private DevExpress.XtraEditors.SimpleButton btnLuu;
