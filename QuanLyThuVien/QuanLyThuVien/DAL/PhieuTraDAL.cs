@@ -55,6 +55,7 @@ namespace QuanLyThuVien.DAL
             return false;
         }
 
+        //lưu chi tiết phiếu trả và cập nhật tình trạng sách
         public bool SaveCTPhieuTra(string maPT, string maSach, string soNgayMuon, string tienPhat)
         {
             int ret = DatabaseAcess.Instance.ExecuteNonQuery("SAVECTPHIEUTRA @maPT , @maSach , @soNgayMuon , @tienPhat", new object[] { maPT, maSach,Convert.ToInt32(soNgayMuon),Convert.ToDouble(tienPhat) });

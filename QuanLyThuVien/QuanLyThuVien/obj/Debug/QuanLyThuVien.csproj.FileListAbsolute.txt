@@ -1233,3 +1233,4 @@ D:\Năm 2\NMCNPM\Library-Management\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLy
 D:\Năm 2\NMCNPM\Library-Management\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.csproj.GenerateResource.Cache
 D:\Năm 2\NMCNPM\Library-Management\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.exe.licenses
 D:\Năm 2\NMCNPM\Library-Management\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.QLTacGia.resources
+D:\Năm 2\NMCNPM\Library-Management\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.LOGIN.frmLogin.resources

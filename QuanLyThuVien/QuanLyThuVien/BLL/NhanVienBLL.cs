@@ -41,6 +41,7 @@ namespace QuanLyThuVien.BLL
             DataTable data = NhanVienDAL.Instance.LoadChucVuToComboBox();
             return data;
         }
+
         public string SaveNhanVien(string MaNV, string TenNV, string ChucVu, string TaiKhoan, string MatKhau)
         {
             //kiểm tra điều kiện
@@ -65,6 +66,7 @@ namespace QuanLyThuVien.BLL
                 return "Thêm thất bại! Có lỗi xảy ra.";
 
         }
+
         public string UpdateNhanVien(string MaNV, string TenNV, string ChucVu, string TaiKhoan, string MatKhau)
         {
             //kiểm tra điều kiện
@@ -96,6 +98,13 @@ namespace QuanLyThuVien.BLL
                 return "Xóa thành công!";
             else
                 return "Xóa thất bại! Có lỗi xảy ra.";
+        }
+
+        public string CheckLogin(string taikhoan, string matkhau)
+        {
+            if (taikhoan == "" || matkhau == "")
+                return "Tên đăng nhập và mật khẩu không được để trống!";
+            return NhanVienDAL.Instance.CheckLogin(taikhoan, matkhau);
         }
     }
 }

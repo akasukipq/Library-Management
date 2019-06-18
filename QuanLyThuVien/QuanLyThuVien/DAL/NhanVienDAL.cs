@@ -100,6 +100,16 @@ namespace QuanLyThuVien.DAL
                 return false;
         }
 
+        public string CheckLogin(string taikhoan,string matkhau)
+        {
+            int ret = Convert.ToInt32(DatabaseAcess.Instance.ExecuteScalar("USP_CHECKLOGIN @TaiKhoan , @MatKhau", new object[] { taikhoan, matkhau }));
+            if (ret > 0)
+                return "Đăng nhập thành công!";
+            else
+                return "Tên tài khoản hoặc mật khẩu không đúng!";
+
+        }
+
         #endregion
     }
 }

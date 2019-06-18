@@ -113,6 +113,14 @@ namespace QuanLyThuVien.DAL
                 return true;
             return false;
         }
+
+
+
+
+        public int CountBook()
+        {
+            return Convert.ToInt32(DatabaseAcess.Instance.ExecuteScalar("select count(*) from SACH"));
+        }
         #endregion
     }
 }

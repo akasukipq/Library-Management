@@ -105,15 +105,21 @@ namespace QuanLyThuVien.BLL
             List<bool> data = PhieuMuonDAL.Instance.LoadAllTinhTrangSachByMaPM(maPM);
             foreach(bool b in data)
             {
-                if (!b)
-                    return;
+                if (!b) //chưa trả xong 1 trong bất kì sách nào thì không set tình trạng phiếu = true
+                   return;
             }
 
-            if (flag == 0)
+            if (flag == 0) // sách đã trả hết => tình trạng phiếu = true
             {//tình trạng phiếu= false
                 PhieuMuonDAL.Instance.UpdateTinhTrangPhieuMuon(maPM, true);
+
             }
 
+        }
+
+        public int CountSachMuon()
+        {
+            return PhieuMuonDAL.Instance.CountSachMuon();
         }
     }
 }

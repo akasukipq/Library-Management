@@ -92,5 +92,10 @@ namespace QuanLyThuVien.BLL
         {
             SachDAL.Instance.UpdateTinhTrangSachTra(Ma);
         }
+
+        public int CountBook()
+        {
+            return SachDAL.Instance.CountBook();
+        }
     }
 }

@@ -9,6 +9,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using QuanLyThuVien.BLL;
 
 namespace QuanLyThuVien
 {
@@ -17,11 +18,19 @@ namespace QuanLyThuVien
         public frmMain()
         {
             InitializeComponent();
+            UpdateTilteBar();
         }
 
-        private void tileBarItem1_ItemClick(object sender, DevExpress.XtraEditors.TileItemEventArgs e)
+        private void UpdateTilteBar()
         {
-
+            string slSach = SachBLL.Instance.CountBook().ToString();
+            string slTL = TheLoaiBLL.Instance.CountTL().ToString();
+            string slDG = DocGiaBLL.Instance.CountDG().ToString();
+            string slSachMuon = PhieuMuonBLL.Instance.CountSachMuon().ToString();
+            tbTongSach.Elements[1].Text = "<size=+10>"+slSach+"";
+            tbTongTL.Elements[1].Text = "<size=+10>" + slTL + "";
+            tbTongDG.Elements[1].Text = "<size=+10>" + slDG + "";
+            tbTongSachMuon.Elements[1].Text = "<size=+10>" + slSachMuon + "";
         }
 
         private void aceQLSach_Click(object sender, EventArgs e)
@@ -146,6 +155,15 @@ namespace QuanLyThuVien
             tbStatus.Visible = false;
             qlLoaiDG.Dock = DockStyle.Fill;
             qlLoaiDG.BringToFront();
+        }
+
+        private void aceHome_Click(object sender, EventArgs e)
+        {
+            containerMain.Controls.Add(panelControl1);
+            panelControl1.Dock = DockStyle.Fill;
+            panelControl1.BringToFront();
+            tbStatus.Visible = true;
+
         }
     }
 }

@@ -149,6 +149,11 @@ namespace QuanLyThuVien.DAL
                 return false;
         }
 
+        public int CountDG()
+        {
+            return Convert.ToInt32(DatabaseAcess.Instance.ExecuteScalar("select count(*) from DOCGIA"));
+
+        }
         #endregion
     }
 }

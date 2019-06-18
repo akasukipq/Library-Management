@@ -76,5 +76,10 @@ namespace QuanLyThuVien.BLL
             else
                 return "Xóa thất bại! Có lỗi xảy ra.";
         }
+
+        public int CountTL()
+        {
+            return TheLoaiDAL.Instance.CountTL();
+        }
     }
 }

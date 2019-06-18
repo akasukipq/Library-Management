@@ -94,6 +94,11 @@ namespace QuanLyThuVien.BLL
 
         }
 
+        public int CountDG()
+        {
+            return DocGiaDAL.Instance.CountDG();
+        }
+
 
     }
 }

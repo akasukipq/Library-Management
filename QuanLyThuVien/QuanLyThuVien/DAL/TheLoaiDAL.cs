@@ -96,6 +96,11 @@ namespace QuanLyThuVien.DAL
                 return false;
         }
 
+        public int CountTL()
+        {
+            return Convert.ToInt32(DatabaseAcess.Instance.ExecuteScalar("select count(*) from THELOAI"));
+        }
+
         #endregion
     }
 }

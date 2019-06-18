@@ -107,6 +107,11 @@ namespace QuanLyThuVien.DAL
             }
             return false;
         }
+
+        public int CountSachMuon()
+        {
+            return Convert.ToInt32(DatabaseAcess.Instance.ExecuteScalar("USP_LOADSLSACHMUON"));
+        }
         #endregion
     }
 }
