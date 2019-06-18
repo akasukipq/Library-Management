@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using QuanLyThuVien.BLL;
+using DevExpress.LookAndFeel;
 
 namespace QuanLyThuVien
 {
@@ -164,6 +165,18 @@ namespace QuanLyThuVien
             panelControl1.BringToFront();
             tbStatus.Visible = true;
 
+        }
+
+        private void fluentDesignFormControl1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+            DevExpress.LookAndFeel.UserLookAndFeel.Default.SetSkinStyle("The Bezier");
+            this.LookAndFeel.SetSkinStyle(SkinSvgPalette.Bezier.OfficeColorful);
+            this.LookAndFeel.TouchUIMode = DevExpress.Utils.DefaultBoolean.False;
         }
     }
 }

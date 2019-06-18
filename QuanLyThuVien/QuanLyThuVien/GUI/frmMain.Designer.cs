@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraEditors.TileItemElement tileItemElement49 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement50 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement51 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement52 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement53 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement54 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement55 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement56 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement1 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement2 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement3 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement4 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement5 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement6 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement7 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement8 = new DevExpress.XtraEditors.TileItemElement();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.containerMain = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
@@ -101,7 +101,7 @@
             this.containerMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.containerMain.Location = new System.Drawing.Point(260, 30);
             this.containerMain.Name = "containerMain";
-            this.containerMain.Size = new System.Drawing.Size(1051, 700);
+            this.containerMain.Size = new System.Drawing.Size(1045, 666);
             this.containerMain.TabIndex = 0;
             // 
             // panelControl1
@@ -112,7 +112,7 @@
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1051, 700);
+            this.panelControl1.Size = new System.Drawing.Size(1045, 666);
             this.panelControl1.TabIndex = 2;
             // 
             // panel2
@@ -121,7 +121,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1047, 141);
+            this.panel2.Size = new System.Drawing.Size(1041, 141);
             this.panel2.TabIndex = 2;
             // 
             // tbStatus
@@ -143,7 +143,7 @@
             this.tbStatus.Name = "tbStatus";
             this.tbStatus.Padding = new System.Windows.Forms.Padding(73, 7, 30, 7);
             this.tbStatus.ScrollMode = DevExpress.XtraEditors.TileControlScrollMode.ScrollButtons;
-            this.tbStatus.Size = new System.Drawing.Size(1047, 141);
+            this.tbStatus.Size = new System.Drawing.Size(1041, 141);
             this.tbStatus.TabIndex = 0;
             this.tbStatus.Text = "tileBar1";
             this.tbStatus.WideTileWidth = 200;
@@ -158,15 +158,15 @@
             this.tbTongSach.AppearanceItem.Normal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.tbTongSach.AppearanceItem.Normal.Options.UseBackColor = true;
             this.tbTongSach.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement49.ImageOptions.Image = global::QuanLyThuVien.Properties.Resources.quyensach2;
-            tileItemElement49.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight;
-            tileItemElement49.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.TileControlImageToTextAlignment.None;
-            tileItemElement49.Text = "<size=+5>QUYỂN SÁCH";
-            tileItemElement49.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomLeft;
-            tileItemElement50.Text = "<size=+10>123";
-            tileItemElement50.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft;
-            this.tbTongSach.Elements.Add(tileItemElement49);
-            this.tbTongSach.Elements.Add(tileItemElement50);
+            tileItemElement1.ImageOptions.Image = global::QuanLyThuVien.Properties.Resources.quyensach2;
+            tileItemElement1.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight;
+            tileItemElement1.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.TileControlImageToTextAlignment.None;
+            tileItemElement1.Text = "<size=+5>QUYỂN SÁCH";
+            tileItemElement1.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomLeft;
+            tileItemElement2.Text = "<size=+10>123";
+            tileItemElement2.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft;
+            this.tbTongSach.Elements.Add(tileItemElement1);
+            this.tbTongSach.Elements.Add(tileItemElement2);
             this.tbTongSach.Id = 0;
             this.tbTongSach.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.tbTongSach.Name = "tbTongSach";
@@ -181,14 +181,14 @@
             this.tbTongTL.AppearanceItem.Normal.BackColor = System.Drawing.Color.ForestGreen;
             this.tbTongTL.AppearanceItem.Normal.Options.UseBackColor = true;
             this.tbTongTL.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement51.ImageOptions.Image = global::QuanLyThuVien.Properties.Resources.Theloai;
-            tileItemElement51.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight;
-            tileItemElement51.Text = "<size=+5>THỂ LOẠI";
-            tileItemElement51.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomLeft;
-            tileItemElement52.Text = "<size=+10>53";
-            tileItemElement52.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft;
-            this.tbTongTL.Elements.Add(tileItemElement51);
-            this.tbTongTL.Elements.Add(tileItemElement52);
+            tileItemElement3.ImageOptions.Image = global::QuanLyThuVien.Properties.Resources.Theloai;
+            tileItemElement3.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight;
+            tileItemElement3.Text = "<size=+5>THỂ LOẠI";
+            tileItemElement3.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.BottomLeft;
+            tileItemElement4.Text = "<size=+10>53";
+            tileItemElement4.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft;
+            this.tbTongTL.Elements.Add(tileItemElement3);
+            this.tbTongTL.Elements.Add(tileItemElement4);
             this.tbTongTL.Id = 1;
             this.tbTongTL.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.tbTongTL.Name = "tbTongTL";
@@ -203,13 +203,13 @@
             this.tbTongDG.AppearanceItem.Normal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tbTongDG.AppearanceItem.Normal.Options.UseBackColor = true;
             this.tbTongDG.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement53.ImageOptions.Image = global::QuanLyThuVien.Properties.Resources.docgia1;
-            tileItemElement53.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight;
-            tileItemElement53.Text = "<size=+5>ĐỌC GIẢ";
-            tileItemElement54.Text = "<size=+10>123";
-            tileItemElement54.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft;
-            this.tbTongDG.Elements.Add(tileItemElement53);
-            this.tbTongDG.Elements.Add(tileItemElement54);
+            tileItemElement5.ImageOptions.Image = global::QuanLyThuVien.Properties.Resources.docgia1;
+            tileItemElement5.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight;
+            tileItemElement5.Text = "<size=+5>ĐỌC GIẢ";
+            tileItemElement6.Text = "<size=+10>123";
+            tileItemElement6.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft;
+            this.tbTongDG.Elements.Add(tileItemElement5);
+            this.tbTongDG.Elements.Add(tileItemElement6);
             this.tbTongDG.Id = 2;
             this.tbTongDG.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.tbTongDG.Name = "tbTongDG";
@@ -224,13 +224,13 @@
             this.tbTongSachMuon.AppearanceItem.Normal.BackColor = System.Drawing.Color.SteelBlue;
             this.tbTongSachMuon.AppearanceItem.Normal.Options.UseBackColor = true;
             this.tbTongSachMuon.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement55.ImageOptions.Image = global::QuanLyThuVien.Properties.Resources.sachmuon;
-            tileItemElement55.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight;
-            tileItemElement55.Text = "<size=+5>SÁCH MƯỢN";
-            tileItemElement56.Text = "<size=+10>23";
-            tileItemElement56.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft;
-            this.tbTongSachMuon.Elements.Add(tileItemElement55);
-            this.tbTongSachMuon.Elements.Add(tileItemElement56);
+            tileItemElement7.ImageOptions.Image = global::QuanLyThuVien.Properties.Resources.sachmuon;
+            tileItemElement7.ImageOptions.ImageAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopRight;
+            tileItemElement7.Text = "<size=+5>SÁCH MƯỢN";
+            tileItemElement8.Text = "<size=+10>23";
+            tileItemElement8.TextAlignment = DevExpress.XtraEditors.TileItemContentAlignment.TopLeft;
+            this.tbTongSachMuon.Elements.Add(tileItemElement7);
+            this.tbTongSachMuon.Elements.Add(tileItemElement8);
             this.tbTongSachMuon.Id = 3;
             this.tbTongSachMuon.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.tbTongSachMuon.Name = "tbTongSachMuon";
@@ -245,7 +245,7 @@
             this.pnIntro.Controls.Add(this.pictureBox1);
             this.pnIntro.Location = new System.Drawing.Point(0, 149);
             this.pnIntro.Name = "pnIntro";
-            this.pnIntro.Size = new System.Drawing.Size(770, 517);
+            this.pnIntro.Size = new System.Drawing.Size(764, 483);
             this.pnIntro.TabIndex = 0;
             // 
             // label2
@@ -293,7 +293,7 @@
             this.groupControl1.Appearance.Options.UseForeColor = true;
             this.groupControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.groupControl1.Controls.Add(this.calendarControl1);
-            this.groupControl1.Location = new System.Drawing.Point(776, 149);
+            this.groupControl1.Location = new System.Drawing.Point(770, 149);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(264, 517);
             this.groupControl1.TabIndex = 1;
@@ -303,9 +303,11 @@
             // 
             this.calendarControl1.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.calendarControl1.DateTime = new System.DateTime(2019, 6, 18, 0, 0, 0, 0);
+            this.calendarControl1.EditValue = new System.DateTime(2019, 6, 18, 0, 0, 0, 0);
             this.calendarControl1.Location = new System.Drawing.Point(7, 39);
             this.calendarControl1.Name = "calendarControl1";
-            this.calendarControl1.Size = new System.Drawing.Size(232, 219);
+            this.calendarControl1.Size = new System.Drawing.Size(244, 219);
             this.calendarControl1.TabIndex = 2;
             // 
             // accordionControl1
@@ -330,7 +332,7 @@
             this.accordionControl1.OptionsMinimizing.AllowMinimizeMode = DevExpress.Utils.DefaultBoolean.False;
             this.accordionControl1.OptionsMinimizing.NormalWidth = 260;
             this.accordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Auto;
-            this.accordionControl1.Size = new System.Drawing.Size(260, 700);
+            this.accordionControl1.Size = new System.Drawing.Size(260, 666);
             this.accordionControl1.TabIndex = 1;
             this.accordionControl1.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
             // 
@@ -509,9 +511,10 @@
             this.skinBarSubItem1});
             this.fluentDesignFormControl1.Location = new System.Drawing.Point(0, 0);
             this.fluentDesignFormControl1.Name = "fluentDesignFormControl1";
-            this.fluentDesignFormControl1.Size = new System.Drawing.Size(1311, 30);
+            this.fluentDesignFormControl1.Size = new System.Drawing.Size(1305, 30);
             this.fluentDesignFormControl1.TabIndex = 2;
             this.fluentDesignFormControl1.TabStop = false;
+            this.fluentDesignFormControl1.Click += new System.EventHandler(this.fluentDesignFormControl1_Click);
             // 
             // skinBarSubItem1
             // 
@@ -538,7 +541,7 @@
             this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1311, 730);
+            this.ClientSize = new System.Drawing.Size(1305, 696);
             this.ControlContainer = this.containerMain;
             this.Controls.Add(this.containerMain);
             this.Controls.Add(this.accordionControl1);
@@ -552,6 +555,7 @@
             this.Text = "Phần mềm quản lý thư viện";
             this.TransparencyKey = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(255)))));
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMain_FormClosing);
+            this.Load += new System.EventHandler(this.frmMain_Load);
             this.containerMain.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);

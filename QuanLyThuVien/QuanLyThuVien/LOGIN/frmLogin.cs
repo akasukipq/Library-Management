@@ -32,7 +32,13 @@ namespace QuanLyThuVien.LOGIN
                 this.Show();
             }
             else
-                lbThongBao.Text = ret;  // trả lỗi
+                lbThongBao.Text = "* " + ret;  // trả lỗi
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            if(MessageBox.Show("Bạn có muốn thoát?", "Thoát",MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                this.Close();
         }
     }
 }

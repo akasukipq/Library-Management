@@ -32,8 +32,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lbThongBao = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnExit = new DevExpress.XtraEditors.SimpleButton();
             this.btnLogin = new DevExpress.XtraEditors.SimpleButton();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -42,7 +43,6 @@
             this.txtMatKhau = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.lbThongBao = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel2.SuspendLayout();
@@ -75,7 +75,7 @@
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.lbThongBao);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.simpleButton2);
+            this.panel2.Controls.Add(this.btnExit);
             this.panel2.Controls.Add(this.btnLogin);
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -84,6 +84,15 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(364, 470);
             this.panel2.TabIndex = 1;
+            // 
+            // lbThongBao
+            // 
+            this.lbThongBao.AutoSize = true;
+            this.lbThongBao.ForeColor = System.Drawing.Color.Red;
+            this.lbThongBao.Location = new System.Drawing.Point(64, 302);
+            this.lbThongBao.Name = "lbThongBao";
+            this.lbThongBao.Size = new System.Drawing.Size(0, 13);
+            this.lbThongBao.TabIndex = 12;
             // 
             // label2
             // 
@@ -97,22 +106,23 @@
             this.label2.Text = "ĐĂNG NHẬP";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // simpleButton2
+            // btnExit
             // 
-            this.simpleButton2.Appearance.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.simpleButton2.Appearance.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.simpleButton2.Appearance.ForeColor = System.Drawing.Color.White;
-            this.simpleButton2.Appearance.Options.UseBackColor = true;
-            this.simpleButton2.Appearance.Options.UseFont = true;
-            this.simpleButton2.Appearance.Options.UseForeColor = true;
-            this.simpleButton2.AppearanceHovered.BackColor = System.Drawing.Color.Navy;
-            this.simpleButton2.AppearanceHovered.Options.UseBackColor = true;
-            this.simpleButton2.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
-            this.simpleButton2.Location = new System.Drawing.Point(210, 354);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(102, 40);
-            this.simpleButton2.TabIndex = 9;
-            this.simpleButton2.Text = "THOÁT";
+            this.btnExit.Appearance.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnExit.Appearance.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.Appearance.ForeColor = System.Drawing.Color.White;
+            this.btnExit.Appearance.Options.UseBackColor = true;
+            this.btnExit.Appearance.Options.UseFont = true;
+            this.btnExit.Appearance.Options.UseForeColor = true;
+            this.btnExit.AppearanceHovered.BackColor = System.Drawing.Color.Navy;
+            this.btnExit.AppearanceHovered.Options.UseBackColor = true;
+            this.btnExit.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
+            this.btnExit.Location = new System.Drawing.Point(210, 340);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(102, 40);
+            this.btnExit.TabIndex = 9;
+            this.btnExit.Text = "THOÁT";
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnLogin
             // 
@@ -127,7 +137,7 @@
             this.btnLogin.AppearancePressed.BackColor = System.Drawing.SystemColors.HotTrack;
             this.btnLogin.AppearancePressed.Options.UseBackColor = true;
             this.btnLogin.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
-            this.btnLogin.Location = new System.Drawing.Point(65, 354);
+            this.btnLogin.Location = new System.Drawing.Point(65, 340);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(102, 40);
             this.btnLogin.TabIndex = 8;
@@ -218,16 +228,6 @@
             this.pictureBox2.TabIndex = 3;
             this.pictureBox2.TabStop = false;
             // 
-            // lbThongBao
-            // 
-            this.lbThongBao.AutoSize = true;
-            this.lbThongBao.ForeColor = System.Drawing.Color.Red;
-            this.lbThongBao.Location = new System.Drawing.Point(74, 313);
-            this.lbThongBao.Name = "lbThongBao";
-            this.lbThongBao.Size = new System.Drawing.Size(25, 13);
-            this.lbThongBao.TabIndex = 12;
-            this.lbThongBao.Text = "123";
-            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -238,6 +238,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmLogin";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -256,7 +257,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label2;
-        private DevExpress.XtraEditors.SimpleButton simpleButton2;
+        private DevExpress.XtraEditors.SimpleButton btnExit;
         private DevExpress.XtraEditors.SimpleButton btnLogin;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel3;
