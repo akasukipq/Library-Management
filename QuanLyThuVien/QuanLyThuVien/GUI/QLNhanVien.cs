@@ -25,6 +25,11 @@ namespace QuanLyThuVien.GUI
             cbChucVu.DataSource = NhanVienBLL.Instance.ShowChucVuToCombobox();///_________Note
             cbChucVu.ValueMember = "Chức vụ";
             Lock(true);
+            NhanVienDTO nv = NhanVienBLL.Instance.ShowCurrentNV();
+            if (nv.ChucVu == "admin")
+                btnThem.Enabled = true;
+            else
+                btnThem.Enabled = false;
             btnSua.Enabled = false;
             btnXoa.Enabled = false;
 

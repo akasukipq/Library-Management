@@ -12,7 +12,7 @@ using QuanLyThuVien.DTO;
 using QuanLyThuVien.BLL;
 using DevExpress.XtraGrid;
 using DevExpress.XtraGrid.Views.Grid;
-
+using QuanLyThuVien.DTO;
 namespace QuanLyThuVien
 {
     public partial class QLMuon : DevExpress.XtraEditors.XtraUserControl
@@ -162,6 +162,8 @@ namespace QuanLyThuVien
             ClearInput();
 
             txtMaPM.Text = Utilities.Instance.NextID("M", grvMuon.GetRowCellValue(grvMuon.RowCount - 1, grvMuon.Columns[0]).ToString());
+            NhanVienDTO nv = NhanVienBLL.Instance.ShowCurrentNV();
+            txtMaNV.Text = nv.MaNV;
 
         }
 

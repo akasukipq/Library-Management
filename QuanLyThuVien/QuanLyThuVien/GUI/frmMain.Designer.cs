@@ -341,6 +341,7 @@
             this.accordionControlElement2.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.accordionControlElement13,
             this.aceThongTinCaNhan});
+            this.accordionControlElement2.Expanded = true;
             this.accordionControlElement2.ImageOptions.Image = global::QuanLyThuVien.Properties.Resources.logg;
             this.accordionControlElement2.Name = "accordionControlElement2";
             this.accordionControlElement2.Text = "CHÀO MỪNG!";

@@ -44,7 +44,14 @@ namespace QuanLyThuVien.DAL
             }
             return list;
         }
+        public NhanVienDTO LoadNhanVienByTaikhoan(string taikhoan)
+        {
+            DataTable data = DatabaseAcess.Instance.ExcuteQuery("USP_LOADNHANVIENBYTAIKHOAN @taikhoan", new object[] { taikhoan});
+            NhanVienDTO nhanvien = new NhanVienDTO(data.Rows[0]);
 
+            return nhanvien;
+
+        }
         //Dung lay chuc vu nhan vien len combobox
         public DataTable LoadChucVuToComboBox()
         {
@@ -110,6 +117,16 @@ namespace QuanLyThuVien.DAL
 
         }
 
+        public bool UpdateMatKhau(string manv, string matkhaumoi)
+        {
+            string query = "USP_UPDATEMATKHAU @MaNV , @MatKhauMoi";
+            int ret = DatabaseAcess.Instance.ExecuteNonQuery(query, new object[] { manv, matkhaumoi });
+
+            if (ret > 0)
+                return true;
+            else
+                return false;
+        }
         #endregion
     }
 }

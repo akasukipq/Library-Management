@@ -27,6 +27,8 @@ namespace QuanLyThuVien.BLL
                 instance = value;
             }
         }
+
+        public string TaiKhoan;
         private NhanVienBLL() { }
 
         public List<NhanVienDTO> ShowNhanVien()
@@ -105,6 +107,36 @@ namespace QuanLyThuVien.BLL
             if (taikhoan == "" || matkhau == "")
                 return "Tên đăng nhập và mật khẩu không được để trống!";
             return NhanVienDAL.Instance.CheckLogin(taikhoan, matkhau);
+        }
+
+        public void SaveTaiKhoan(string taikhoan)
+        {
+            TaiKhoan = taikhoan;
+        }
+
+        public NhanVienDTO ShowCurrentNV()
+        {
+            if (TaiKhoan != null)
+                return NhanVienDAL.Instance.LoadNhanVienByTaikhoan(TaiKhoan);
+            else
+                return null;
+        }
+
+        public string UpdateMatKhau(string manv, string matkhau,string matkhaucu, string matkhaumoi, string rematkhaumoi)
+        {
+            //check điều kiện đơn giản
+            if (matkhaucu == "" || matkhaumoi == "" || rematkhaumoi == "")
+                return "Các trường không được để trống!";
+            else if (matkhau != matkhaucu)
+                return "Mật khẩu không đúng!";
+            else if (matkhaumoi != rematkhaumoi)
+                return "Mật khẩu nhập lại không khớp!";
+
+            //lưu xuống DB
+            if (NhanVienDAL.Instance.UpdateMatKhau(manv, matkhaumoi))
+                return "Đã đổi mật khẩu!";
+            else
+                return "Có lỗi xảy ra, vui lòng thử lại!";
         }
     }
 }

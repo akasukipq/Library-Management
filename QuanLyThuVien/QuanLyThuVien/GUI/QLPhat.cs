@@ -114,6 +114,9 @@ namespace QuanLyThuVien.GUI
             cbMaDG.Text = "Chọn mã đọc giả";
             flag = 1;
             btnXoa.Text = "Hủy";
+            btnXoa.Enabled = true;
+            NhanVienDTO nv = NhanVienBLL.Instance.ShowCurrentNV();
+            txtMaNV.Text = nv.MaNV;
         }
 
         private void btnLuu_Click(object sender, EventArgs e)

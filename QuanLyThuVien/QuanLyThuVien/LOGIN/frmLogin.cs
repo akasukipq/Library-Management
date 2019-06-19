@@ -22,6 +22,10 @@ namespace QuanLyThuVien.LOGIN
             string ret = NhanVienBLL.Instance.CheckLogin(txtTaiKhoan.Text, txtMatKhau.Text);
             if (ret == "Đăng nhập thành công!")
             {
+                lbThongBao.Text = "";
+                //truyền tài khoản vào NhanVienBLL
+                NhanVienBLL.Instance.SaveTaiKhoan(txtTaiKhoan.Text);
+
                 //gọi trang chủ
                 frmMain main = new frmMain();
                 this.Hide();

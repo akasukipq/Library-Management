@@ -34,25 +34,26 @@
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtThoiHanThe = new System.Windows.Forms.TextBox();
+            this.txtMatKhau = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtSoSachMuonToiDa = new System.Windows.Forms.TextBox();
+            this.txtTaiKhoan = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.SoLuongTGToiDa = new System.Windows.Forms.TextBox();
-            this.txtTuoiToiDa = new System.Windows.Forms.TextBox();
+            this.txtChucVu = new System.Windows.Forms.TextBox();
+            this.txtTenNV = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtTuoiToiThieu = new System.Windows.Forms.TextBox();
+            this.txtMaNV = new System.Windows.Forms.TextBox();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnHuy = new DevExpress.XtraEditors.SimpleButton();
+            this.btnLuu = new DevExpress.XtraEditors.SimpleButton();
             this.label8 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtReMatKhauMoi = new System.Windows.Forms.TextBox();
+            this.txtMatKhauMoi = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.btnXoa = new DevExpress.XtraEditors.SimpleButton();
-            this.btnThem = new DevExpress.XtraEditors.SimpleButton();
+            this.txtMatKhauCu = new System.Windows.Forms.TextBox();
+            this.lbThongBao = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
@@ -102,15 +103,15 @@
             // panel6
             // 
             this.panel6.Controls.Add(this.label7);
-            this.panel6.Controls.Add(this.txtThoiHanThe);
+            this.panel6.Controls.Add(this.txtMatKhau);
             this.panel6.Controls.Add(this.label3);
             this.panel6.Controls.Add(this.label5);
-            this.panel6.Controls.Add(this.txtSoSachMuonToiDa);
+            this.panel6.Controls.Add(this.txtTaiKhoan);
             this.panel6.Controls.Add(this.label4);
-            this.panel6.Controls.Add(this.SoLuongTGToiDa);
-            this.panel6.Controls.Add(this.txtTuoiToiDa);
+            this.panel6.Controls.Add(this.txtChucVu);
+            this.panel6.Controls.Add(this.txtTenNV);
             this.panel6.Controls.Add(this.label2);
-            this.panel6.Controls.Add(this.txtTuoiToiThieu);
+            this.panel6.Controls.Add(this.txtMaNV);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel6.Location = new System.Drawing.Point(2, 27);
             this.panel6.Name = "panel6";
@@ -129,17 +130,17 @@
             this.label7.Text = "Mật khẩu:";
             this.label7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // txtThoiHanThe
+            // txtMatKhau
             // 
-            this.txtThoiHanThe.BackColor = System.Drawing.Color.White;
-            this.txtThoiHanThe.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtThoiHanThe.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtThoiHanThe.ForeColor = System.Drawing.Color.Black;
-            this.txtThoiHanThe.Location = new System.Drawing.Point(734, 72);
-            this.txtThoiHanThe.Name = "txtThoiHanThe";
-            this.txtThoiHanThe.Size = new System.Drawing.Size(163, 19);
-            this.txtThoiHanThe.TabIndex = 14;
-            this.txtThoiHanThe.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtMatKhau.BackColor = System.Drawing.Color.White;
+            this.txtMatKhau.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtMatKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMatKhau.ForeColor = System.Drawing.Color.Black;
+            this.txtMatKhau.Location = new System.Drawing.Point(734, 72);
+            this.txtMatKhau.Name = "txtMatKhau";
+            this.txtMatKhau.Size = new System.Drawing.Size(163, 19);
+            this.txtMatKhau.TabIndex = 14;
+            this.txtMatKhau.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label3
             // 
@@ -165,17 +166,17 @@
             this.label5.Text = "Tài khoản:";
             this.label5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // txtSoSachMuonToiDa
+            // txtTaiKhoan
             // 
-            this.txtSoSachMuonToiDa.BackColor = System.Drawing.Color.White;
-            this.txtSoSachMuonToiDa.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSoSachMuonToiDa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSoSachMuonToiDa.ForeColor = System.Drawing.Color.Black;
-            this.txtSoSachMuonToiDa.Location = new System.Drawing.Point(734, 30);
-            this.txtSoSachMuonToiDa.Name = "txtSoSachMuonToiDa";
-            this.txtSoSachMuonToiDa.Size = new System.Drawing.Size(163, 19);
-            this.txtSoSachMuonToiDa.TabIndex = 9;
-            this.txtSoSachMuonToiDa.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtTaiKhoan.BackColor = System.Drawing.Color.White;
+            this.txtTaiKhoan.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTaiKhoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTaiKhoan.ForeColor = System.Drawing.Color.Black;
+            this.txtTaiKhoan.Location = new System.Drawing.Point(734, 30);
+            this.txtTaiKhoan.Name = "txtTaiKhoan";
+            this.txtTaiKhoan.Size = new System.Drawing.Size(163, 19);
+            this.txtTaiKhoan.TabIndex = 9;
+            this.txtTaiKhoan.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label4
             // 
@@ -189,29 +190,29 @@
             this.label4.Text = "Chức vụ";
             this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // SoLuongTGToiDa
+            // txtChucVu
             // 
-            this.SoLuongTGToiDa.BackColor = System.Drawing.Color.White;
-            this.SoLuongTGToiDa.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.SoLuongTGToiDa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SoLuongTGToiDa.ForeColor = System.Drawing.Color.Black;
-            this.SoLuongTGToiDa.Location = new System.Drawing.Point(299, 114);
-            this.SoLuongTGToiDa.Name = "SoLuongTGToiDa";
-            this.SoLuongTGToiDa.Size = new System.Drawing.Size(163, 19);
-            this.SoLuongTGToiDa.TabIndex = 7;
-            this.SoLuongTGToiDa.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtChucVu.BackColor = System.Drawing.Color.White;
+            this.txtChucVu.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtChucVu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtChucVu.ForeColor = System.Drawing.Color.Black;
+            this.txtChucVu.Location = new System.Drawing.Point(299, 114);
+            this.txtChucVu.Name = "txtChucVu";
+            this.txtChucVu.Size = new System.Drawing.Size(163, 19);
+            this.txtChucVu.TabIndex = 7;
+            this.txtChucVu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // txtTuoiToiDa
+            // txtTenNV
             // 
-            this.txtTuoiToiDa.BackColor = System.Drawing.Color.White;
-            this.txtTuoiToiDa.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtTuoiToiDa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTuoiToiDa.ForeColor = System.Drawing.Color.Black;
-            this.txtTuoiToiDa.Location = new System.Drawing.Point(299, 72);
-            this.txtTuoiToiDa.Name = "txtTuoiToiDa";
-            this.txtTuoiToiDa.Size = new System.Drawing.Size(163, 19);
-            this.txtTuoiToiDa.TabIndex = 5;
-            this.txtTuoiToiDa.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtTenNV.BackColor = System.Drawing.Color.White;
+            this.txtTenNV.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTenNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenNV.ForeColor = System.Drawing.Color.Black;
+            this.txtTenNV.Location = new System.Drawing.Point(299, 72);
+            this.txtTenNV.Name = "txtTenNV";
+            this.txtTenNV.Size = new System.Drawing.Size(163, 19);
+            this.txtTenNV.TabIndex = 5;
+            this.txtTenNV.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label2
             // 
@@ -225,17 +226,17 @@
             this.label2.Text = "Mã nhân viên:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // txtTuoiToiThieu
+            // txtMaNV
             // 
-            this.txtTuoiToiThieu.BackColor = System.Drawing.Color.White;
-            this.txtTuoiToiThieu.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtTuoiToiThieu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTuoiToiThieu.ForeColor = System.Drawing.Color.Black;
-            this.txtTuoiToiThieu.Location = new System.Drawing.Point(299, 30);
-            this.txtTuoiToiThieu.Name = "txtTuoiToiThieu";
-            this.txtTuoiToiThieu.Size = new System.Drawing.Size(163, 19);
-            this.txtTuoiToiThieu.TabIndex = 3;
-            this.txtTuoiToiThieu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtMaNV.BackColor = System.Drawing.Color.White;
+            this.txtMaNV.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtMaNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaNV.ForeColor = System.Drawing.Color.Black;
+            this.txtMaNV.Location = new System.Drawing.Point(299, 30);
+            this.txtMaNV.Name = "txtMaNV";
+            this.txtMaNV.Size = new System.Drawing.Size(163, 19);
+            this.txtMaNV.TabIndex = 3;
+            this.txtMaNV.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // groupControl2
             // 
@@ -250,20 +251,74 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.btnXoa);
-            this.panel2.Controls.Add(this.btnThem);
+            this.panel2.Controls.Add(this.lbThongBao);
+            this.panel2.Controls.Add(this.btnHuy);
+            this.panel2.Controls.Add(this.btnLuu);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.label10);
-            this.panel2.Controls.Add(this.textBox3);
-            this.panel2.Controls.Add(this.textBox4);
+            this.panel2.Controls.Add(this.txtReMatKhauMoi);
+            this.panel2.Controls.Add(this.txtMatKhauMoi);
             this.panel2.Controls.Add(this.label11);
-            this.panel2.Controls.Add(this.textBox5);
+            this.panel2.Controls.Add(this.txtMatKhauCu);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.Location = new System.Drawing.Point(2, 27);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1140, 235);
             this.panel2.TabIndex = 0;
+            // 
+            // btnHuy
+            // 
+            this.btnHuy.Appearance.BackColor = System.Drawing.Color.Firebrick;
+            this.btnHuy.Appearance.BorderColor = System.Drawing.SystemColors.HotTrack;
+            this.btnHuy.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHuy.Appearance.ForeColor = System.Drawing.Color.White;
+            this.btnHuy.Appearance.Options.UseBackColor = true;
+            this.btnHuy.Appearance.Options.UseBorderColor = true;
+            this.btnHuy.Appearance.Options.UseFont = true;
+            this.btnHuy.Appearance.Options.UseForeColor = true;
+            this.btnHuy.Appearance.Options.UseImage = true;
+            this.btnHuy.Appearance.Options.UseTextOptions = true;
+            this.btnHuy.AppearanceHovered.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnHuy.AppearanceHovered.ForeColor = System.Drawing.Color.White;
+            this.btnHuy.AppearanceHovered.Options.UseBackColor = true;
+            this.btnHuy.AppearanceHovered.Options.UseForeColor = true;
+            this.btnHuy.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.btnHuy.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.ImageOptions.Image")));
+            this.btnHuy.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.RightCenter;
+            this.btnHuy.Location = new System.Drawing.Point(641, 170);
+            this.btnHuy.Name = "btnHuy";
+            this.btnHuy.Size = new System.Drawing.Size(107, 34);
+            this.btnHuy.TabIndex = 15;
+            this.btnHuy.Text = "Hủy";
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
+            // 
+            // btnLuu
+            // 
+            this.btnLuu.Appearance.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnLuu.Appearance.BorderColor = System.Drawing.SystemColors.InactiveBorder;
+            this.btnLuu.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLuu.Appearance.ForeColor = System.Drawing.Color.White;
+            this.btnLuu.Appearance.Options.UseBackColor = true;
+            this.btnLuu.Appearance.Options.UseBorderColor = true;
+            this.btnLuu.Appearance.Options.UseFont = true;
+            this.btnLuu.Appearance.Options.UseForeColor = true;
+            this.btnLuu.Appearance.Options.UseImage = true;
+            this.btnLuu.Appearance.Options.UseTextOptions = true;
+            this.btnLuu.AppearanceHovered.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnLuu.AppearanceHovered.ForeColor = System.Drawing.Color.White;
+            this.btnLuu.AppearanceHovered.Options.UseBackColor = true;
+            this.btnLuu.AppearanceHovered.Options.UseForeColor = true;
+            this.btnLuu.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.btnLuu.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnLuu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.ImageOptions.Image")));
+            this.btnLuu.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.RightCenter;
+            this.btnLuu.Location = new System.Drawing.Point(399, 170);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(107, 34);
+            this.btnLuu.TabIndex = 14;
+            this.btnLuu.Text = "Lưu";
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // label8
             // 
@@ -289,29 +344,31 @@
             this.label10.Text = "Nhập lại mật khẩu mới:";
             this.label10.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // textBox3
+            // txtReMatKhauMoi
             // 
-            this.textBox3.BackColor = System.Drawing.Color.White;
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.ForeColor = System.Drawing.Color.Black;
-            this.textBox3.Location = new System.Drawing.Point(585, 106);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(163, 19);
-            this.textBox3.TabIndex = 7;
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtReMatKhauMoi.BackColor = System.Drawing.Color.White;
+            this.txtReMatKhauMoi.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtReMatKhauMoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtReMatKhauMoi.ForeColor = System.Drawing.Color.Black;
+            this.txtReMatKhauMoi.Location = new System.Drawing.Point(585, 106);
+            this.txtReMatKhauMoi.Name = "txtReMatKhauMoi";
+            this.txtReMatKhauMoi.PasswordChar = '*';
+            this.txtReMatKhauMoi.Size = new System.Drawing.Size(163, 19);
+            this.txtReMatKhauMoi.TabIndex = 7;
+            this.txtReMatKhauMoi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox4
+            // txtMatKhauMoi
             // 
-            this.textBox4.BackColor = System.Drawing.Color.White;
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.ForeColor = System.Drawing.Color.Black;
-            this.textBox4.Location = new System.Drawing.Point(585, 64);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(163, 19);
-            this.textBox4.TabIndex = 5;
-            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtMatKhauMoi.BackColor = System.Drawing.Color.White;
+            this.txtMatKhauMoi.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtMatKhauMoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMatKhauMoi.ForeColor = System.Drawing.Color.Black;
+            this.txtMatKhauMoi.Location = new System.Drawing.Point(585, 64);
+            this.txtMatKhauMoi.Name = "txtMatKhauMoi";
+            this.txtMatKhauMoi.PasswordChar = '*';
+            this.txtMatKhauMoi.Size = new System.Drawing.Size(163, 19);
+            this.txtMatKhauMoi.TabIndex = 5;
+            this.txtMatKhauMoi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label11
             // 
@@ -325,68 +382,29 @@
             this.label11.Text = "Mật khẩu:";
             this.label11.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // textBox5
+            // txtMatKhauCu
             // 
-            this.textBox5.BackColor = System.Drawing.Color.White;
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.ForeColor = System.Drawing.Color.Black;
-            this.textBox5.Location = new System.Drawing.Point(585, 22);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(163, 19);
-            this.textBox5.TabIndex = 3;
-            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtMatKhauCu.BackColor = System.Drawing.Color.White;
+            this.txtMatKhauCu.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtMatKhauCu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMatKhauCu.ForeColor = System.Drawing.Color.Black;
+            this.txtMatKhauCu.Location = new System.Drawing.Point(585, 22);
+            this.txtMatKhauCu.Name = "txtMatKhauCu";
+            this.txtMatKhauCu.PasswordChar = '*';
+            this.txtMatKhauCu.Size = new System.Drawing.Size(163, 19);
+            this.txtMatKhauCu.TabIndex = 3;
+            this.txtMatKhauCu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtMatKhauCu.TextChanged += new System.EventHandler(this.txtMatKhauCu_TextChanged);
             // 
-            // btnXoa
+            // lbThongBao
             // 
-            this.btnXoa.Appearance.BackColor = System.Drawing.Color.Firebrick;
-            this.btnXoa.Appearance.BorderColor = System.Drawing.SystemColors.HotTrack;
-            this.btnXoa.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoa.Appearance.ForeColor = System.Drawing.Color.White;
-            this.btnXoa.Appearance.Options.UseBackColor = true;
-            this.btnXoa.Appearance.Options.UseBorderColor = true;
-            this.btnXoa.Appearance.Options.UseFont = true;
-            this.btnXoa.Appearance.Options.UseForeColor = true;
-            this.btnXoa.Appearance.Options.UseImage = true;
-            this.btnXoa.Appearance.Options.UseTextOptions = true;
-            this.btnXoa.AppearanceHovered.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnXoa.AppearanceHovered.ForeColor = System.Drawing.Color.White;
-            this.btnXoa.AppearanceHovered.Options.UseBackColor = true;
-            this.btnXoa.AppearanceHovered.Options.UseForeColor = true;
-            this.btnXoa.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.btnXoa.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.ImageOptions.Image")));
-            this.btnXoa.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.RightCenter;
-            this.btnXoa.Location = new System.Drawing.Point(641, 170);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(107, 34);
-            this.btnXoa.TabIndex = 15;
-            this.btnXoa.Text = "Xóa";
-            // 
-            // btnThem
-            // 
-            this.btnThem.Appearance.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnThem.Appearance.BorderColor = System.Drawing.SystemColors.InactiveBorder;
-            this.btnThem.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThem.Appearance.ForeColor = System.Drawing.Color.White;
-            this.btnThem.Appearance.Options.UseBackColor = true;
-            this.btnThem.Appearance.Options.UseBorderColor = true;
-            this.btnThem.Appearance.Options.UseFont = true;
-            this.btnThem.Appearance.Options.UseForeColor = true;
-            this.btnThem.Appearance.Options.UseImage = true;
-            this.btnThem.Appearance.Options.UseTextOptions = true;
-            this.btnThem.AppearanceHovered.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnThem.AppearanceHovered.ForeColor = System.Drawing.Color.White;
-            this.btnThem.AppearanceHovered.Options.UseBackColor = true;
-            this.btnThem.AppearanceHovered.Options.UseForeColor = true;
-            this.btnThem.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.btnThem.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btnThem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.ImageOptions.Image")));
-            this.btnThem.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.RightCenter;
-            this.btnThem.Location = new System.Drawing.Point(399, 170);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(107, 34);
-            this.btnThem.TabIndex = 14;
-            this.btnThem.Text = "Lưu";
+            this.lbThongBao.AutoSize = true;
+            this.lbThongBao.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbThongBao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lbThongBao.Location = new System.Drawing.Point(396, 136);
+            this.lbThongBao.Name = "lbThongBao";
+            this.lbThongBao.Size = new System.Drawing.Size(0, 17);
+            this.lbThongBao.TabIndex = 16;
             // 
             // ThongTinCaNhan
             // 
@@ -417,24 +435,25 @@
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtThoiHanThe;
+        private System.Windows.Forms.TextBox txtMatKhau;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtSoSachMuonToiDa;
+        private System.Windows.Forms.TextBox txtTaiKhoan;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox SoLuongTGToiDa;
-        private System.Windows.Forms.TextBox txtTuoiToiDa;
+        private System.Windows.Forms.TextBox txtChucVu;
+        private System.Windows.Forms.TextBox txtTenNV;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtTuoiToiThieu;
+        private System.Windows.Forms.TextBox txtMaNV;
         private DevExpress.XtraEditors.GroupControl groupControl2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtReMatKhauMoi;
+        private System.Windows.Forms.TextBox txtMatKhauMoi;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox5;
-        private DevExpress.XtraEditors.SimpleButton btnXoa;
-        private DevExpress.XtraEditors.SimpleButton btnThem;
+        private System.Windows.Forms.TextBox txtMatKhauCu;
+        private DevExpress.XtraEditors.SimpleButton btnHuy;
+        private DevExpress.XtraEditors.SimpleButton btnLuu;
+        private System.Windows.Forms.Label lbThongBao;
     }
 }

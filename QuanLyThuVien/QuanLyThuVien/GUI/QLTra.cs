@@ -164,6 +164,9 @@ namespace QuanLyThuVien
             XuLyHienThiGridCTPhieuMuon();
 
             txtMaPT.Text = Utilities.Instance.NextID("PT", grvTra.GetRowCellValue(grvTra.RowCount - 1, grvTra.Columns[0]).ToString());
+
+            NhanVienDTO nv = NhanVienBLL.Instance.ShowCurrentNV();
+            txtMaNV.Text = nv.MaNV;
         }
 
         void ClearInput()

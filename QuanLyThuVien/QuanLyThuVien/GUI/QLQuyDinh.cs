@@ -37,6 +37,11 @@ namespace QuanLyThuVien.GUI
             txtDKNhanSach.ReadOnly = true;
             txtSoLuongTGToiDa.ReadOnly = true;
             btnLuu.Enabled = false;
+            NhanVienDTO nv = NhanVienBLL.Instance.ShowCurrentNV();
+            if (nv.ChucVu == "admin")
+                btnSua.Enabled = true;
+            else
+                btnSua.Enabled = false;
         }
 
         private void label8_Click(object sender, EventArgs e)
