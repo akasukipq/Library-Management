@@ -42,8 +42,8 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dtNgayBC = new System.Windows.Forms.DateTimePicker();
             this.txtMaBC = new System.Windows.Forms.TextBox();
+            this.dtNgayBC = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.grvCTBCSachTT)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridCTBCSachTT)).BeginInit();
             this.panel2.SuspendLayout();
@@ -59,17 +59,17 @@
             // 
             // btnThongKe
             // 
-            this.btnThongKe.Appearance.BackColor = System.Drawing.Color.White;
-            this.btnThongKe.Appearance.BorderColor = System.Drawing.SystemColors.HotTrack;
+            this.btnThongKe.Appearance.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnThongKe.Appearance.BorderColor = System.Drawing.SystemColors.InactiveBorder;
             this.btnThongKe.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThongKe.Appearance.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.btnThongKe.Appearance.ForeColor = System.Drawing.Color.White;
             this.btnThongKe.Appearance.Options.UseBackColor = true;
             this.btnThongKe.Appearance.Options.UseBorderColor = true;
             this.btnThongKe.Appearance.Options.UseFont = true;
             this.btnThongKe.Appearance.Options.UseForeColor = true;
             this.btnThongKe.Appearance.Options.UseImage = true;
             this.btnThongKe.Appearance.Options.UseTextOptions = true;
-            this.btnThongKe.AppearanceHovered.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnThongKe.AppearanceHovered.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnThongKe.AppearanceHovered.ForeColor = System.Drawing.Color.White;
             this.btnThongKe.AppearanceHovered.Options.UseBackColor = true;
             this.btnThongKe.AppearanceHovered.Options.UseForeColor = true;
@@ -130,6 +130,7 @@
             this.SoNgayTraTre});
             this.grvCTBCSachTT.GridControl = this.gridCTBCSachTT;
             this.grvCTBCSachTT.Name = "grvCTBCSachTT";
+            this.grvCTBCSachTT.OptionsBehavior.Editable = false;
             this.grvCTBCSachTT.OptionsView.ShowGroupPanel = false;
             // 
             // NgayMuon
@@ -152,17 +153,19 @@
             // 
             // btnLapBaoCao
             // 
-            this.btnLapBaoCao.Appearance.BackColor = System.Drawing.Color.White;
-            this.btnLapBaoCao.Appearance.BorderColor = System.Drawing.SystemColors.HotTrack;
+            this.btnLapBaoCao.Appearance.BackColor = System.Drawing.Color.ForestGreen;
+            this.btnLapBaoCao.Appearance.BorderColor = System.Drawing.SystemColors.InactiveBorder;
             this.btnLapBaoCao.Appearance.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLapBaoCao.Appearance.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.btnLapBaoCao.Appearance.ForeColor = System.Drawing.Color.White;
             this.btnLapBaoCao.Appearance.Options.UseBackColor = true;
             this.btnLapBaoCao.Appearance.Options.UseBorderColor = true;
             this.btnLapBaoCao.Appearance.Options.UseFont = true;
             this.btnLapBaoCao.Appearance.Options.UseForeColor = true;
             this.btnLapBaoCao.Appearance.Options.UseImage = true;
             this.btnLapBaoCao.Appearance.Options.UseTextOptions = true;
-            this.btnLapBaoCao.AppearanceHovered.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnLapBaoCao.AppearanceDisabled.BackColor = System.Drawing.Color.Silver;
+            this.btnLapBaoCao.AppearanceDisabled.Options.UseBackColor = true;
+            this.btnLapBaoCao.AppearanceHovered.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnLapBaoCao.AppearanceHovered.ForeColor = System.Drawing.Color.White;
             this.btnLapBaoCao.AppearanceHovered.Options.UseBackColor = true;
             this.btnLapBaoCao.AppearanceHovered.Options.UseForeColor = true;
@@ -219,6 +222,13 @@
             this.panel1.Size = new System.Drawing.Size(1144, 117);
             this.panel1.TabIndex = 6;
             // 
+            // txtMaBC
+            // 
+            this.txtMaBC.Location = new System.Drawing.Point(379, 71);
+            this.txtMaBC.Name = "txtMaBC";
+            this.txtMaBC.Size = new System.Drawing.Size(100, 21);
+            this.txtMaBC.TabIndex = 35;
+            // 
             // dtNgayBC
             // 
             this.dtNgayBC.Font = new System.Drawing.Font("Tahoma", 11F);
@@ -228,13 +238,6 @@
             this.dtNgayBC.Size = new System.Drawing.Size(104, 25);
             this.dtNgayBC.TabIndex = 34;
             this.dtNgayBC.ValueChanged += new System.EventHandler(this.dtNgayBC_ValueChanged);
-            // 
-            // txtMaBC
-            // 
-            this.txtMaBC.Location = new System.Drawing.Point(379, 71);
-            this.txtMaBC.Name = "txtMaBC";
-            this.txtMaBC.Size = new System.Drawing.Size(100, 21);
-            this.txtMaBC.TabIndex = 35;
             // 
             // BCSachTraTre
             // 

@@ -170,6 +170,8 @@
             this.btnThem.Appearance.Options.UseForeColor = true;
             this.btnThem.Appearance.Options.UseImage = true;
             this.btnThem.Appearance.Options.UseTextOptions = true;
+            this.btnThem.AppearanceDisabled.BackColor = System.Drawing.Color.Silver;
+            this.btnThem.AppearanceDisabled.Options.UseBackColor = true;
             this.btnThem.AppearanceHovered.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnThem.AppearanceHovered.ForeColor = System.Drawing.Color.White;
             this.btnThem.AppearanceHovered.Options.UseBackColor = true;
@@ -405,6 +407,7 @@
             this.MaNV});
             this.grvPhat.GridControl = this.gridPhat;
             this.grvPhat.Name = "grvPhat";
+            this.grvPhat.OptionsBehavior.Editable = false;
             this.grvPhat.OptionsView.ShowGroupPanel = false;
             // 
             // MaPP

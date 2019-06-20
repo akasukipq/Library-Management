@@ -44,16 +44,6 @@ namespace QuanLyThuVien.GUI
                 btnSua.Enabled = false;
         }
 
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnSua_Click(object sender, EventArgs e)
         {
             txtTuoiToiThieu.ReadOnly = false;
@@ -82,7 +72,7 @@ namespace QuanLyThuVien.GUI
                 txtSoLuongTGToiDa.ReadOnly = true;
                 btnLuu.Enabled = false;
             }
-            MessageBox.Show(ret, "Thông báo", MessageBoxButtons.OK);
+            MessageBox.Show(ret, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

@@ -103,10 +103,13 @@ namespace QuanLyThuVien.GUI
             btnXoa.Text = "Huỷ";
            
 
+            if(grvLDG.GetRowCellValue(grvLDG.RowCount - 1, grvLDG.Columns[0]) != null)
+                txtMaLDG.Text = Utilities.Instance.NextID("LDG", grvLDG.GetRowCellValue(grvLDG.RowCount - 1, grvLDG.Columns[0]).ToString());
+            else
+                txtMaLDG.Text = Utilities.Instance.NextID("LDG", "LDG000");
 
-            txtMaLDG.Text = Utilities.Instance.NextID("LDG", grvLDG.GetRowCellValue(grvLDG.RowCount - 1, grvLDG.Columns[0]).ToString());
         }
-    
+
 
         private void btnSua_Click(object sender, EventArgs e)
         {
@@ -120,7 +123,7 @@ namespace QuanLyThuVien.GUI
         {
             if (btnXoa.Text == "Huỷ")
             {
-                if (MessageBox.Show("Bạn có muốn huỷ không!", "Thông báo", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                if (MessageBox.Show("Bạn có muốn huỷ không!", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     btnXoa.Text = "Xoá";
                     txtTenLDG.Text = "";
@@ -132,10 +135,10 @@ namespace QuanLyThuVien.GUI
             }
             else if (btnXoa.Text == "Xoá")
             {
-                if (MessageBox.Show("Bạn chắc chắn muốn xóa không?", "Thông báo", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                if (MessageBox.Show("Bạn chắc chắn muốn xóa không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     string ret = LoaiDocGiaBLL.Instance.DeleteLDG(txtMaLDG.Text);
-                    MessageBox.Show(ret);
+                    MessageBox.Show(ret, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     ShowLoaiDocGia();
                 }
             }
@@ -147,7 +150,7 @@ namespace QuanLyThuVien.GUI
             {
 
                 string ret = LoaiDocGiaBLL.Instance.SaveLoaiDG(txtMaLDG.Text, txtTenLDG.Text);
-                MessageBox.Show(ret);
+                MessageBox.Show(ret, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 if (ret == "Thêm thành công!")
                     Lock(true);
             }
@@ -155,11 +158,12 @@ namespace QuanLyThuVien.GUI
             {
 
                 string ret = LoaiDocGiaBLL.Instance.UpdateLoaiDG(txtMaLDG.Text, txtTenLDG.Text);
-                MessageBox.Show(ret);
+                MessageBox.Show(ret, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 if (ret == "Sửa thành công!")
                     Lock(true);
             }
             ShowLoaiDocGia();
+            btnXoa.Text = "Xóa";
         }
     }
 }

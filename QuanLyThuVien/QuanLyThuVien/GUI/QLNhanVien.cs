@@ -26,7 +26,7 @@ namespace QuanLyThuVien.GUI
             cbChucVu.ValueMember = "Chức vụ";
             Lock(true);
             NhanVienDTO nv = NhanVienBLL.Instance.ShowCurrentNV();
-            if (nv.ChucVu == "admin")
+            if (nv.ChucVu == "Quản lý")
                 btnThem.Enabled = true;
             else
                 btnThem.Enabled = false;
@@ -118,7 +118,8 @@ namespace QuanLyThuVien.GUI
             flag = 1;
             Lock(false);
             btnSua.Enabled = false;
-            btnXoa.Enabled = false;
+            btnXoa.Enabled = true;
+            btnXoa.Text = "Hủy";
             txtMaNV.Text = "";
             txtTenNV.Text = "";
             txtTaiKhoan.Text = "";
@@ -126,7 +127,11 @@ namespace QuanLyThuVien.GUI
             cbChucVu.Text = "Chọn chức vụ";
             //Lấy mã sách mới nhất
 
-            txtMaNV.Text = Utilities.Instance.NextID("NV", grvNhanVien.GetRowCellValue(grvNhanVien.RowCount - 1, grvNhanVien.Columns[0]).ToString());
+            if(grvNhanVien.GetRowCellValue(grvNhanVien.RowCount - 1, grvNhanVien.Columns[0]) != null)
+                txtMaNV.Text = Utilities.Instance.NextID("NV", grvNhanVien.GetRowCellValue(grvNhanVien.RowCount - 1, grvNhanVien.Columns[0]).ToString());
+            else
+                txtMaNV.Text = Utilities.Instance.NextID("NV", "NV000");
+
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
@@ -135,7 +140,7 @@ namespace QuanLyThuVien.GUI
             {
                 string ret = NhanVienBLL.Instance.SaveNhanVien(txtMaNV.Text, txtTenNV.Text, cbChucVu.SelectedValue.ToString()
                     , txtTaiKhoan.Text, txtMatKhau.Text);
-                MessageBox.Show(ret);
+                MessageBox.Show(ret, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 if (ret == "Thêm thành công!")
                     Lock(true);
             }
@@ -143,11 +148,12 @@ namespace QuanLyThuVien.GUI
             {
                 string ret = NhanVienBLL.Instance.UpdateNhanVien(txtMaNV.Text, txtTenNV.Text, cbChucVu.SelectedValue.ToString()
                     , txtTaiKhoan.Text, txtMatKhau.Text);
-                MessageBox.Show(ret);
+                MessageBox.Show(ret, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 if (ret == "Sửa thành công!")
                     Lock(true);
             }
             ShowNhanVien();
+            btnXoa.Text = "Xóa";
         }
 
         private void btnSua_Click(object sender, EventArgs e)
@@ -156,15 +162,35 @@ namespace QuanLyThuVien.GUI
             Lock(false);
             txtMaNV.ReadOnly = true;
             cbChucVu.Enabled = true;
+            btnXoa.Text = "Hủy";
+            btnXoa.Enabled = true;
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Bạn chắc chắn muốn xóa nhân viên này?", "Xóa", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (btnXoa.Text == "Huỷ")
             {
-                string ret = NhanVienBLL.Instance.DeleteNhanVien(txtMaNV.Text);
-                MessageBox.Show(ret);
-                ShowNhanVien();
+                if (MessageBox.Show("Bạn có muốn huỷ không!", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    btnXoa.Text = "Xoá";
+                    Lock(false);
+                    btnXoa.Enabled = false;
+                    btnLuu.Enabled = false;
+                    btnSua.Enabled = false;
+                }
+
+            }
+            else if (btnXoa.Text == "Xoá")
+            {
+                if (MessageBox.Show("Bạn chắc chắn muốn xóa nhân viên này?", "Xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    string ret = NhanVienBLL.Instance.DeleteNhanVien(txtMaNV.Text);
+                    MessageBox.Show(ret, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ShowNhanVien();
+                }
+                btnXoa.Enabled = false;
+                btnLuu.Enabled = false;
+                btnSua.Enabled = false;
             }
         }
 

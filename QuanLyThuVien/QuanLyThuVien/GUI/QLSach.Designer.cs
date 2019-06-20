@@ -72,8 +72,8 @@
             this.txtNamXB = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.ptbAnhBia = new System.Windows.Forms.PictureBox();
             this.btnImage = new System.Windows.Forms.Button();
+            this.ptbAnhBia = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridSach)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grvSach)).BeginInit();
@@ -272,7 +272,7 @@
             this.btnLuu.Appearance.Options.UseTextOptions = true;
             this.btnLuu.AppearanceDisabled.BackColor = System.Drawing.Color.Silver;
             this.btnLuu.AppearanceDisabled.Options.UseBackColor = true;
-            this.btnLuu.AppearanceHovered.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnLuu.AppearanceHovered.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnLuu.AppearanceHovered.ForeColor = System.Drawing.Color.White;
             this.btnLuu.AppearanceHovered.Options.UseBackColor = true;
             this.btnLuu.AppearanceHovered.Options.UseForeColor = true;
@@ -300,7 +300,7 @@
             this.btnXoa.Appearance.Options.UseTextOptions = true;
             this.btnXoa.AppearanceDisabled.BackColor = System.Drawing.Color.Silver;
             this.btnXoa.AppearanceDisabled.Options.UseBackColor = true;
-            this.btnXoa.AppearanceHovered.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnXoa.AppearanceHovered.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnXoa.AppearanceHovered.ForeColor = System.Drawing.Color.White;
             this.btnXoa.AppearanceHovered.Options.UseBackColor = true;
             this.btnXoa.AppearanceHovered.Options.UseForeColor = true;
@@ -326,7 +326,9 @@
             this.btnThem.Appearance.Options.UseForeColor = true;
             this.btnThem.Appearance.Options.UseImage = true;
             this.btnThem.Appearance.Options.UseTextOptions = true;
-            this.btnThem.AppearanceHovered.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnThem.AppearanceDisabled.BackColor = System.Drawing.Color.Silver;
+            this.btnThem.AppearanceDisabled.Options.UseBackColor = true;
+            this.btnThem.AppearanceHovered.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnThem.AppearanceHovered.ForeColor = System.Drawing.Color.White;
             this.btnThem.AppearanceHovered.Options.UseBackColor = true;
             this.btnThem.AppearanceHovered.Options.UseForeColor = true;
@@ -354,7 +356,7 @@
             this.btnSua.Appearance.Options.UseTextOptions = true;
             this.btnSua.AppearanceDisabled.BackColor = System.Drawing.Color.Silver;
             this.btnSua.AppearanceDisabled.Options.UseBackColor = true;
-            this.btnSua.AppearanceHovered.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnSua.AppearanceHovered.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnSua.AppearanceHovered.ForeColor = System.Drawing.Color.White;
             this.btnSua.AppearanceHovered.Options.UseBackColor = true;
             this.btnSua.AppearanceHovered.Options.UseForeColor = true;
@@ -635,6 +637,16 @@
             this.panel7.Size = new System.Drawing.Size(197, 242);
             this.panel7.TabIndex = 1;
             // 
+            // btnImage
+            // 
+            this.btnImage.Location = new System.Drawing.Point(78, 202);
+            this.btnImage.Name = "btnImage";
+            this.btnImage.Size = new System.Drawing.Size(75, 23);
+            this.btnImage.TabIndex = 23;
+            this.btnImage.Text = "Chọn ảnh";
+            this.btnImage.UseVisualStyleBackColor = true;
+            this.btnImage.Click += new System.EventHandler(this.btnImage_Click);
+            // 
             // ptbAnhBia
             // 
             this.ptbAnhBia.Image = ((System.Drawing.Image)(resources.GetObject("ptbAnhBia.Image")));
@@ -644,16 +656,6 @@
             this.ptbAnhBia.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ptbAnhBia.TabIndex = 21;
             this.ptbAnhBia.TabStop = false;
-            // 
-            // btnImage
-            // 
-            this.btnImage.Location = new System.Drawing.Point(78, 202);
-            this.btnImage.Name = "btnImage";
-            this.btnImage.Size = new System.Drawing.Size(75, 23);
-            this.btnImage.TabIndex = 22;
-            this.btnImage.Text = "Chọn ảnh";
-            this.btnImage.UseVisualStyleBackColor = true;
-            this.btnImage.Click += new System.EventHandler(this.btnImage_Click);
             // 
             // QLSach
             // 

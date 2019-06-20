@@ -160,8 +160,11 @@ namespace QuanLyThuVien
 
             XuLyHienThiGridSach();
             ClearInput();
+            if(grvMuon.GetRowCellValue(grvMuon.RowCount - 1, grvMuon.Columns[0]) != null)
+                txtMaPM.Text = Utilities.Instance.NextID("M", grvMuon.GetRowCellValue(grvMuon.RowCount - 1, grvMuon.Columns[0]).ToString());
+            else
+                txtMaPM.Text = Utilities.Instance.NextID("M", "M000");
 
-            txtMaPM.Text = Utilities.Instance.NextID("M", grvMuon.GetRowCellValue(grvMuon.RowCount - 1, grvMuon.Columns[0]).ToString());
             NhanVienDTO nv = NhanVienBLL.Instance.ShowCurrentNV();
             txtMaNV.Text = nv.MaNV;
 
@@ -228,7 +231,7 @@ namespace QuanLyThuVien
             for (int i = 0; i < handle.Length; i++)
             {
                 if (grvSach.GetRowCellValue(handle[i], grvSach.Columns[8]).ToString() == "False")
-                    MessageBox.Show(string.Format("Sách có mã {0} không có sẵn. Mời chọn sách khác!", grvSach.GetRowCellValue(handle[i], grvSach.Columns[0]).ToString()), "Thông báo",MessageBoxButtons.OK);
+                    MessageBox.Show(string.Format("Sách có mã {0} không có sẵn. Mời chọn sách khác!", grvSach.GetRowCellValue(handle[i], grvSach.Columns[0]).ToString()), "Thông báo",MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 else
                 {
                     if (grvSach.GetRowCellValue(handle[i], grvSach.Columns[10]).ToString() == "False")
@@ -267,17 +270,17 @@ namespace QuanLyThuVien
                 string ma = grvCTMuon.GetRowCellValue(grvCTMuon.GetRowHandle(i), grvCTMuon.Columns[0]).ToString();
                 lmasach.Add(ma);
             }
-            string ketqua = PhieuMuonBLL.Instance.SavePhieuMuon(txtMaPM.Text, cbMaDG.Text, dtNgayMuon.Text, txtMaNV.Text, dtHanTra.Text, grvCTMuon.RowCount, lmasach);
+            string ketqua = PhieuMuonBLL.Instance.SavePhieuMuon(txtMaPM.Text, cbMaDG.Text, dtNgayMuon.Value.ToString(), txtMaNV.Text, dtHanTra.Value.ToString(), grvCTMuon.RowCount, lmasach);
             if (ketqua == "Thêm phiếu mượn thành công!")
             {
                 flag = 1;
-                btnXoa.Text = "Xóa";
             }
-            MessageBox.Show(ketqua, "Thông báo", MessageBoxButtons.OK);
+            MessageBox.Show(ketqua, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             gridSach.Visible = false;
             gridMuon.Visible = true;
             ClearInput();
             ShowPhieuMuon();
+            btnXoa.Text = "Xóa";
 
 
         }
@@ -297,16 +300,11 @@ namespace QuanLyThuVien
             grvCTMuon.DeleteRow(grvCTMuon.FocusedRowHandle);
         }
 
-        private void grvCTMuon_InitNewRow(object sender, InitNewRowEventArgs e)
-        {
-
-        }
-
         private void btnXoa_Click(object sender, EventArgs e)
         {
             if(flag ==2)
             {
-                if(MessageBox.Show("Bạn có muốn hủy phiếu mượn này?","Thông báo",MessageBoxButtons.YesNo) == DialogResult.Yes)
+                if(MessageBox.Show("Bạn có muốn hủy phiếu mượn này?","Thông báo",MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     gridSach.Visible = false;
                     gridMuon.Visible = true;
@@ -314,7 +312,10 @@ namespace QuanLyThuVien
                     ShowPhieuMuon();
                     flag = 1;
                     btnXoa.Text = "Xóa";
-
+                    btnThemsach.Enabled = false;
+                    btnXoasach.Enabled = false;
+                    btnLuu.Enabled = false;
+                    btnXoa.Enabled = false;
                 }
 
             }

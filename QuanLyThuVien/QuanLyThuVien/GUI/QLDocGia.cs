@@ -201,7 +201,11 @@ namespace QuanLyThuVien
             
             dtNgayHetHan.Value = txtNgayLapThe.Value.AddMonths(x);
             
-            txtMaDG.Text = Utilities.Instance.NextID("DG", grvDocGia.GetRowCellValue(grvDocGia.RowCount - 1, grvDocGia.Columns[0]).ToString());
+            if(grvDocGia.GetRowCellValue(grvDocGia.RowCount - 1, grvDocGia.Columns[0]) != null)
+                txtMaDG.Text = Utilities.Instance.NextID("DG", grvDocGia.GetRowCellValue(grvDocGia.RowCount - 1, grvDocGia.Columns[0]).ToString());
+            else
+                txtMaDG.Text = Utilities.Instance.NextID("DG", "DG000");
+
         }
 
         private void btnSua_Click(object sender, EventArgs e)
@@ -217,7 +221,7 @@ namespace QuanLyThuVien
         {
             if (btnXoa.Text == "Huỷ")
             {
-                if (MessageBox.Show("Bạn có muốn huỷ không!", "Thông báo", MessageBoxButtons.YesNo)==DialogResult.Yes)
+                if (MessageBox.Show("Bạn có muốn huỷ không!", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question)==DialogResult.Yes)
                 {
                     btnXoa.Text = "Xoá";
                     txtTenDG.Text = "";
@@ -228,6 +232,7 @@ namespace QuanLyThuVien
                     Lock(false);
                     btnXoa.Enabled = false;
                     btnLuu.Enabled = false;
+                    btnSua.Enabled = false;
                 }
 
             }
@@ -239,12 +244,15 @@ namespace QuanLyThuVien
                 //}
 
                 //else 
-                if (MessageBox.Show("Bạn chắc chắn muốn xóa không?", "Thông báo", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                if (MessageBox.Show("Bạn chắc chắn muốn xóa không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     string ret = DocGiaBLL.Instance.DeleteDocGia(txtMaDG.Text);
-                    MessageBox.Show(ret);
+                    MessageBox.Show(ret, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     ShowDocGia();
                 }
+                btnXoa.Enabled = false;
+                btnLuu.Enabled = false;
+                btnSua.Enabled = false;
             }
         }
 
@@ -255,9 +263,8 @@ namespace QuanLyThuVien
                 string TinhTrang="True";
                
                 string ret = DocGiaBLL.Instance.SaveDocGia(txtMaDG.Text, txtTenDG.Text, cbLoaiDG.Text, dtNgaySinh.Value, txtDiaChi.Text, txtEmail.Text, txtNgayLapThe.Value, dtNgayHetHan.Value, TinhTrang, txtTongNo.Text);
-                MessageBox.Show(ret);
+                MessageBox.Show(ret, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Lock(true);
-                btnXoa.Text = "Xoá";
                 
             }
             else if (flag == 2)
@@ -269,11 +276,13 @@ namespace QuanLyThuVien
                     TinhTrang = "False";
 
                 string ret = DocGiaBLL.Instance.UpdateDocGia(txtMaDG.Text, txtTenDG.Text, cbLoaiDG.Text, dtNgaySinh.Value, txtDiaChi.Text, txtEmail.Text, txtNgayLapThe.Value, dtNgayHetHan.Value, TinhTrang, txtTongNo.Text);
-                MessageBox.Show(ret);
+                MessageBox.Show(ret, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 if (ret == "Sửa thành công!")
                     Lock(true);
             }
             ShowDocGia();
+            btnXoa.Text = "Xoá";
+
         }
 
         private void txtNgayLapThe_ValueChanged(object sender, EventArgs e)

@@ -105,6 +105,7 @@
             this.TenTG});
             this.grvTacGia.GridControl = this.gridTacGia;
             this.grvTacGia.Name = "grvTacGia";
+            this.grvTacGia.OptionsBehavior.Editable = false;
             this.grvTacGia.OptionsView.ShowGroupPanel = false;
             // 
             // TenTG
@@ -328,12 +329,12 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label1.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.label1.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.label1.Image = global::QuanLyThuVien.Properties.Resources.quyensach2;
             this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label1.Location = new System.Drawing.Point(14, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(310, 41);
+            this.label1.Size = new System.Drawing.Size(286, 41);
             this.label1.TabIndex = 4;
             this.label1.Text = "QUẢN LÝ TÁC GIẢ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;

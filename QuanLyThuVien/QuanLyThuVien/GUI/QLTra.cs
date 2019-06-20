@@ -151,6 +151,7 @@ namespace QuanLyThuVien
 
         private void btnThem_Click(object sender, EventArgs e)
         {
+            txtTienPhatKyNay.Text = "0";
             btnThemsach.Enabled = true;
             btnXoasach.Enabled = true;
             btnXoa.Enabled = true;
@@ -163,7 +164,10 @@ namespace QuanLyThuVien
             ClearInput();
             XuLyHienThiGridCTPhieuMuon();
 
-            txtMaPT.Text = Utilities.Instance.NextID("PT", grvTra.GetRowCellValue(grvTra.RowCount - 1, grvTra.Columns[0]).ToString());
+            if(grvTra.GetRowCellValue(grvTra.RowCount - 1, grvTra.Columns[0]) != null)
+                txtMaPT.Text = Utilities.Instance.NextID("PT", grvTra.GetRowCellValue(grvTra.RowCount - 1, grvTra.Columns[0]).ToString());
+            else
+                txtMaPT.Text = Utilities.Instance.NextID("PT", "PT000");
 
             NhanVienDTO nv = NhanVienBLL.Instance.ShowCurrentNV();
             txtMaNV.Text = nv.MaNV;
@@ -260,7 +264,7 @@ namespace QuanLyThuVien
             {
                 //Kiểm tra tình trạng sách xem sách đã trả chưa
                 if (SachBLL.Instance.GetTinhTrangSachByMaSach(grvCTPM.GetRowCellValue(handle[i], grvCTPM.Columns[0]).ToString()))
-                    MessageBox.Show(string.Format("Sách có mã {0} đã trả. Mời chọn sách khác!", grvCTPM.GetRowCellValue(handle[i], grvCTPM.Columns[0]).ToString()), "Thông báo", MessageBoxButtons.OK);
+                    MessageBox.Show(string.Format("Sách có mã {0} đã trả. Mời chọn sách khác!", grvCTPM.GetRowCellValue(handle[i], grvCTPM.Columns[0]).ToString()), "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 else
                 {
                     //nếu sách chưa trả: load ngày mượn
@@ -279,7 +283,9 @@ namespace QuanLyThuVien
                             tienphat = "0";
                         grvCTPM.SetRowCellValue(handle[i], grvCTPM.Columns[4], true);
                         CreateNewRow(masach, tensach, ngaymuon, songaymuon.ToString(),tienphat);
-                        double tienphatkynay = Convert.ToDouble(txtTienPhatKyNay.Text) + Convert.ToDouble(tienphat);
+                        double TienPhatKiNay = Convert.ToDouble(txtTienPhatKyNay.Text);
+                        double TienPhat = Convert.ToDouble(tienphat);
+                        double tienphatkynay = TienPhatKiNay + TienPhat;
                         txtTienPhatKyNay.Text = tienphatkynay.ToString();
                     }
                 }
@@ -319,7 +325,7 @@ namespace QuanLyThuVien
             //kiểm tra trường trống
             if (cbMaDG.Text == "Chọn mã đọc giả" || cbMaPM.Text == "Chọn mã phiếu mượn")
             {
-                MessageBox.Show("Vui lòng chọn mã đọc giả hoặc mã phiếu mượn!", "Thông báo", MessageBoxButtons.OK);
+                MessageBox.Show("Vui lòng chọn mã đọc giả hoặc mã phiếu mượn!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             //lưu phiếu trả vào CSDL
@@ -335,26 +341,27 @@ namespace QuanLyThuVien
                 string tienphat = grvCTTra.GetRowCellValue(grvCTTra.GetRowHandle(i), grvCTTra.Columns[4]).ToString();
                 dt.Rows.Add(masach, songaymuon, tienphat);
             }
-            string ketqua = PhieuTraBLL.Instance.SavePhieuTra(txtMaPT.Text, cbMaPM.Text, cbMaDG.Text, dtNgayTra.Text, txtMaNV.Text, txtTienPhatKyNay.Text, dt);
+            string ketqua = PhieuTraBLL.Instance.SavePhieuTra(txtMaPT.Text, cbMaPM.Text, cbMaDG.Text, dtNgayTra.Value.ToString(), txtMaNV.Text, txtTienPhatKyNay.Text, dt);
             //check lại tình trạng phiếu mượn
             if (ketqua == "Thêm phiếu trả thành công!")
             {
                 flag = 1;
                 PhieuMuonBLL.Instance.SetTinhTrangPhieuMuon(cbMaPM.Text);
-                btnXoa.Text = "Xóa";
             }
-            MessageBox.Show(ketqua, "Thông báo", MessageBoxButtons.OK);
+            MessageBox.Show(ketqua, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             gridCTPhieuMuon.Visible = false;
             gridTra.Visible = true;
             ClearInput();
             ShowPhieuTra();
+            btnXoa.Text = "Xóa";
+
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
             if (flag == 2)
             {
-                if (MessageBox.Show("Bạn có muốn hủy phiếu trả này?", "Thông báo", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                if (MessageBox.Show("Bạn có muốn hủy phiếu trả này?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     gridCTPhieuMuon.Visible = false;
                     gridTra.Visible = true;
@@ -362,7 +369,10 @@ namespace QuanLyThuVien
                     ShowPhieuTra();
                     flag = 1;
                     btnXoa.Text = "Xóa";
-
+                    btnThemsach.Enabled = false;
+                    btnXoasach.Enabled = false;
+                    btnLuu.Enabled = false;
+                    btnXoa.Enabled = false;
                 }
 
             }

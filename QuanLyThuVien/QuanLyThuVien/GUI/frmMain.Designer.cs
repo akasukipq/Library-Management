@@ -57,7 +57,6 @@
             this.calendarControl1 = new DevExpress.XtraEditors.Controls.CalendarControl();
             this.accordionControl1 = new DevExpress.XtraBars.Navigation.AccordionControl();
             this.accordionControlElement2 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.accordionControlElement13 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.aceThongTinCaNhan = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.aceHome = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement1 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -339,18 +338,10 @@
             // accordionControlElement2
             // 
             this.accordionControlElement2.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
-            this.accordionControlElement13,
             this.aceThongTinCaNhan});
-            this.accordionControlElement2.Expanded = true;
             this.accordionControlElement2.ImageOptions.Image = global::QuanLyThuVien.Properties.Resources.logg;
             this.accordionControlElement2.Name = "accordionControlElement2";
             this.accordionControlElement2.Text = "CHÀO MỪNG!";
-            // 
-            // accordionControlElement13
-            // 
-            this.accordionControlElement13.Name = "accordionControlElement13";
-            this.accordionControlElement13.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.accordionControlElement13.Text = "ĐĂNG XUẤT";
             // 
             // aceThongTinCaNhan
             // 
@@ -402,7 +393,6 @@
             this.acegQLDocGia.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.aceQLDocGia,
             this.aceQLLoaiDG});
-            this.acegQLDocGia.Expanded = true;
             this.acegQLDocGia.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("acegQLDocGia.ImageOptions.Image")));
             this.acegQLDocGia.Name = "acegQLDocGia";
             this.acegQLDocGia.Text = "QUẢN LÝ ĐỌC GIẢ";
@@ -426,7 +416,6 @@
             this.accordionControlElement5.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.aceQLMuon,
             this.aceQLTra});
-            this.accordionControlElement5.Expanded = true;
             this.accordionControlElement5.ImageOptions.Image = global::QuanLyThuVien.Properties.Resources.muontra;
             this.accordionControlElement5.Name = "accordionControlElement5";
             this.accordionControlElement5.Text = "QUẢN LÝ MƯỢN - TRẢ";
@@ -606,7 +595,6 @@
         private DevExpress.XtraBars.SkinBarSubItem skinBarSubItem1;
         private System.Windows.Forms.Panel panel2;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement2;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement13;
         private DevExpress.XtraBars.Navigation.AccordionControlElement aceQLTacGia;
         private DevExpress.XtraBars.Navigation.AccordionControlElement aceMuonTheoTL;
         private DevExpress.XtraBars.Navigation.AccordionControlElement aceSachTraTre;

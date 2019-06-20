@@ -45,6 +45,7 @@
             this.txtMaNV = new System.Windows.Forms.TextBox();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lbThongBao = new System.Windows.Forms.Label();
             this.btnHuy = new DevExpress.XtraEditors.SimpleButton();
             this.btnLuu = new DevExpress.XtraEditors.SimpleButton();
             this.label8 = new System.Windows.Forms.Label();
@@ -53,7 +54,6 @@
             this.txtMatKhauMoi = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txtMatKhauCu = new System.Windows.Forms.TextBox();
-            this.lbThongBao = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
@@ -267,6 +267,16 @@
             this.panel2.Size = new System.Drawing.Size(1140, 235);
             this.panel2.TabIndex = 0;
             // 
+            // lbThongBao
+            // 
+            this.lbThongBao.AutoSize = true;
+            this.lbThongBao.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbThongBao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lbThongBao.Location = new System.Drawing.Point(396, 136);
+            this.lbThongBao.Name = "lbThongBao";
+            this.lbThongBao.Size = new System.Drawing.Size(0, 17);
+            this.lbThongBao.TabIndex = 16;
+            // 
             // btnHuy
             // 
             this.btnHuy.Appearance.BackColor = System.Drawing.Color.Firebrick;
@@ -284,7 +294,7 @@
             this.btnHuy.AppearanceHovered.Options.UseBackColor = true;
             this.btnHuy.AppearanceHovered.Options.UseForeColor = true;
             this.btnHuy.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.btnHuy.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.ImageOptions.Image")));
+            this.btnHuy.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnHuy.ImageOptions.Image")));
             this.btnHuy.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.RightCenter;
             this.btnHuy.Location = new System.Drawing.Point(641, 170);
             this.btnHuy.Name = "btnHuy";
@@ -311,7 +321,7 @@
             this.btnLuu.AppearanceHovered.Options.UseForeColor = true;
             this.btnLuu.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.btnLuu.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btnLuu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.ImageOptions.Image")));
+            this.btnLuu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.ImageOptions.Image")));
             this.btnLuu.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.RightCenter;
             this.btnLuu.Location = new System.Drawing.Point(399, 170);
             this.btnLuu.Name = "btnLuu";
@@ -395,16 +405,6 @@
             this.txtMatKhauCu.TabIndex = 3;
             this.txtMatKhauCu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtMatKhauCu.TextChanged += new System.EventHandler(this.txtMatKhauCu_TextChanged);
-            // 
-            // lbThongBao
-            // 
-            this.lbThongBao.AutoSize = true;
-            this.lbThongBao.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbThongBao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lbThongBao.Location = new System.Drawing.Point(396, 136);
-            this.lbThongBao.Name = "lbThongBao";
-            this.lbThongBao.Size = new System.Drawing.Size(0, 17);
-            this.lbThongBao.TabIndex = 16;
             // 
             // ThongTinCaNhan
             // 

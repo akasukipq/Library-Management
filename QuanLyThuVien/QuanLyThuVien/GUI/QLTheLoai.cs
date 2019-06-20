@@ -37,13 +37,9 @@ namespace QuanLyThuVien
             Lock(true);
             btnSua.Enabled = false;
             btnXoa.Enabled = false;
-
         }
 
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
 
-        }
         public void Lock(bool b)
         {
             if (b)
@@ -98,7 +94,8 @@ namespace QuanLyThuVien
             Lock(false);
 
             btnSua.Enabled = false;
-            btnXoa.Enabled = false;
+            btnXoa.Enabled = true;
+            btnXoa.Text = "Hủy";
             txtMaTL.Text = "";
             txtTenTL.Text = "";
             //Lấy mã sách mới nhất
@@ -109,38 +106,56 @@ namespace QuanLyThuVien
             if (flag == 1)
             {
                 string ret = TheLoaiBLL.Instance.SaveTheLoai(txtMaTL.Text, txtTenTL.Text);
-                MessageBox.Show(ret);
+                MessageBox.Show(ret, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 if (ret == "Thêm thành công!")
                     Lock(true);
             }
             else if (flag == 2)
             {
                 string ret = TheLoaiBLL.Instance.UpdateTheLoai(txtMaTL.Text, txtTenTL.Text);
-                MessageBox.Show(ret);
+                MessageBox.Show(ret, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 if (ret == "Sửa thành công!")
                     Lock(true);
             }
             ShowTheLoai();
+            btnXoa.Text = "Xóa";
+
         }
         private void btnSua_Click(object sender, EventArgs e)
         {
             flag = 2;
             Lock(false);
             txtMaTL.ReadOnly = true;
+            btnXoa.Text = "Hủy";
+            btnXoa.Enabled = true;
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Bạn chắc chắn muốn xóa thể loại này?", "Xóa", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (btnXoa.Text == "Hủy")
             {
-                string ret = TheLoaiBLL.Instance.DeleteTheLoai(txtMaTL.Text);
-                MessageBox.Show(ret);
-                ShowTheLoai();
-            }
-        }
-        private void txtMaTL_TextChanged(object sender, EventArgs e)
-        {
+                if (MessageBox.Show("Bạn có muốn huỷ không!", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    btnXoa.Text = "Xoá";
+                    Lock(false);
+                    btnXoa.Enabled = false;
+                    btnLuu.Enabled = false;
+                    btnSua.Enabled = false;
+                }
 
+            }
+            else if (btnXoa.Text == "Xoá")
+            {
+                if (MessageBox.Show("Bạn chắc chắn muốn xóa thể loại này?", "Xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    string ret = TheLoaiBLL.Instance.DeleteTheLoai(txtMaTL.Text);
+                    MessageBox.Show(ret, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ShowTheLoai();
+                }
+                btnXoa.Enabled = false;
+                btnLuu.Enabled = false;
+                btnSua.Enabled = false;
+            }
         }
 
         private void gridTheLoai_Click(object sender, EventArgs e)

@@ -91,7 +91,8 @@ namespace QuanLyThuVien
             flag = 1;
             Lock(false);
             btnSua.Enabled = false;
-            btnXoa.Enabled = false;
+            btnXoa.Enabled = true;
+            btnXoa.Text = "Hủy";
             txtMaTG.Text = "";
             txtTenTG.Text = "";
             //Lấy mã sách mới nhất
@@ -102,33 +103,55 @@ namespace QuanLyThuVien
             if (flag == 1)
             {
                 string ret = TacGiaBLL.Instance.SaveTacGia(txtMaTG.Text, txtTenTG.Text);
-                MessageBox.Show(ret);
+                MessageBox.Show(ret, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 if (ret == "Thêm thành công!")
                     Lock(true);
             }
             else if (flag == 2)
             {
                 string ret = TacGiaBLL.Instance.UpdateTacGia(txtMaTG.Text, txtTenTG.Text);
-                MessageBox.Show(ret);
+                MessageBox.Show(ret, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 if (ret == "Sửa thành công!")
                     Lock(true);
             }
             ShowTacGia();
+            btnXoa.Text = "Xóa";
+
         }
         private void btnSua_Click(object sender, EventArgs e)
         {
             flag = 2;
             Lock(false);
             txtMaTG.ReadOnly = true;
+            btnXoa.Text = "Hủy";
+            btnXoa.Enabled = true;
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Bạn chắc chắn muốn xóa tác giả này?", "Xóa", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (btnXoa.Text == "Hủy")
             {
-                string ret = TacGiaBLL.Instance.DeleteTacGia(txtMaTG.Text);
-                MessageBox.Show(ret);
-                ShowTacGia();
+                if (MessageBox.Show("Bạn có muốn huỷ không!", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    btnXoa.Text = "Xoá";
+                    Lock(false);
+                    btnXoa.Enabled = false;
+                    btnLuu.Enabled = false;
+                    btnSua.Enabled = false;
+                }
+
+            }
+            else if (btnXoa.Text == "Xoá")
+            {
+                if (MessageBox.Show("Bạn chắc chắn muốn xóa tác giả này?", "Xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    string ret = TacGiaBLL.Instance.DeleteTacGia(txtMaTG.Text);
+                    MessageBox.Show(ret, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ShowTacGia();
+                }
+                btnXoa.Enabled = false;
+                btnLuu.Enabled = false;
+                btnSua.Enabled = false;
             }
         }
 

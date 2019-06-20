@@ -43,15 +43,17 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtTenLDG = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.gridLDG = new DevExpress.XtraGrid.GridControl();
             this.grvLDG = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.MaLDG = new DevExpress.XtraGrid.Columns.GridColumn();
             this.TenLDG = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grChucNang)).BeginInit();
+            this.grChucNang.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
+            this.groupControl1.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridLDG)).BeginInit();
@@ -285,21 +287,6 @@
             this.panel1.Size = new System.Drawing.Size(1144, 67);
             this.panel1.TabIndex = 10;
             // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label1.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label1.Image = global::QuanLyThuVien.Properties.Resources.quyensach2;
-            this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label1.Location = new System.Drawing.Point(14, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(370, 41);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "QUẢN LÝ LOẠI ĐỌC GIẢ";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
             // gridLDG
             // 
             this.gridLDG.AllowRestoreSelectionAndFocusedRow = DevExpress.Utils.DefaultBoolean.True;
@@ -338,6 +325,21 @@
             this.TenLDG.Visible = true;
             this.TenLDG.VisibleIndex = 1;
             // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label1.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.DarkGreen;
+            this.label1.Image = global::QuanLyThuVien.Properties.Resources.docgia1;
+            this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label1.Location = new System.Drawing.Point(22, 5);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(358, 57);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "QUẢN LÝ LOẠI ĐỌC GIẢ";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // QLLoaiDG
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -349,8 +351,10 @@
             this.Size = new System.Drawing.Size(1144, 696);
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grChucNang)).EndInit();
+            this.grChucNang.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
+            this.groupControl1.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -376,10 +380,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtTenLDG;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
         private DevExpress.XtraGrid.GridControl gridLDG;
         private DevExpress.XtraGrid.Views.Grid.GridView grvLDG;
         private DevExpress.XtraGrid.Columns.GridColumn MaLDG;
         private DevExpress.XtraGrid.Columns.GridColumn TenLDG;
+        private System.Windows.Forms.Label label1;
     }
 }

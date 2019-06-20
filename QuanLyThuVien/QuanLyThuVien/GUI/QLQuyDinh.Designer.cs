@@ -204,7 +204,6 @@
             this.label8.TabIndex = 17;
             this.label8.Text = "Tiền phạt một ngày:";
             this.label8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // txtTienPhatMotNgay
             // 
@@ -217,7 +216,6 @@
             this.txtTienPhatMotNgay.Size = new System.Drawing.Size(163, 16);
             this.txtTienPhatMotNgay.TabIndex = 16;
             this.txtTienPhatMotNgay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtTienPhatMotNgay.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label7
             // 
@@ -233,6 +231,7 @@
             // 
             // txtThoiHanThe
             // 
+            this.txtThoiHanThe.BackColor = System.Drawing.Color.White;
             this.txtThoiHanThe.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtThoiHanThe.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtThoiHanThe.ForeColor = System.Drawing.Color.Black;

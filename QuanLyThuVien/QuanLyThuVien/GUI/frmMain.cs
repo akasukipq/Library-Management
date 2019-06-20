@@ -165,6 +165,13 @@ namespace QuanLyThuVien
             panelControl1.Dock = DockStyle.Fill;
             panelControl1.BringToFront();
             tbStatus.Visible = true;
+            UpdateTilteBar();
+
+
+        }
+
+        private void fluentDesignFormControl1_Click(object sender, EventArgs e)
+        {
 
         }
 

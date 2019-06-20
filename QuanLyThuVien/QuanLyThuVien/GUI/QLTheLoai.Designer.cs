@@ -77,7 +77,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label1.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.label1.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.label1.Image = global::QuanLyThuVien.Properties.Resources.quyensach2;
             this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label1.Location = new System.Drawing.Point(14, 12);
@@ -332,6 +332,7 @@
             this.TenTL});
             this.grvTheLoai.GridControl = this.gridTheLoai;
             this.grvTheLoai.Name = "grvTheLoai";
+            this.grvTheLoai.OptionsBehavior.Editable = false;
             this.grvTheLoai.OptionsView.ShowGroupPanel = false;
             // 
             // MaTL

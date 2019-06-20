@@ -231,6 +231,7 @@
             // 
             // dtNgayTra
             // 
+            this.dtNgayTra.CustomFormat = "dd/MM/yyyy";
             this.dtNgayTra.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtNgayTra.Location = new System.Drawing.Point(449, 33);
             this.dtNgayTra.Name = "dtNgayTra";
@@ -369,7 +370,9 @@
             this.btnXoasach.Appearance.Options.UseForeColor = true;
             this.btnXoasach.Appearance.Options.UseImage = true;
             this.btnXoasach.Appearance.Options.UseTextOptions = true;
-            this.btnXoasach.AppearanceHovered.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnXoasach.AppearanceDisabled.BackColor = System.Drawing.Color.Silver;
+            this.btnXoasach.AppearanceDisabled.Options.UseBackColor = true;
+            this.btnXoasach.AppearanceHovered.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnXoasach.AppearanceHovered.ForeColor = System.Drawing.Color.White;
             this.btnXoasach.AppearanceHovered.Options.UseBackColor = true;
             this.btnXoasach.AppearanceHovered.Options.UseForeColor = true;
@@ -395,7 +398,9 @@
             this.btnThemsach.Appearance.Options.UseForeColor = true;
             this.btnThemsach.Appearance.Options.UseImage = true;
             this.btnThemsach.Appearance.Options.UseTextOptions = true;
-            this.btnThemsach.AppearanceHovered.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnThemsach.AppearanceDisabled.BackColor = System.Drawing.Color.Silver;
+            this.btnThemsach.AppearanceDisabled.Options.UseBackColor = true;
+            this.btnThemsach.AppearanceHovered.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnThemsach.AppearanceHovered.ForeColor = System.Drawing.Color.White;
             this.btnThemsach.AppearanceHovered.Options.UseBackColor = true;
             this.btnThemsach.AppearanceHovered.Options.UseForeColor = true;
@@ -481,6 +486,7 @@
             this.txtTienPhatKyNay.Name = "txtTienPhatKyNay";
             this.txtTienPhatKyNay.Size = new System.Drawing.Size(151, 16);
             this.txtTienPhatKyNay.TabIndex = 29;
+            this.txtTienPhatKyNay.Text = "0";
             this.txtTienPhatKyNay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // cbMaPM
@@ -528,7 +534,9 @@
             this.btnXoa.Appearance.Options.UseForeColor = true;
             this.btnXoa.Appearance.Options.UseImage = true;
             this.btnXoa.Appearance.Options.UseTextOptions = true;
-            this.btnXoa.AppearanceHovered.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnXoa.AppearanceDisabled.BackColor = System.Drawing.Color.Silver;
+            this.btnXoa.AppearanceDisabled.Options.UseBackColor = true;
+            this.btnXoa.AppearanceHovered.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnXoa.AppearanceHovered.ForeColor = System.Drawing.Color.White;
             this.btnXoa.AppearanceHovered.Options.UseBackColor = true;
             this.btnXoa.AppearanceHovered.Options.UseForeColor = true;
@@ -554,7 +562,9 @@
             this.btnLuu.Appearance.Options.UseForeColor = true;
             this.btnLuu.Appearance.Options.UseImage = true;
             this.btnLuu.Appearance.Options.UseTextOptions = true;
-            this.btnLuu.AppearanceHovered.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnLuu.AppearanceDisabled.BackColor = System.Drawing.Color.Silver;
+            this.btnLuu.AppearanceDisabled.Options.UseBackColor = true;
+            this.btnLuu.AppearanceHovered.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnLuu.AppearanceHovered.ForeColor = System.Drawing.Color.White;
             this.btnLuu.AppearanceHovered.Options.UseBackColor = true;
             this.btnLuu.AppearanceHovered.Options.UseForeColor = true;
@@ -580,7 +590,7 @@
             this.btnThem.Appearance.Options.UseForeColor = true;
             this.btnThem.Appearance.Options.UseImage = true;
             this.btnThem.Appearance.Options.UseTextOptions = true;
-            this.btnThem.AppearanceHovered.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnThem.AppearanceHovered.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnThem.AppearanceHovered.ForeColor = System.Drawing.Color.White;
             this.btnThem.AppearanceHovered.Options.UseBackColor = true;
             this.btnThem.AppearanceHovered.Options.UseForeColor = true;
@@ -606,7 +616,7 @@
             this.labelControl1.Appearance.Options.UseImageAlign = true;
             this.labelControl1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.labelControl1.ImageAlignToText = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.labelControl1.Location = new System.Drawing.Point(19, 21);
+            this.labelControl1.Location = new System.Drawing.Point(19, 14);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(236, 32);
             this.labelControl1.TabIndex = 5;

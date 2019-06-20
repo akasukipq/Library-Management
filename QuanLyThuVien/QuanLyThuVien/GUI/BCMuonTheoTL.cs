@@ -59,13 +59,17 @@ namespace QuanLyThuVien.GUI
             else
             {
                 //tạo mã báo cáo với tháng = this
-                txtMaBC.Text = Utilities.Instance.NextID("BC", BaoCaoTheoTheLoaiBLL.Instance.GetLastMaBC());
+                if(BaoCaoTheoTheLoaiBLL.Instance.GetLastMaBC() != null)
+                    txtMaBC.Text = Utilities.Instance.NextID("BC", BaoCaoTheoTheLoaiBLL.Instance.GetLastMaBC());
+                else
+                    txtMaBC.Text = Utilities.Instance.NextID("BC", "BC000");
+
 
                 string message = BaoCaoTheoTheLoaiBLL.Instance.SaveBaoCaoTheoTL(txtMaBC.Text, cbThang.Text, cbNam.Text);
                
                 if (message!= "OK")
                 {
-                    MessageBox.Show(message);
+                    MessageBox.Show(message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
                 {

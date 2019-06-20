@@ -19,7 +19,7 @@ namespace QuanLyThuVien
     public partial class QLSach : DevExpress.XtraEditors.XtraUserControl
     {
         private static QLSach _instance;
-        
+
         public static QLSach Instance
         {
             get
@@ -29,8 +29,8 @@ namespace QuanLyThuVien
                 return _instance;
             }
         }
-
         const string PATH = @"bookcover\example.png";
+
         int flag = 0;
         public QLSach()
         {
@@ -158,6 +158,7 @@ namespace QuanLyThuVien
         private void gridSach_Click(object sender, EventArgs e)
         {
             btnSua.Enabled = true;
+            btnXoa.Text = "Xóa";
             btnXoa.Enabled = true;
             string ret = grvSach.GetRowCellValue(grvSach.FocusedRowHandle, grvSach.Columns[8]).ToString();
             //xử lí cho tình trạng sách
@@ -184,9 +185,10 @@ namespace QuanLyThuVien
         {
             flag = 1;
             Lock(false);
+            btnXoa.Text = "Hủy";
+            btnXoa.Enabled = true;
             dtNgayNhap.Value = DateTime.Now;
             btnSua.Enabled = false;
-            btnXoa.Enabled = false;
             txtMaSach.Text = "";
             txtTenSach.Text = "";
             txtNamXB.Text = "";
@@ -221,10 +223,9 @@ namespace QuanLyThuVien
                 }
                 else // không có ảnh bìa
                     path = "";
-
                 string ret = SachBLL.Instance.SaveBook(txtMaSach.Text, txtTenSach.Text, cbTheLoai.SelectedValue.ToString(), cbTacGia.SelectedValue.ToString(), txtNamXB.Text
                     , txtNXB.Text, dtNgayNhap.Value, txtTriGia.Text, TinhTrang, path);
-                MessageBox.Show(ret);
+                MessageBox.Show(ret, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 if (ret == "Thêm thành công!")
                     Lock(true);
             }
@@ -235,36 +236,66 @@ namespace QuanLyThuVien
                     TinhTrang = "False";
                 else
                     TinhTrang = "True";
-
+                //lưu file ảnh bìa 
+                string path;
+                if (ptbAnhBia.Image != null)
+                {
+                    path = @"bookcover\" + txtMaSach.Text;
+                    ptbAnhBia.Image.Save(path, ImageFormat.Png);
+                }
+                else // không có ảnh bìa
+                    path = "";
                 string ret = SachBLL.Instance.UpdateBook(txtMaSach.Text, txtTenSach.Text, cbTheLoai.SelectedValue.ToString(), cbTacGia.SelectedValue.ToString(), txtNamXB.Text
-                    , txtNXB.Text, dtNgayNhap.Text, txtTriGia.Text, TinhTrang, "");
-                MessageBox.Show(ret);
+                    , txtNXB.Text, dtNgayNhap.Value.ToString(), txtTriGia.Text, TinhTrang, path);
+                MessageBox.Show(ret, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 if (ret == "Sửa thành công!")
                     Lock(true);
             }
             ShowBooks();
+            btnXoa.Text = "Xóa";
+
         }
 
         private void btnSua_Click(object sender, EventArgs e)
         {
             flag = 2;
             Lock(false);
+            btnXoa.Text = "Hủy";
+            btnXoa.Enabled = true;
             txtMaSach.ReadOnly = true;
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            if (rdbBorrowed.Checked == true)
-                MessageBox.Show("Sách đang được mượn. Không thể xóa!", "Thông báo", MessageBoxButtons.YesNo);
-            else
+            if (btnXoa.Text == "Hủy")
             {
-                if (MessageBox.Show("Bạn chắc chắn muốn xóa quyển sách này?", "Xóa", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                if (MessageBox.Show("Bạn có muốn huỷ không!", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    string ret = SachBLL.Instance.DeleteBook(txtMaSach.Text);
-                    MessageBox.Show(ret);
-                    ShowBooks();
+                    Lock(false);
+                    btnXoa.Enabled = false;
+                    btnLuu.Enabled = false;
+                    btnSua.Enabled = false;
                 }
+
             }
+            else if (btnXoa.Text == "Xóa")
+            {
+                if (rdbBorrowed.Checked == true)
+                    MessageBox.Show("Sách đang được mượn. Không thể xóa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                else
+                {
+                    if (MessageBox.Show("Bạn chắc chắn muốn xóa quyển sách này?", "Xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        string ret = SachBLL.Instance.DeleteBook(txtMaSach.Text);
+                        MessageBox.Show(ret, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        ShowBooks();
+                    }
+                }
+                btnXoa.Enabled = false;
+                btnLuu.Enabled = false;
+                btnSua.Enabled = false;
+            }
+         
         }
 
         private void btnImage_Click(object sender, EventArgs e)

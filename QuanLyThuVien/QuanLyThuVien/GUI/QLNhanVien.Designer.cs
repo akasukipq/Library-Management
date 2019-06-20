@@ -38,6 +38,7 @@
             this.btnSua = new DevExpress.XtraEditors.SimpleButton();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.cbChucVu = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtMatKhau = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -56,7 +57,6 @@
             this.ChucVu = new DevExpress.XtraGrid.Columns.GridColumn();
             this.TaiKhoan = new DevExpress.XtraGrid.Columns.GridColumn();
             this.MatKhau = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.cbChucVu = new System.Windows.Forms.ComboBox();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grChucNang)).BeginInit();
             this.grChucNang.SuspendLayout();
@@ -244,6 +244,14 @@
             this.panel6.Size = new System.Drawing.Size(689, 151);
             this.panel6.TabIndex = 0;
             // 
+            // cbChucVu
+            // 
+            this.cbChucVu.FormattingEnabled = true;
+            this.cbChucVu.Location = new System.Drawing.Point(133, 107);
+            this.cbChucVu.Name = "cbChucVu";
+            this.cbChucVu.Size = new System.Drawing.Size(163, 21);
+            this.cbChucVu.TabIndex = 13;
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -399,6 +407,7 @@
             this.MatKhau});
             this.grvNhanVien.GridControl = this.gridNhanVien;
             this.grvNhanVien.Name = "grvNhanVien";
+            this.grvNhanVien.OptionsBehavior.Editable = false;
             this.grvNhanVien.OptionsView.ShowGroupPanel = false;
             // 
             // MaNV
@@ -440,14 +449,6 @@
             this.MatKhau.Visible = true;
             this.MatKhau.VisibleIndex = 4;
             this.MatKhau.Width = 301;
-            // 
-            // cbChucVu
-            // 
-            this.cbChucVu.FormattingEnabled = true;
-            this.cbChucVu.Location = new System.Drawing.Point(133, 107);
-            this.cbChucVu.Name = "cbChucVu";
-            this.cbChucVu.Size = new System.Drawing.Size(163, 21);
-            this.cbChucVu.TabIndex = 13;
             // 
             // QLNhanVien
             // 

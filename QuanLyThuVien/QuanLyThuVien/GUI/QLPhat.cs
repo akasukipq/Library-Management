@@ -122,7 +122,7 @@ namespace QuanLyThuVien.GUI
         private void btnLuu_Click(object sender, EventArgs e)
         {
             string ret = PhieuPhatBLL.Instance.SavePhieuPhat(txtMaPP.Text, cbMaDG.Text, txtTienThu.Text, txtTienConLai.Text, txtMaNV.Text);
-            MessageBox.Show(ret, "Thông báo", MessageBoxButtons.OK);
+            MessageBox.Show(ret, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             ShowPhieuPhat();
             btnLuu.Enabled = false;
             btnXoa.Enabled = false;
@@ -159,7 +159,7 @@ namespace QuanLyThuVien.GUI
                 double TongNo = DocGiaBLL.Instance.LoadTongNo(cbMaDG.Text);
                 if (TongNo < 0)
                 {
-                    MessageBox.Show("Có lỗi xảy ra vui lòng thử lại!");
+                    MessageBox.Show("Có lỗi xảy ra vui lòng thử lại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
@@ -172,25 +172,28 @@ namespace QuanLyThuVien.GUI
         {
             if (flag == 1)
             {
-                if (MessageBox.Show("Bạn có muốn hủy phiếu phạt này?", "Thông báo", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                if (MessageBox.Show("Bạn có muốn hủy phiếu phạt này?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {            
                     ShowPhieuPhat();
                     flag = 0;
                     btnXoa.Text = "Xóa";
-                    txtMaPP.Text = "";
-                    cbMaDG.Text = "Chọn mã đọc giả";
-                    txtTenDG.Text = "";
-                    txtTienThu.Text = "";
-                    txtTienConLai.Text = "";
+                    btnLuu.Enabled = false;
+                    btnXoa.Enabled = false;
+                    txtMaPP.ReadOnly = true;
+                    txtMaNV.ReadOnly = true;
+                    cbMaDG.Enabled = false;
+                    txtTenDG.ReadOnly = true;
+                    txtTienThu.ReadOnly = true;
+                    txtTienConLai.ReadOnly = true;
                 }
 
             }
             else
             {
-                if (MessageBox.Show("Bạn có muốn xóa phiếu phạt này?", "Thông báo", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                if (MessageBox.Show("Bạn có muốn xóa phiếu phạt này?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     string ret = PhieuPhatBLL.Instance.DeletePhieuPhat(txtMaPP.Text, cbMaDG.Text, txtTienThu.Text);
-                    MessageBox.Show(ret, "Thông báo", MessageBoxButtons.OK);
+                    MessageBox.Show(ret, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     ShowPhieuPhat();
                     btnLuu.Enabled = false;
                     btnXoa.Enabled = false;
