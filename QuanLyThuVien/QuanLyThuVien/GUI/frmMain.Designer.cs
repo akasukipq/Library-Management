@@ -307,7 +307,7 @@
             this.calendarControl1.EditValue = new System.DateTime(2019, 6, 18, 0, 0, 0, 0);
             this.calendarControl1.Location = new System.Drawing.Point(7, 39);
             this.calendarControl1.Name = "calendarControl1";
-            this.calendarControl1.Size = new System.Drawing.Size(244, 219);
+            this.calendarControl1.Size = new System.Drawing.Size(232, 219);
             this.calendarControl1.TabIndex = 2;
             // 
             // accordionControl1
@@ -515,7 +515,6 @@
             this.fluentDesignFormControl1.Size = new System.Drawing.Size(1305, 30);
             this.fluentDesignFormControl1.TabIndex = 2;
             this.fluentDesignFormControl1.TabStop = false;
-            this.fluentDesignFormControl1.Click += new System.EventHandler(this.fluentDesignFormControl1_Click);
             // 
             // skinBarSubItem1
             // 

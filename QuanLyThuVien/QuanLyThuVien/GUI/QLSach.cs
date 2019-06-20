@@ -12,12 +12,14 @@ using System.Data.SqlClient;
 using QuanLyThuVien.BLL;
 using QuanLyThuVien.DTO;
 using DevExpress;
+using System.Drawing.Imaging;
+
 namespace QuanLyThuVien
 {
     public partial class QLSach : DevExpress.XtraEditors.XtraUserControl
     {
         private static QLSach _instance;
-
+        
         public static QLSach Instance
         {
             get
@@ -27,6 +29,8 @@ namespace QuanLyThuVien
                 return _instance;
             }
         }
+
+        const string PATH = @"bookcover\example.png";
         int flag = 0;
         public QLSach()
         {
@@ -47,6 +51,7 @@ namespace QuanLyThuVien
         {
             if(b)
             {
+                btnImage.Enabled = false;
                 btnLuu.Enabled = false;
                 txtMaSach.ReadOnly = true;
                 txtTenSach.ReadOnly = true;
@@ -61,6 +66,7 @@ namespace QuanLyThuVien
             }
             else
             {
+                btnImage.Enabled = true;
                 btnLuu.Enabled = true;
                 txtMaSach.ReadOnly = false;
                 txtTenSach.ReadOnly = false;
@@ -166,6 +172,11 @@ namespace QuanLyThuVien
             //Xử lý tác giả
             string tacgia = grvSach.GetRowCellValue(grvSach.FocusedRowHandle, grvSach.Columns[3]).ToString();
             cbTacGia.SelectedValue = tacgia;
+            //xử lý ảnh bìa
+            string path = grvSach.GetRowCellValue(grvSach.FocusedRowHandle, grvSach.Columns[9]).ToString();
+            if (path == "Không có ảnh")
+                path = PATH;
+            ptbAnhBia.Image = new Bitmap(path);
             Lock(true);
         }
 
@@ -201,9 +212,18 @@ namespace QuanLyThuVien
                     TinhTrang = "False";
                 else
                     TinhTrang = "True";
+                //lưu file ảnh bìa 
+                string path;
+                if (ptbAnhBia.Image != null)
+                {
+                    path = @"bookcover\" + txtMaSach.Text;
+                    ptbAnhBia.Image.Save(path, ImageFormat.Png);
+                }
+                else // không có ảnh bìa
+                    path = "";
 
                 string ret = SachBLL.Instance.SaveBook(txtMaSach.Text, txtTenSach.Text, cbTheLoai.SelectedValue.ToString(), cbTacGia.SelectedValue.ToString(), txtNamXB.Text
-                    , txtNXB.Text, dtNgayNhap.Value, txtTriGia.Text, TinhTrang, "");
+                    , txtNXB.Text, dtNgayNhap.Value, txtTriGia.Text, TinhTrang, path);
                 MessageBox.Show(ret);
                 if (ret == "Thêm thành công!")
                     Lock(true);
@@ -247,5 +267,17 @@ namespace QuanLyThuVien
             }
         }
 
+        private void btnImage_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog img = new OpenFileDialog();
+
+            img.Title = "Vui lòng chọn ảnh bìa sách";
+            img.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp";
+
+            if (img.ShowDialog() == DialogResult.OK)
+            {
+                ptbAnhBia.Image = new Bitmap(img.FileName);
+            }
+        }
     }
 }

@@ -23,6 +23,8 @@ namespace QuanLyThuVien.LOGIN
             if (ret == "Đăng nhập thành công!")
             {
                 lbThongBao.Text = "";
+                txtTaiKhoan.Clear();
+                txtMatKhau.Clear();
                 //truyền tài khoản vào NhanVienBLL
                 NhanVienBLL.Instance.SaveTaiKhoan(txtTaiKhoan.Text);
 
@@ -41,8 +43,7 @@ namespace QuanLyThuVien.LOGIN
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            if(MessageBox.Show("Bạn có muốn thoát?", "Thoát",MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                this.Close();
+            this.Close();
         }
     }
 }

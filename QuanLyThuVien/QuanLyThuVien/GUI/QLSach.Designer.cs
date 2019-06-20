@@ -73,6 +73,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.ptbAnhBia = new System.Windows.Forms.PictureBox();
+            this.btnImage = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridSach)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grvSach)).BeginInit();
@@ -626,6 +627,7 @@
             // 
             // panel7
             // 
+            this.panel7.Controls.Add(this.btnImage);
             this.panel7.Controls.Add(this.ptbAnhBia);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel7.Location = new System.Drawing.Point(2, 27);
@@ -635,11 +637,23 @@
             // 
             // ptbAnhBia
             // 
+            this.ptbAnhBia.Image = ((System.Drawing.Image)(resources.GetObject("ptbAnhBia.Image")));
             this.ptbAnhBia.Location = new System.Drawing.Point(17, 29);
             this.ptbAnhBia.Name = "ptbAnhBia";
             this.ptbAnhBia.Size = new System.Drawing.Size(136, 167);
+            this.ptbAnhBia.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ptbAnhBia.TabIndex = 21;
             this.ptbAnhBia.TabStop = false;
+            // 
+            // btnImage
+            // 
+            this.btnImage.Location = new System.Drawing.Point(78, 202);
+            this.btnImage.Name = "btnImage";
+            this.btnImage.Size = new System.Drawing.Size(75, 23);
+            this.btnImage.TabIndex = 22;
+            this.btnImage.Text = "Chọn ảnh";
+            this.btnImage.UseVisualStyleBackColor = true;
+            this.btnImage.Click += new System.EventHandler(this.btnImage_Click);
             // 
             // QLSach
             // 
@@ -715,5 +729,6 @@
         public System.Windows.Forms.ComboBox cbTacGia;
         private System.Windows.Forms.DateTimePicker dtNgayNhap;
         public System.Windows.Forms.TextBox txtNamXB;
+        private System.Windows.Forms.Button btnImage;
     }
 }

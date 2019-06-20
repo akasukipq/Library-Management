@@ -91,7 +91,8 @@ namespace QuanLyThuVien
 
         private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
         {
-
+            if (MessageBox.Show("Bạn có muốn thoát?", "Thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+                e.Cancel = true;
         }
 
         private void aceMuonTheoTL_Click(object sender, EventArgs e)
@@ -164,11 +165,6 @@ namespace QuanLyThuVien
             panelControl1.Dock = DockStyle.Fill;
             panelControl1.BringToFront();
             tbStatus.Visible = true;
-
-        }
-
-        private void fluentDesignFormControl1_Click(object sender, EventArgs e)
-        {
 
         }
 
