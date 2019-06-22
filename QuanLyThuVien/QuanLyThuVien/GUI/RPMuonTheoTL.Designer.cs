@@ -35,6 +35,8 @@
             DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery2 = new DevExpress.DataAccess.Sql.StoredProcQuery();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter2 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.XtraReports.UI.XRSummary xrSummary1 = new DevExpress.XtraReports.UI.XRSummary();
+            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery3 = new DevExpress.DataAccess.Sql.StoredProcQuery();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter3 = new DevExpress.DataAccess.Sql.QueryParameter();
             this.Detail = new DevExpress.XtraReports.UI.DetailBand();
             this.xrTable2 = new DevExpress.XtraReports.UI.XRTable();
             this.xrTableRow2 = new DevExpress.XtraReports.UI.XRTableRow();
@@ -75,6 +77,7 @@
             this.xrTableCell9 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell10 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell11 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.sqlDataSource3 = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable3)).BeginInit();
@@ -466,7 +469,7 @@
             // 
             // sqlDataSource2
             // 
-            this.sqlDataSource2.ConnectionName = "localhost_QLTV_Connection";
+            this.sqlDataSource2.ConnectionName = "QLTV_Connection";
             this.sqlDataSource2.Name = "sqlDataSource2";
             storedProcQuery2.Name = "USP_LOADCTBAOCAOTHEOTL";
             queryParameter2.Name = "@ma";
@@ -559,6 +562,20 @@
             this.xrTableCell11.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             this.xrTableCell11.Weight = 0.72103698605701549D;
             // 
+            // sqlDataSource3
+            // 
+            this.sqlDataSource3.ConnectionName = "QLTV_Connection";
+            this.sqlDataSource3.Name = "sqlDataSource3";
+            storedProcQuery3.Name = "USP_LOADCTBAOCAOTHEOTL";
+            queryParameter3.Name = "@ma";
+            queryParameter3.Type = typeof(string);
+            queryParameter3.ValueInfo = "ma";
+            storedProcQuery3.Parameters.Add(queryParameter3);
+            storedProcQuery3.StoredProcName = "USP_LOADCTBAOCAOTHEOTL";
+            this.sqlDataSource3.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
+            storedProcQuery3});
+            this.sqlDataSource3.ResultSchemaSerializable = resources.GetString("sqlDataSource3.ResultSchemaSerializable");
+            // 
             // RPMuonTheoTL
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -570,7 +587,8 @@
             this.ReportFooter});
             this.ComponentStorage.AddRange(new System.ComponentModel.IComponent[] {
             this.sqlDataSource1,
-            this.sqlDataSource2});
+            this.sqlDataSource2,
+            this.sqlDataSource3});
             this.DataMember = "USP_LOADCTBAOCAOTHEOTL";
             this.DataSource = this.sqlDataSource2;
             this.Margins = new System.Drawing.Printing.Margins(70, 71, 70, 70);
@@ -635,5 +653,6 @@
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell9;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell10;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell11;
+        private DevExpress.DataAccess.Sql.SqlDataSource sqlDataSource3;
     }
 }

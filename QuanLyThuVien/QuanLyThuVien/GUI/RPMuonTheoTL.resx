@@ -129,4 +129,10 @@
   <data name="sqlDataSource2.ResultSchemaSerializable" xml:space="preserve">
     <value>PERhdGFTZXQgTmFtZT0ic3FsRGF0YVNvdXJjZTIiPjxWaWV3IE5hbWU9IlVTUF9MT0FEQ1RCQU9DQU9USEVPVEwiPjxGaWVsZCBOYW1lPSJNw6MgdGjhu4MgbG/huqFpIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlTDqm4gdGjhu4MgbG/huqFpIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlPhu5EgbMaw4bujdCBtxrDhu6NuIiBUeXBlPSJJbnQzMiIgLz48RmllbGQgTmFtZT0iVOG7iSBs4buHIiBUeXBlPSJEb3VibGUiIC8+PC9WaWV3PjwvRGF0YVNldD4=</value>
   </data>
+  <metadata name="sqlDataSource3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 95</value>
+  </metadata>
+  <data name="sqlDataSource3.ResultSchemaSerializable" xml:space="preserve">
+    <value>PERhdGFTZXQgTmFtZT0ic3FsRGF0YVNvdXJjZTMiPjxWaWV3IE5hbWU9IlVTUF9MT0FEQ1RCQU9DQU9USEVPVEwiPjxGaWVsZCBOYW1lPSJNw6MgdGjhu4MgbG/huqFpIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlTDqm4gdGjhu4MgbG/huqFpIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlPhu5EgbMaw4bujdCBtxrDhu6NuIiBUeXBlPSJJbnQzMiIgLz48RmllbGQgTmFtZT0iVOG7iSBs4buHIiBUeXBlPSJEb3VibGUiIC8+PC9WaWV3PjwvRGF0YVNldD4=</value>
+  </data>
 </root>

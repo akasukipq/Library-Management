@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using QuanLyThuVien.BLL;
+using QuanLyThuVien.DTO;
 using DevExpress.LookAndFeel;
 
 namespace QuanLyThuVien
@@ -115,11 +116,19 @@ namespace QuanLyThuVien
 
         private void aceQLNhanVien_Click(object sender, EventArgs e)
         {
-            QLNhanVien qlNhanVien = new QLNhanVien();
-            containerMain.Controls.Add(qlNhanVien);
-            tbStatus.Visible = false;
-            qlNhanVien.Dock = DockStyle.Fill;
-            qlNhanVien.BringToFront();
+            NhanVienDTO nv = NhanVienBLL.Instance.ShowCurrentNV();
+            if(nv.ChucVu == "Quản lý")
+            {
+                QLNhanVien qlNhanVien = new QLNhanVien();
+                containerMain.Controls.Add(qlNhanVien);
+                tbStatus.Visible = false;
+                qlNhanVien.Dock = DockStyle.Fill;
+                qlNhanVien.BringToFront();
+            }else
+            {
+                MessageBox.Show("Khu vực này thuộc quyền hạn của người quản lý!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
         }
 
         private void aceQuyDinh_Click(object sender, EventArgs e)
