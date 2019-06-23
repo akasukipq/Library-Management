@@ -29,7 +29,7 @@ namespace QuanLyThuVien.DAL
                 }
             }
 
-            string connection = @"Data Source=DESKTOP-MN9IP2M\SQLEXPRESS;Initial Catalog=QLTV;Integrated Security=True";
+            string connection = @"Data Source=LENOVO\SQLEXPRESS;Initial Catalog=QLTV;Integrated Security=True";
             SqlConnection sqlconnect = null;
 
             private DatabaseAcess() { }

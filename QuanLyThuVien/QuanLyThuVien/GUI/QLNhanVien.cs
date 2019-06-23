@@ -168,12 +168,12 @@ namespace QuanLyThuVien.GUI
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            if (btnXoa.Text == "Huỷ")
+            if (btnXoa.Text == "Hủy")
             {
                 if (MessageBox.Show("Bạn có muốn huỷ không!", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     btnXoa.Text = "Xoá";
-                    Lock(false);
+                    Lock(true);
                     btnXoa.Enabled = false;
                     btnLuu.Enabled = false;
                     btnSua.Enabled = false;

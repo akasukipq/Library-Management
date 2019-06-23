@@ -56,27 +56,27 @@
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.calendarControl1 = new DevExpress.XtraEditors.Controls.CalendarControl();
             this.accordionControl1 = new DevExpress.XtraBars.Navigation.AccordionControl();
-            this.accordionControlElement2 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.acegChaoMung = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.aceThongTinCaNhan = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.aceHome = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.accordionControlElement1 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.acegQLSach = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.aceQLSach = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.aceQLTheLoai = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.aceQLTacGia = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.acegQLDocGia = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.aceQLDocGia = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.aceQLLoaiDG = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.accordionControlElement5 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.acegQLMuonTra = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.aceQLMuon = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.aceQLTra = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.aceQLPhatTien = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.aceQLNhanVien = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.accordionControlElement9 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.acegBaoCao = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.aceMuonTheoTL = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.aceSachTraTre = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.aceHeThong = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.aceQuyDinh = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.accordionControlElement4 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.aceHelp = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
             this.skinBarSubItem1 = new DevExpress.XtraBars.SkinBarSubItem();
             this.accordionControlElement11 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -316,14 +316,14 @@
             this.accordionControl1.Appearance.AccordionControl.Options.UseForeColor = true;
             this.accordionControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.accordionControl1.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
-            this.accordionControlElement2,
+            this.acegChaoMung,
             this.aceHome,
-            this.accordionControlElement1,
+            this.acegQLSach,
             this.acegQLDocGia,
-            this.accordionControlElement5,
+            this.acegQLMuonTra,
             this.aceQLPhatTien,
             this.aceQLNhanVien,
-            this.accordionControlElement9,
+            this.acegBaoCao,
             this.aceHeThong});
             this.accordionControl1.Location = new System.Drawing.Point(0, 30);
             this.accordionControl1.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Style3D;
@@ -335,13 +335,13 @@
             this.accordionControl1.TabIndex = 1;
             this.accordionControl1.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
             // 
-            // accordionControlElement2
+            // acegChaoMung
             // 
-            this.accordionControlElement2.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
+            this.acegChaoMung.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.aceThongTinCaNhan});
-            this.accordionControlElement2.ImageOptions.Image = global::QuanLyThuVien.Properties.Resources.logg;
-            this.accordionControlElement2.Name = "accordionControlElement2";
-            this.accordionControlElement2.Text = "CHÀO MỪNG!";
+            this.acegChaoMung.ImageOptions.Image = global::QuanLyThuVien.Properties.Resources.logg;
+            this.acegChaoMung.Name = "acegChaoMung";
+            this.acegChaoMung.Text = "CHÀO MỪNG!";
             // 
             // aceThongTinCaNhan
             // 
@@ -357,15 +357,16 @@
             this.aceHome.Text = "TRANG CHỦ";
             this.aceHome.Click += new System.EventHandler(this.aceHome_Click);
             // 
-            // accordionControlElement1
+            // acegQLSach
             // 
-            this.accordionControlElement1.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
+            this.acegQLSach.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.aceQLSach,
             this.aceQLTheLoai,
             this.aceQLTacGia});
-            this.accordionControlElement1.ImageOptions.Image = global::QuanLyThuVien.Properties.Resources.book;
-            this.accordionControlElement1.Name = "accordionControlElement1";
-            this.accordionControlElement1.Text = "QUẢN LÝ SÁCH";
+            this.acegQLSach.Expanded = true;
+            this.acegQLSach.ImageOptions.Image = global::QuanLyThuVien.Properties.Resources.book;
+            this.acegQLSach.Name = "acegQLSach";
+            this.acegQLSach.Text = "QUẢN LÝ SÁCH";
             // 
             // aceQLSach
             // 
@@ -411,14 +412,15 @@
             this.aceQLLoaiDG.Text = "QUẢN LÝ LOẠI ĐỌC GIẢ";
             this.aceQLLoaiDG.Click += new System.EventHandler(this.aceQLLoaiDG_Click);
             // 
-            // accordionControlElement5
+            // acegQLMuonTra
             // 
-            this.accordionControlElement5.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
+            this.acegQLMuonTra.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.aceQLMuon,
             this.aceQLTra});
-            this.accordionControlElement5.ImageOptions.Image = global::QuanLyThuVien.Properties.Resources.muontra;
-            this.accordionControlElement5.Name = "accordionControlElement5";
-            this.accordionControlElement5.Text = "QUẢN LÝ MƯỢN - TRẢ";
+            this.acegQLMuonTra.Expanded = true;
+            this.acegQLMuonTra.ImageOptions.Image = global::QuanLyThuVien.Properties.Resources.muontra;
+            this.acegQLMuonTra.Name = "acegQLMuonTra";
+            this.acegQLMuonTra.Text = "QUẢN LÝ MƯỢN - TRẢ";
             // 
             // aceQLMuon
             // 
@@ -436,6 +438,7 @@
             // 
             // aceQLPhatTien
             // 
+            this.aceQLPhatTien.Expanded = true;
             this.aceQLPhatTien.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("aceQLPhatTien.ImageOptions.Image")));
             this.aceQLPhatTien.Name = "aceQLPhatTien";
             this.aceQLPhatTien.Text = "QUẢN LÝ PHẠT TIỀN";
@@ -448,14 +451,15 @@
             this.aceQLNhanVien.Text = "QUẢN LÝ NHÂN VIÊN";
             this.aceQLNhanVien.Click += new System.EventHandler(this.aceQLNhanVien_Click);
             // 
-            // accordionControlElement9
+            // acegBaoCao
             // 
-            this.accordionControlElement9.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
+            this.acegBaoCao.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.aceMuonTheoTL,
             this.aceSachTraTre});
-            this.accordionControlElement9.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement9.ImageOptions.Image")));
-            this.accordionControlElement9.Name = "accordionControlElement9";
-            this.accordionControlElement9.Text = "BÁO CÁO";
+            this.acegBaoCao.Expanded = true;
+            this.acegBaoCao.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement9.ImageOptions.Image")));
+            this.acegBaoCao.Name = "acegBaoCao";
+            this.acegBaoCao.Text = "BÁO CÁO";
             // 
             // aceMuonTheoTL
             // 
@@ -475,7 +479,8 @@
             // 
             this.aceHeThong.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.aceQuyDinh,
-            this.accordionControlElement4});
+            this.aceHelp});
+            this.aceHeThong.Expanded = true;
             this.aceHeThong.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("aceHeThong.ImageOptions.Image")));
             this.aceHeThong.Name = "aceHeThong";
             this.aceHeThong.Text = "HỆ THỐNG";
@@ -487,11 +492,11 @@
             this.aceQuyDinh.Text = "QUY ĐỊNH";
             this.aceQuyDinh.Click += new System.EventHandler(this.aceQuyDinh_Click);
             // 
-            // accordionControlElement4
+            // aceHelp
             // 
-            this.accordionControlElement4.Name = "accordionControlElement4";
-            this.accordionControlElement4.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.accordionControlElement4.Text = "HELP";
+            this.aceHelp.Name = "aceHelp";
+            this.aceHelp.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.aceHelp.Text = "HELP";
             // 
             // fluentDesignFormControl1
             // 
@@ -565,16 +570,16 @@
         #endregion
         private DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer containerMain;
         private DevExpress.XtraBars.Navigation.AccordionControl accordionControl1;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement1;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement acegQLSach;
         private DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl fluentDesignFormControl1;
         private DevExpress.XtraBars.Navigation.AccordionControlElement aceQLSach;
         private DevExpress.XtraBars.Navigation.AccordionControlElement aceQLTheLoai;
         private DevExpress.XtraBars.Navigation.AccordionControlElement acegQLDocGia;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement5;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement acegQLMuonTra;
         private DevExpress.XtraBars.Navigation.AccordionControlElement aceQLMuon;
         private DevExpress.XtraBars.Navigation.AccordionControlElement aceQLTra;
         private DevExpress.XtraBars.Navigation.AccordionControlElement aceQLNhanVien;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement9;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement acegBaoCao;
         private DevExpress.XtraBars.Navigation.AccordionControlElement aceHeThong;
         private DevExpress.XtraBars.Navigation.TileBar tbStatus;
         private DevExpress.XtraBars.Navigation.TileBarGroup tileBarGroup2;
@@ -594,7 +599,7 @@
         private System.Windows.Forms.Label label1;
         private DevExpress.XtraBars.SkinBarSubItem skinBarSubItem1;
         private System.Windows.Forms.Panel panel2;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement2;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement acegChaoMung;
         private DevExpress.XtraBars.Navigation.AccordionControlElement aceQLTacGia;
         private DevExpress.XtraBars.Navigation.AccordionControlElement aceMuonTheoTL;
         private DevExpress.XtraBars.Navigation.AccordionControlElement aceSachTraTre;
@@ -602,7 +607,7 @@
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement11;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement12;
         private DevExpress.XtraBars.Navigation.AccordionControlElement aceThongTinCaNhan;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement4;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement aceHelp;
         private DevExpress.XtraBars.Navigation.AccordionControlElement aceQLPhatTien;
         private DevExpress.XtraBars.Navigation.AccordionControlElement aceQLDocGia;
         private DevExpress.XtraBars.Navigation.AccordionControlElement aceQLLoaiDG;

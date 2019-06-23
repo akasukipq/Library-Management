@@ -97,7 +97,10 @@ namespace QuanLyThuVien
             dt.Columns.Add("Ảnh bìa");
             foreach (SachDTO book in listBooks)
             {
-                dt.Rows.Add(book.MaSach, book.TenSach, book.MaTL.ToString(), book.MaTG, book.NamXB.ToString(), book.NXB, book.NgayNhap.ToString(), book.TriGia.ToString(), book.TinhTrang.ToString(), book.AnhBia);
+                if(book.TinhTrang == true)
+                    dt.Rows.Add(book.MaSach, book.TenSach, book.MaTL.ToString(), book.MaTG, book.NamXB.ToString(), book.NXB, book.NgayNhap.ToString(), book.TriGia.ToString(), "Trống", book.AnhBia);
+                else
+                    dt.Rows.Add(book.MaSach, book.TenSach, book.MaTL.ToString(), book.MaTG, book.NamXB.ToString(), book.NXB, book.NgayNhap.ToString(), book.TriGia.ToString(), "Đang mượn", book.AnhBia);
             }
             gridSach.DataSource = dt;
             grvSach.ClearSelection();
