@@ -38,7 +38,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.txtNgayLapThe = new System.Windows.Forms.DateTimePicker();
+            this.dtNgayLapThe = new System.Windows.Forms.DateTimePicker();
             this.txtDiaChi = new System.Windows.Forms.TextBox();
             this.dtNgaySinh = new System.Windows.Forms.DateTimePicker();
             this.cbLoaiDG = new System.Windows.Forms.ComboBox();
@@ -182,7 +182,7 @@
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.txtNgayLapThe);
+            this.panel6.Controls.Add(this.dtNgayLapThe);
             this.panel6.Controls.Add(this.txtDiaChi);
             this.panel6.Controls.Add(this.dtNgaySinh);
             this.panel6.Controls.Add(this.cbLoaiDG);
@@ -205,16 +205,16 @@
             this.panel6.Size = new System.Drawing.Size(820, 192);
             this.panel6.TabIndex = 0;
             // 
-            // txtNgayLapThe
+            // dtNgayLapThe
             // 
-            this.txtNgayLapThe.CalendarTrailingForeColor = System.Drawing.SystemColors.Desktop;
-            this.txtNgayLapThe.CustomFormat = "dd/MM/yyyy";
-            this.txtNgayLapThe.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.txtNgayLapThe.Location = new System.Drawing.Point(467, 149);
-            this.txtNgayLapThe.Name = "txtNgayLapThe";
-            this.txtNgayLapThe.Size = new System.Drawing.Size(163, 21);
-            this.txtNgayLapThe.TabIndex = 23;
-            this.txtNgayLapThe.ValueChanged += new System.EventHandler(this.txtNgayLapThe_ValueChanged);
+            this.dtNgayLapThe.CalendarTrailingForeColor = System.Drawing.SystemColors.Desktop;
+            this.dtNgayLapThe.CustomFormat = "dd/MM/yyyy";
+            this.dtNgayLapThe.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtNgayLapThe.Location = new System.Drawing.Point(467, 149);
+            this.dtNgayLapThe.Name = "dtNgayLapThe";
+            this.dtNgayLapThe.Size = new System.Drawing.Size(163, 21);
+            this.dtNgayLapThe.TabIndex = 23;
+            this.dtNgayLapThe.ValueChanged += new System.EventHandler(this.dtNgayLapThe_ValueChanged);
             // 
             // txtDiaChi
             // 
@@ -717,7 +717,7 @@
         private System.Windows.Forms.RadioButton rbHetHan;
         private System.Windows.Forms.RadioButton rbHoatDong;
         private System.Windows.Forms.DateTimePicker dtNgayHetHan;
-        private System.Windows.Forms.DateTimePicker txtNgayLapThe;
+        private System.Windows.Forms.DateTimePicker dtNgayLapThe;
         private System.Windows.Forms.TextBox txtDiaChi;
         private System.Windows.Forms.DateTimePicker dtNgaySinh;
         private System.Windows.Forms.ComboBox cbLoaiDG;

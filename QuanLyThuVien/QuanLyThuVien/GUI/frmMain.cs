@@ -179,16 +179,20 @@ namespace QuanLyThuVien
 
         }
 
-        private void fluentDesignFormControl1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void frmMain_Load(object sender, EventArgs e)
         {
             DevExpress.LookAndFeel.UserLookAndFeel.Default.SetSkinStyle("The Bezier");
             this.LookAndFeel.SetSkinStyle(SkinSvgPalette.Bezier.OfficeColorful);
             this.LookAndFeel.TouchUIMode = DevExpress.Utils.DefaultBoolean.False;
+        }
+
+        private void aceHelp_Click(object sender, EventArgs e)
+        {
+            GUI.Help trogiup = new GUI.Help();
+            containerMain.Controls.Add(trogiup);
+            tbStatus.Visible = false;
+            trogiup.Dock = DockStyle.Fill;
+            trogiup.BringToFront();
         }
     }
 }

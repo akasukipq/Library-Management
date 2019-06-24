@@ -138,6 +138,12 @@
     <Compile Include="GUI\frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Help.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Help.Designer.cs">
+      <DependentUpon>Help.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\PrintBCMuonTheoTheLoai.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -245,6 +251,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Help.resx">
+      <DependentUpon>Help.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\PrintBCMuonTheoTheLoai.resx">
       <DependentUpon>PrintBCMuonTheoTheLoai.cs</DependentUpon>

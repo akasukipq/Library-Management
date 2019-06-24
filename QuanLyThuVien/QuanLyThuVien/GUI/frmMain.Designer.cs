@@ -457,7 +457,7 @@
             this.aceMuonTheoTL,
             this.aceSachTraTre});
             this.acegBaoCao.Expanded = true;
-            this.acegBaoCao.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("accordionControlElement9.ImageOptions.Image")));
+            this.acegBaoCao.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("acegBaoCao.ImageOptions.Image")));
             this.acegBaoCao.Name = "acegBaoCao";
             this.acegBaoCao.Text = "BÁO CÁO";
             // 
@@ -497,6 +497,7 @@
             this.aceHelp.Name = "aceHelp";
             this.aceHelp.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.aceHelp.Text = "HELP";
+            this.aceHelp.Click += new System.EventHandler(this.aceHelp_Click);
             // 
             // fluentDesignFormControl1
             // 

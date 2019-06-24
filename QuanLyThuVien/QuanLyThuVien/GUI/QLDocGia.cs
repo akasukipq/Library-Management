@@ -50,7 +50,7 @@ namespace QuanLyThuVien
                 txtTongNo.ReadOnly = true;
                 dtNgaySinh.Enabled = false;
                 txtDiaChi.ReadOnly = true;
-                txtNgayLapThe.Enabled = false;
+                dtNgayLapThe.Enabled = false;
                 txtEmail.ReadOnly = true;
                 cbLoaiDG.Enabled = false;
                 rbHetHan.Enabled = false;
@@ -64,7 +64,7 @@ namespace QuanLyThuVien
                 txtTongNo.ReadOnly = false;
                 dtNgaySinh.Enabled = true;
                 txtDiaChi.ReadOnly = false;
-                txtNgayLapThe.Enabled = true;
+                dtNgayLapThe.Enabled = true;
                 txtEmail.ReadOnly = false;
                 cbLoaiDG.Enabled = true;
                 rbHetHan.Enabled = true;
@@ -106,8 +106,8 @@ namespace QuanLyThuVien
                 txtEmail.DataBindings.RemoveAt(0);
             if (dtNgaySinh.DataBindings.Count > 0)
                 dtNgaySinh.DataBindings.RemoveAt(0);
-            if (txtNgayLapThe.DataBindings.Count > 0)
-                txtNgayLapThe.DataBindings.RemoveAt(0);
+            if (dtNgayLapThe.DataBindings.Count > 0)
+                dtNgayLapThe.DataBindings.RemoveAt(0);
             if (txtTongNo.DataBindings.Count > 0)
                 txtTongNo.DataBindings.RemoveAt(0);
             if (dtNgayHetHan.DataBindings.Count > 0)
@@ -141,7 +141,7 @@ namespace QuanLyThuVien
                 DataSourceUpdateMode = DataSourceUpdateMode.Never,
                 ControlUpdateMode = ControlUpdateMode.OnPropertyChanged
             });
-            txtNgayLapThe.DataBindings.Add(new Binding("Text", gridDocGia.DataSource, "Ngày lập thẻ")
+            dtNgayLapThe.DataBindings.Add(new Binding("Text", gridDocGia.DataSource, "Ngày lập thẻ")
             {
                 DataSourceUpdateMode = DataSourceUpdateMode.Never,
                 ControlUpdateMode = ControlUpdateMode.OnPropertyChanged
@@ -183,7 +183,7 @@ namespace QuanLyThuVien
         {
             flag = 1;
             Lock(false);
-            txtNgayLapThe.Value = DateTime.Now;
+            dtNgayLapThe.Value = DateTime.Now;
             btnSua.Enabled = false;
             btnXoa.Enabled = true;
             txtTenDG.Text = "";
@@ -199,7 +199,7 @@ namespace QuanLyThuVien
 
             int x = ThamSoBLL.Instance.ThoiHanThe();
             
-            dtNgayHetHan.Value = txtNgayLapThe.Value.AddMonths(x);
+            dtNgayHetHan.Value = dtNgayLapThe.Value.AddMonths(x);
             
             if(grvDocGia.GetRowCellValue(grvDocGia.RowCount - 1, grvDocGia.Columns[0]) != null)
                 txtMaDG.Text = Utilities.Instance.NextID("DG", grvDocGia.GetRowCellValue(grvDocGia.RowCount - 1, grvDocGia.Columns[0]).ToString());
@@ -262,7 +262,7 @@ namespace QuanLyThuVien
             {
                 string TinhTrang="True";
                
-                string ret = DocGiaBLL.Instance.SaveDocGia(txtMaDG.Text, txtTenDG.Text, cbLoaiDG.Text, dtNgaySinh.Value, txtDiaChi.Text, txtEmail.Text, txtNgayLapThe.Value, dtNgayHetHan.Value, TinhTrang, txtTongNo.Text);
+                string ret = DocGiaBLL.Instance.SaveDocGia(txtMaDG.Text, txtTenDG.Text, cbLoaiDG.Text, dtNgaySinh.Value, txtDiaChi.Text, txtEmail.Text, dtNgayLapThe.Value, dtNgayHetHan.Value, TinhTrang, txtTongNo.Text);
                 MessageBox.Show(ret, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Lock(true);
                 
@@ -275,7 +275,7 @@ namespace QuanLyThuVien
                 else
                     TinhTrang = "False";
 
-                string ret = DocGiaBLL.Instance.UpdateDocGia(txtMaDG.Text, txtTenDG.Text, cbLoaiDG.Text, dtNgaySinh.Value, txtDiaChi.Text, txtEmail.Text, txtNgayLapThe.Value, dtNgayHetHan.Value, TinhTrang, txtTongNo.Text);
+                string ret = DocGiaBLL.Instance.UpdateDocGia(txtMaDG.Text, txtTenDG.Text, cbLoaiDG.Text, dtNgaySinh.Value, txtDiaChi.Text, txtEmail.Text, dtNgayLapThe.Value, dtNgayHetHan.Value, TinhTrang, txtTongNo.Text);
                 MessageBox.Show(ret, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 if (ret == "Sửa thành công!")
                     Lock(true);
@@ -285,12 +285,12 @@ namespace QuanLyThuVien
 
         }
 
-        private void txtNgayLapThe_ValueChanged(object sender, EventArgs e)
+        private void dtNgayLapThe_ValueChanged(object sender, EventArgs e)
         {
             int x = ThamSoBLL.Instance.ThoiHanThe();
 
-           // dtNgayHetHan.Value = txtNgayLapThe.Value.AddDays(x);
-            dtNgayHetHan.Value = txtNgayLapThe.Value.AddMonths(x);
+           // dtNgayHetHan.Value = dtNgayLapThe.Value.AddDays(x);
+            dtNgayHetHan.Value = dtNgayLapThe.Value.AddMonths(x);
 
         }
 
