@@ -1465,3 +1465,4 @@ D:\Năm 2\Game\Library-Management\QuanLyThuVien\QuanLyThuVien\bin\Debug\QuanLyTh
 D:\Năm 2\Game\Library-Management\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.exe
 D:\Năm 2\Game\Library-Management\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.pdb
 D:\Năm 2\NMCNPM\Library-Management\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.GUI.Help.resources
+C:\Users\ThinkPad\Desktop\Library-Management\QuanLyThuVien\QuanLyThuVien\obj\Debug\QuanLyThuVien.GUI.Help.resources

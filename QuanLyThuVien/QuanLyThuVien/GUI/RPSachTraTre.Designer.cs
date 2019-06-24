@@ -34,8 +34,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RPSachTraTre));
             DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery2 = new DevExpress.DataAccess.Sql.StoredProcQuery();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter2 = new DevExpress.DataAccess.Sql.QueryParameter();
-            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery3 = new DevExpress.DataAccess.Sql.StoredProcQuery();
-            DevExpress.DataAccess.Sql.QueryParameter queryParameter3 = new DevExpress.DataAccess.Sql.QueryParameter();
             this.Detail = new DevExpress.XtraReports.UI.DetailBand();
             this.xrTable1 = new DevExpress.XtraReports.UI.XRTable();
             this.xrTableRow1 = new DevExpress.XtraReports.UI.XRTableRow();
@@ -438,19 +436,12 @@
             this.sqlDataSource2.Name = "sqlDataSource2";
             storedProcQuery2.Name = "USP_LOADCTBCSACHTRATRE";
             queryParameter2.Name = "@ma";
-            queryParameter2.Type = typeof(string);
-            queryParameter2.ValueInfo = "ma";
+            queryParameter2.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter2.Value = new DevExpress.DataAccess.Expression("[Parameters.ma]", typeof(string));
             storedProcQuery2.Parameters.Add(queryParameter2);
             storedProcQuery2.StoredProcName = "USP_LOADCTBCSACHTRATRE";
-            storedProcQuery3.Name = "USP_LOADCTBAOCAOTHEOTL";
-            queryParameter3.Name = "@ma";
-            queryParameter3.Type = typeof(string);
-            queryParameter3.ValueInfo = "ma";
-            storedProcQuery3.Parameters.Add(queryParameter3);
-            storedProcQuery3.StoredProcName = "USP_LOADCTBAOCAOTHEOTL";
             this.sqlDataSource2.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
-            storedProcQuery2,
-            storedProcQuery3});
+            storedProcQuery2});
             this.sqlDataSource2.ResultSchemaSerializable = resources.GetString("sqlDataSource2.ResultSchemaSerializable");
             // 
             // RPSachTraTre

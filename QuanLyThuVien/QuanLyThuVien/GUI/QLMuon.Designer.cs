@@ -565,7 +565,7 @@
             // 
             // gvMaNV
             // 
-            this.gvMaNV.FieldName = "Mã NV";
+            this.gvMaNV.FieldName = "Mã nhân viên";
             this.gvMaNV.Name = "gvMaNV";
             this.gvMaNV.Visible = true;
             this.gvMaNV.VisibleIndex = 3;

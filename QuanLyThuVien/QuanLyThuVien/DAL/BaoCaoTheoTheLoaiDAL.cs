@@ -80,7 +80,10 @@ namespace QuanLyThuVien.DAL
 
             object ret =  DatabaseAcess.Instance.ExecuteScalar(query);
 
-            return ret.ToString();
+            if (ret != null)
+                return ret.ToString();
+            else
+                return null;
 
         }
         #endregion

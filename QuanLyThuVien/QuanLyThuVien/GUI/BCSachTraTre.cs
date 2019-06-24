@@ -43,8 +43,8 @@ namespace QuanLyThuVien.GUI
             else
             {
                 //tạo mã báo cáo với tháng = this
-                if (BaoCaoTheoTheLoaiBLL.Instance.GetLastMaBC() != null)
-                    txtMaBC.Text = Utilities.Instance.NextID("BC", BaoCaoTheoTheLoaiBLL.Instance.GetLastMaBC());
+                if (BaoCaoSachTraTreBLL.Instance.GetLastMaBC() != null)
+                    txtMaBC.Text = Utilities.Instance.NextID("BC", BaoCaoSachTraTreBLL.Instance.GetLastMaBC());
                 else
                     txtMaBC.Text = Utilities.Instance.NextID("BC", "BC000");
 
