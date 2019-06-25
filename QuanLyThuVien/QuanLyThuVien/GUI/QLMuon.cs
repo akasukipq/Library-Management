@@ -262,7 +262,6 @@ namespace QuanLyThuVien
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-
             //lưu xuống CSDL
             List<string> lmasach = new List<string>();
             for (int i = 0; i < grvCTMuon.RowCount; i++)
@@ -281,7 +280,10 @@ namespace QuanLyThuVien
             ClearInput();
             ShowPhieuMuon();
             btnXoa.Text = "Xóa";
-
+            btnThemsach.Enabled = false;
+            btnXoasach.Enabled = false;
+            btnLuu.Enabled = false;
+            btnXoa.Enabled = false;
 
         }
 

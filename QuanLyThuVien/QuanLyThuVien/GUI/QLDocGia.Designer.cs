@@ -141,6 +141,7 @@
             // 
             this.txtMaDG.BackColor = System.Drawing.Color.White;
             this.txtMaDG.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtMaDG.Enabled = false;
             this.txtMaDG.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaDG.ForeColor = System.Drawing.Color.Black;
             this.txtMaDG.Location = new System.Drawing.Point(133, 10);

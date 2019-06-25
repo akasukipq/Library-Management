@@ -38,7 +38,7 @@ namespace QuanLyThuVien.GUI
             txtSoLuongTGToiDa.ReadOnly = true;
             btnLuu.Enabled = false;
             NhanVienDTO nv = NhanVienBLL.Instance.ShowCurrentNV();
-            if (nv.ChucVu == "admin")
+            if (nv.ChucVu == "Quản lý")
                 btnSua.Enabled = true;
             else
                 btnSua.Enabled = false;

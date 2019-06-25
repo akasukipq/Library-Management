@@ -43,11 +43,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtTenLDG = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.gridLDG = new DevExpress.XtraGrid.GridControl();
             this.grvLDG = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.MaLDG = new DevExpress.XtraGrid.Columns.GridColumn();
             this.TenLDG = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grChucNang)).BeginInit();
             this.grChucNang.SuspendLayout();
@@ -245,6 +245,7 @@
             // 
             this.txtMaLDG.BackColor = System.Drawing.Color.White;
             this.txtMaLDG.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtMaLDG.Enabled = false;
             this.txtMaLDG.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaLDG.ForeColor = System.Drawing.Color.Black;
             this.txtMaLDG.Location = new System.Drawing.Point(259, 31);
@@ -287,6 +288,21 @@
             this.panel1.Size = new System.Drawing.Size(1144, 67);
             this.panel1.TabIndex = 10;
             // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label1.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.DarkGreen;
+            this.label1.Image = global::QuanLyThuVien.Properties.Resources.docgia1;
+            this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label1.Location = new System.Drawing.Point(22, 5);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(358, 57);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "QUẢN LÝ LOẠI ĐỌC GIẢ";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // gridLDG
             // 
             this.gridLDG.AllowRestoreSelectionAndFocusedRow = DevExpress.Utils.DefaultBoolean.True;
@@ -324,21 +340,6 @@
             this.TenLDG.Name = "TenLDG";
             this.TenLDG.Visible = true;
             this.TenLDG.VisibleIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label1.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DarkGreen;
-            this.label1.Image = global::QuanLyThuVien.Properties.Resources.docgia1;
-            this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label1.Location = new System.Drawing.Point(22, 5);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(358, 57);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "QUẢN LÝ LOẠI ĐỌC GIẢ";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // QLLoaiDG
             // 

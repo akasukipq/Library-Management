@@ -154,7 +154,7 @@ namespace QuanLyThuVien.GUI
 
         private void txtTienThu_TextChanged(object sender, EventArgs e)
         {
-            if (flag == 1)
+            if (flag == 1 && txtTienThu.Text != null && txtTienThu.Text != "")
             {
                 double TongNo = DocGiaBLL.Instance.LoadTongNo(cbMaDG.Text);
                 if (TongNo < 0)

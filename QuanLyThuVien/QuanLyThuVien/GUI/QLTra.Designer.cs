@@ -252,6 +252,7 @@
             // 
             this.txtMaNV.BackColor = System.Drawing.Color.White;
             this.txtMaNV.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtMaNV.Enabled = false;
             this.txtMaNV.Font = new System.Drawing.Font("Arial", 10F);
             this.txtMaNV.ForeColor = System.Drawing.Color.Black;
             this.txtMaNV.Location = new System.Drawing.Point(449, 128);
@@ -324,6 +325,7 @@
             // 
             this.txtMaPT.BackColor = System.Drawing.Color.White;
             this.txtMaPT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtMaPT.Enabled = false;
             this.txtMaPT.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaPT.ForeColor = System.Drawing.Color.Black;
             this.txtMaPT.Location = new System.Drawing.Point(135, 37);

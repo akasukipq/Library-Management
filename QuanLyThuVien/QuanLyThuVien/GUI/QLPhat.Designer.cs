@@ -213,6 +213,7 @@
             this.panel6.Controls.Add(this.label2);
             this.panel6.Controls.Add(this.label3);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel6.Enabled = false;
             this.panel6.Location = new System.Drawing.Point(2, 27);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(689, 227);
@@ -259,6 +260,7 @@
             // 
             this.txtMaNV.BackColor = System.Drawing.Color.White;
             this.txtMaNV.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtMaNV.Enabled = false;
             this.txtMaNV.Font = new System.Drawing.Font("Arial", 10F);
             this.txtMaNV.ForeColor = System.Drawing.Color.Black;
             this.txtMaNV.Location = new System.Drawing.Point(446, 161);
@@ -328,6 +330,7 @@
             // 
             this.txtMaPP.BackColor = System.Drawing.Color.White;
             this.txtMaPP.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtMaPP.Enabled = false;
             this.txtMaPP.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaPP.ForeColor = System.Drawing.Color.Black;
             this.txtMaPP.Location = new System.Drawing.Point(132, 23);

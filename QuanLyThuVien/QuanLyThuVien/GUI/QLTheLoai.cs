@@ -107,19 +107,15 @@ namespace QuanLyThuVien
             {
                 string ret = TheLoaiBLL.Instance.SaveTheLoai(txtMaTL.Text, txtTenTL.Text);
                 MessageBox.Show(ret, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                if (ret == "Thêm thành công!")
-                    Lock(true);
             }
             else if (flag == 2)
             {
                 string ret = TheLoaiBLL.Instance.UpdateTheLoai(txtMaTL.Text, txtTenTL.Text);
                 MessageBox.Show(ret, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                if (ret == "Sửa thành công!")
-                    Lock(true);
             }
             ShowTheLoai();
             btnXoa.Text = "Xóa";
-
+            Lock(true);
         }
         private void btnSua_Click(object sender, EventArgs e)
         {

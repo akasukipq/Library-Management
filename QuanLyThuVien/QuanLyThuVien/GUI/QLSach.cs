@@ -165,7 +165,7 @@ namespace QuanLyThuVien
             btnXoa.Enabled = true;
             string ret = grvSach.GetRowCellValue(grvSach.FocusedRowHandle, grvSach.Columns[8]).ToString();
             //xử lí cho tình trạng sách
-            if (ret == "True")
+            if (ret == "Trống")
                 rdbTrong.Checked = true;
             else
                 rdbBorrowed.Checked = true;
@@ -229,8 +229,6 @@ namespace QuanLyThuVien
                 string ret = SachBLL.Instance.SaveBook(txtMaSach.Text, txtTenSach.Text, cbTheLoai.SelectedValue.ToString(), cbTacGia.SelectedValue.ToString(), txtNamXB.Text
                     , txtNXB.Text, dtNgayNhap.Value, txtTriGia.Text, TinhTrang, path);
                 MessageBox.Show(ret, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                if (ret == "Thêm thành công!")
-                    Lock(true);
             }
             else if(flag == 2)
             {
@@ -251,12 +249,10 @@ namespace QuanLyThuVien
                 string ret = SachBLL.Instance.UpdateBook(txtMaSach.Text, txtTenSach.Text, cbTheLoai.SelectedValue.ToString(), cbTacGia.SelectedValue.ToString(), txtNamXB.Text
                     , txtNXB.Text, dtNgayNhap.Value.ToString(), txtTriGia.Text, TinhTrang, path);
                 MessageBox.Show(ret, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                if (ret == "Sửa thành công!")
-                    Lock(true);
             }
             ShowBooks();
             btnXoa.Text = "Xóa";
-
+            Lock(true);
         }
 
         private void btnSua_Click(object sender, EventArgs e)
@@ -306,7 +302,7 @@ namespace QuanLyThuVien
             OpenFileDialog img = new OpenFileDialog();
 
             img.Title = "Vui lòng chọn ảnh bìa sách";
-            img.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp";
+            img.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp; *.png)|*.jpg; *.jpeg; *.gif; *.bmp; *.png";
 
             if (img.ShowDialog() == DialogResult.OK)
             {

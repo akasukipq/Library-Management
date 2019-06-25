@@ -352,6 +352,7 @@
             // 
             this.txtMaNV.BackColor = System.Drawing.Color.White;
             this.txtMaNV.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtMaNV.Enabled = false;
             this.txtMaNV.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaNV.ForeColor = System.Drawing.Color.Black;
             this.txtMaNV.Location = new System.Drawing.Point(133, 19);

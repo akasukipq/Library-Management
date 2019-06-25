@@ -73,7 +73,7 @@ namespace QuanLyThuVien
         }
         public void ShowDocGia()
         {
-            List<DocGiaDTO> listBooks = DocGiaBLL.Instance.ShowDocGia();  
+            List<DocGiaDTO> listDocGia = DocGiaBLL.Instance.ShowDocGia();  
             DataTable dt = new DataTable();
             dt.Columns.Add("Mã đọc giả");
             dt.Columns.Add("Tên đọc giả");
@@ -85,16 +85,20 @@ namespace QuanLyThuVien
             dt.Columns.Add("Ngày hết hạn");
             dt.Columns.Add("Tình trạng thẻ");
             dt.Columns.Add("Tổng nợ");
-            foreach (DocGiaDTO book in listBooks)
+            foreach (DocGiaDTO docgia in listDocGia)
             {
-                dt.Rows.Add(book.MaDG, book.HoTen, book.MaLDG.ToString(), book.NgaySinh.ToString(), book.DiaChi, book.Email, book.NgayLapThe.ToString(), book.NgayHetHan.ToString(), book.TinhTrangThe.ToString(), book.TongNo);
+                if(docgia.TinhTrangThe == true)
+                    dt.Rows.Add(docgia.MaDG, docgia.HoTen, docgia.MaLDG.ToString(), docgia.NgaySinh.ToString(), docgia.DiaChi, docgia.Email, docgia.NgayLapThe.ToString(), docgia.NgayHetHan.ToString(), "Hoạt động", docgia.TongNo);
+                else
+                    dt.Rows.Add(docgia.MaDG, docgia.HoTen, docgia.MaLDG.ToString(), docgia.NgaySinh.ToString(), docgia.DiaChi, docgia.Email, docgia.NgayLapThe.ToString(), docgia.NgayHetHan.ToString(), "Hết hạn", docgia.TongNo);
+
             }
             gridDocGia.DataSource = dt;
             grvDocGia.ClearSelection();
-            BookDetailBinding();
+            DocGiaDetailBinding();
         }
 
-        public void BookDetailBinding()
+        public void DocGiaDetailBinding()
         {
             if (txtMaDG.DataBindings.Count > 0)
                 txtMaDG.DataBindings.RemoveAt(0);
@@ -166,7 +170,7 @@ namespace QuanLyThuVien
             btnXoa.Enabled = true;
             string ret = grvDocGia.GetRowCellValue(grvDocGia.FocusedRowHandle, grvDocGia.Columns[8]).ToString();
             //xử lí cho tình trạng the
-            if (ret == "True")
+            if (ret == "Hoạt động")
                 rbHoatDong.Checked = true;
             else
                 rbHetHan.Checked = true;
@@ -264,7 +268,6 @@ namespace QuanLyThuVien
                
                 string ret = DocGiaBLL.Instance.SaveDocGia(txtMaDG.Text, txtTenDG.Text, cbLoaiDG.Text, dtNgaySinh.Value, txtDiaChi.Text, txtEmail.Text, dtNgayLapThe.Value, dtNgayHetHan.Value, TinhTrang, txtTongNo.Text);
                 MessageBox.Show(ret, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Lock(true);
                 
             }
             else if (flag == 2)
@@ -277,11 +280,10 @@ namespace QuanLyThuVien
 
                 string ret = DocGiaBLL.Instance.UpdateDocGia(txtMaDG.Text, txtTenDG.Text, cbLoaiDG.Text, dtNgaySinh.Value, txtDiaChi.Text, txtEmail.Text, dtNgayLapThe.Value, dtNgayHetHan.Value, TinhTrang, txtTongNo.Text);
                 MessageBox.Show(ret, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                if (ret == "Sửa thành công!")
-                    Lock(true);
             }
             ShowDocGia();
             btnXoa.Text = "Xoá";
+            Lock(true);
 
         }
 

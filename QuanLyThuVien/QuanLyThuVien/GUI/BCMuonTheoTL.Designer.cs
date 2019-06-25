@@ -72,6 +72,7 @@
             // 
             // txtMaBC
             // 
+            this.txtMaBC.Enabled = false;
             this.txtMaBC.Location = new System.Drawing.Point(378, 73);
             this.txtMaBC.Name = "txtMaBC";
             this.txtMaBC.Size = new System.Drawing.Size(136, 21);

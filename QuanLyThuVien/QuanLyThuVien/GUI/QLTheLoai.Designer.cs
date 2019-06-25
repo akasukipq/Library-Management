@@ -272,6 +272,7 @@
             // 
             this.txtMaTL.BackColor = System.Drawing.Color.White;
             this.txtMaTL.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtMaTL.Enabled = false;
             this.txtMaTL.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaTL.ForeColor = System.Drawing.Color.Gray;
             this.txtMaTL.Location = new System.Drawing.Point(259, 31);

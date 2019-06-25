@@ -96,26 +96,30 @@ namespace QuanLyThuVien
             txtMaTG.Text = "";
             txtTenTG.Text = "";
             //Lấy mã sách mới nhất
-            txtMaTG.Text = Utilities.Instance.NextID("TL", grvTacGia.GetRowCellValue(grvTacGia.RowCount - 1, grvTacGia.Columns[0]).ToString());
+            txtMaTG.Text = Utilities.Instance.NextID("TG", grvTacGia.GetRowCellValue(grvTacGia.RowCount - 1, grvTacGia.Columns[0]).ToString());
         }
         private void btnLuu_Click(object sender, EventArgs e)
         {
             if (flag == 1)
             {
-                string ret = TacGiaBLL.Instance.SaveTacGia(txtMaTG.Text, txtTenTG.Text);
-                MessageBox.Show(ret, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                if (ret == "Thêm thành công!")
-                    Lock(true);
+                if (grvTacGia.RowCount < ThamSoBLL.Instance.ShowThamSo().SoLuongTGToiDa)
+                {
+                    string ret = TacGiaBLL.Instance.SaveTacGia(txtMaTG.Text, txtTenTG.Text);
+                    MessageBox.Show(ret, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Số lượng tác giả đã đạt tối đa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
             else if (flag == 2)
             {
                 string ret = TacGiaBLL.Instance.UpdateTacGia(txtMaTG.Text, txtTenTG.Text);
                 MessageBox.Show(ret, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                if (ret == "Sửa thành công!")
-                    Lock(true);
             }
             ShowTacGia();
             btnXoa.Text = "Xóa";
+            Lock(true);
 
         }
         private void btnSua_Click(object sender, EventArgs e)

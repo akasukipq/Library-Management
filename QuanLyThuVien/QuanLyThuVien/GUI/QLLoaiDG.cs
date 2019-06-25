@@ -151,19 +151,17 @@ namespace QuanLyThuVien.GUI
 
                 string ret = LoaiDocGiaBLL.Instance.SaveLoaiDG(txtMaLDG.Text, txtTenLDG.Text);
                 MessageBox.Show(ret, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                if (ret == "Thêm thành công!")
-                    Lock(true);
             }
             else if (flag == 2)
             {
 
                 string ret = LoaiDocGiaBLL.Instance.UpdateLoaiDG(txtMaLDG.Text, txtTenLDG.Text);
                 MessageBox.Show(ret, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                if (ret == "Sửa thành công!")
-                    Lock(true);
             }
             ShowLoaiDocGia();
             btnXoa.Text = "Xóa";
+            Lock(true);
+
         }
     }
 }

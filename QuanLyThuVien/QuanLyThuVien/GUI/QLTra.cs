@@ -354,7 +354,10 @@ namespace QuanLyThuVien
             ClearInput();
             ShowPhieuTra();
             btnXoa.Text = "Xóa";
-
+            btnThemsach.Enabled = false;
+            btnXoasach.Enabled = false;
+            btnLuu.Enabled = false;
+            btnXoa.Enabled = false;
         }
 
         private void btnXoa_Click(object sender, EventArgs e)

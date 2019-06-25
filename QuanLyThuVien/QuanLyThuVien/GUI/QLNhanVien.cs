@@ -141,19 +141,17 @@ namespace QuanLyThuVien.GUI
                 string ret = NhanVienBLL.Instance.SaveNhanVien(txtMaNV.Text, txtTenNV.Text, cbChucVu.SelectedValue.ToString()
                     , txtTaiKhoan.Text, txtMatKhau.Text);
                 MessageBox.Show(ret, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                if (ret == "Thêm thành công!")
-                    Lock(true);
             }
             else if (flag == 2)
             {
                 string ret = NhanVienBLL.Instance.UpdateNhanVien(txtMaNV.Text, txtTenNV.Text, cbChucVu.SelectedValue.ToString()
                     , txtTaiKhoan.Text, txtMatKhau.Text);
                 MessageBox.Show(ret, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                if (ret == "Sửa thành công!")
-                    Lock(true);
             }
             ShowNhanVien();
             btnXoa.Text = "Xóa";
+            Lock(true);
+
         }
 
         private void btnSua_Click(object sender, EventArgs e)
