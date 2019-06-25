@@ -40,7 +40,8 @@ namespace QuanLyThuVien.BLL
             //check
             if (maPP == "" || maDG == "" || soTienThu == "" || conLai == "" || maNV == "")
                 return "Các trường không được bỏ trống!";
-
+            else if (Convert.ToInt32(conLai) < 0)
+                return "Số tiền thu vượt qua số nợ còn lại!";
             string ret = PhieuPhatDAL.Instance.SavePhieuPhat(maPP, maDG, soTienThu, conLai, maNV);
 
             if(ret == "Lưu phiếu phạt thành công!")

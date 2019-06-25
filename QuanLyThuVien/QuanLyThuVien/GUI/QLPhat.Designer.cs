@@ -213,7 +213,6 @@
             this.panel6.Controls.Add(this.label2);
             this.panel6.Controls.Add(this.label3);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Enabled = false;
             this.panel6.Location = new System.Drawing.Point(2, 27);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(689, 227);
@@ -255,6 +254,7 @@
             this.txtTienThu.TabIndex = 33;
             this.txtTienThu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtTienThu.TextChanged += new System.EventHandler(this.txtTienThu_TextChanged);
+            this.txtTienThu.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTienThu_KeyPress);
             // 
             // txtMaNV
             // 
