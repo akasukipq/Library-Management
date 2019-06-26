@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using QuanLyThuVien.LOGIN;
+using QuanLyThuVien.GUI;
 namespace QuanLyThuVien
 {
     static class Program

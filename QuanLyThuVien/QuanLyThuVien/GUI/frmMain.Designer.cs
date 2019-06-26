@@ -306,7 +306,7 @@
             this.calendarControl1.EditValue = new System.DateTime(2019, 6, 18, 0, 0, 0, 0);
             this.calendarControl1.Location = new System.Drawing.Point(7, 39);
             this.calendarControl1.Name = "calendarControl1";
-            this.calendarControl1.Size = new System.Drawing.Size(232, 219);
+            this.calendarControl1.Size = new System.Drawing.Size(244, 219);
             this.calendarControl1.TabIndex = 2;
             // 
             // accordionControl1
@@ -544,6 +544,7 @@
             this.DoubleBuffered = true;
             this.FluentDesignFormControl = this.fluentDesignFormControl1;
             this.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmMain";
             this.NavigationControl = this.accordionControl1;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -1,0 +1,722 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<DOCUMENT Type="Advanced Installer" CreateVersion="16.0" version="16.0" Modules="simple" RootPath="." Language="en" Id="{83C5633B-D682-460B-8780-7413CB35C303}">
+  <COMPONENT cid="caphyon.advinst.msicomp.ProjectOptionsComponent">
+    <ROW Name="HiddenItems" Value="AppXProductDetailsComponent;AppXDependenciesComponent;AppXAppDetailsComponent;AppXVisualAssetsComponent;AppXCapabilitiesComponent;AppXAppDeclarationsComponent;AppXUriRulesComponent;FixupComponent"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiPropsComponent">
+    <ROW Property="AI_BITMAP_DISPLAY_MODE" Value="0"/>
+    <ROW Property="AI_PREDEF_LCONDS_PROPS" Value="AI_DETECTED_DOTNET_VERSION;AI_DETECTED_SQLEXPRESS_VERSION"/>
+    <ROW Property="AI_REQUIRED_DOTNET_DISPLAY" MultiBuildValue="DefaultBuild:4.0" ValueLocId="-"/>
+    <ROW Property="AI_REQUIRED_DOTNET_VERSION" MultiBuildValue="DefaultBuild:4.0.1" ValueLocId="-"/>
+    <ROW Property="AI_REQUIRED_SQLEXPRESS_DISPLAY" MultiBuildValue="DefaultBuild:SQL Server Express 2008R2" ValueLocId="-"/>
+    <ROW Property="AI_REQUIRED_SQLEXPRESS_VERSION" MultiBuildValue="DefaultBuild:2008.50" ValueLocId="-"/>
+    <ROW Property="ALLUSERS" Value="1"/>
+    <ROW Property="ARPCOMMENTS" Value="This installer database contains the logic and data required to install [|ProductName]." ValueLocId="*"/>
+    <ROW Property="ARPPRODUCTICON" Value="polabooks_EQx_2.exe" Type="8"/>
+    <ROW Property="Manufacturer" Value="QuadTreeTeam"/>
+    <ROW Property="ProductCode" Value="1033:{33BEF929-F08C-4EC9-BDF0-D91E26D937B0} " Type="16"/>
+    <ROW Property="ProductLanguage" Value="1033"/>
+    <ROW Property="ProductName" Value="Library Management"/>
+    <ROW Property="ProductVersion" Value="1.0.0" Type="32"/>
+    <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND"/>
+    <ROW Property="UpgradeCode" Value="{CDEC1186-BC8C-45FB-9929-6C52A29B57D7}"/>
+    <ROW Property="WindowsType9X" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
+    <ROW Property="WindowsType9XDisplay" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT40" MultiBuildValue="DefaultBuild:Windows NT 4.0" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT40Display" MultiBuildValue="DefaultBuild:Windows NT 4.0" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT50" MultiBuildValue="DefaultBuild:Windows 2000" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT50Display" MultiBuildValue="DefaultBuild:Windows 2000" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT5X" MultiBuildValue="DefaultBuild:Windows XP/2003 RTM, Windows XP/2003 SP1, Windows XP SP2 x86" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT5XDisplay" MultiBuildValue="DefaultBuild:Windows XP/2003 RTM, Windows XP/2003 SP1, Windows XP SP2 x86" ValueLocId="-"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiDirsComponent">
+    <ROW Directory="APPDIR" Directory_Parent="TARGETDIR" DefaultDir="APPDIR:." IsPseudoRoot="1"/>
+    <ROW Directory="Data_Dir" Directory_Parent="APPDIR" DefaultDir="Data"/>
+    <ROW Directory="SHORTCUTDIR" Directory_Parent="TARGETDIR" DefaultDir="SHORTC~1|SHORTCUTDIR" IsPseudoRoot="1"/>
+    <ROW Directory="TARGETDIR" DefaultDir="SourceDir"/>
+    <ROW Directory="bookcover_Dir" Directory_Parent="APPDIR" DefaultDir="BOOKCO~1|bookcover"/>
+    <ROW Directory="de_Dir" Directory_Parent="APPDIR" DefaultDir="de"/>
+    <ROW Directory="es_Dir" Directory_Parent="APPDIR" DefaultDir="es"/>
+    <ROW Directory="ja_Dir" Directory_Parent="APPDIR" DefaultDir="ja"/>
+    <ROW Directory="ru_Dir" Directory_Parent="APPDIR" DefaultDir="ru"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCompsComponent">
+    <ROW Component="Createdatabase.bat" ComponentId="{EE8546FD-5793-4D25-910D-C9C46A32B82E}" Directory_="Data_Dir" Attributes="0" KeyPath="Createdatabase.bat" Type="0"/>
+    <ROW Component="DevExpress.Charts.v18.1.Core.dll" ComponentId="{6AE663A3-C11B-4808-900A-AE35B1A3E6FD}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.Charts.v18.1.Core.dll"/>
+    <ROW Component="DevExpress.CodeParser.v18.1.dll" ComponentId="{51823925-0FC3-4C52-9ED7-884B65B5B2F0}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.CodeParser.v18.1.dll"/>
+    <ROW Component="DevExpress.Data.v18.1.dll" ComponentId="{DA20E86C-375C-4AE3-B3EF-7291F71E670A}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.Data.v18.1.dll"/>
+    <ROW Component="DevExpress.Data.v18.1.resources.dll" ComponentId="{E57B3414-4D37-4AEB-817E-C23403B6BC43}" Directory_="de_Dir" Attributes="0" KeyPath="DevExpress.Data.v18.1.resources.dll"/>
+    <ROW Component="DevExpress.Data.v18.1.resources.dll_1" ComponentId="{37814722-3BF1-438B-B401-EDE1A1FC2412}" Directory_="es_Dir" Attributes="0" KeyPath="DevExpress.Data.v18.1.resources.dll_1"/>
+    <ROW Component="DevExpress.Data.v18.1.resources.dll_2" ComponentId="{6B7AABA2-926B-4D70-ACBB-4F867DFCD3FC}" Directory_="ja_Dir" Attributes="0" KeyPath="DevExpress.Data.v18.1.resources.dll_2"/>
+    <ROW Component="DevExpress.Data.v18.1.resources.dll_3" ComponentId="{ABD77378-E8F0-4A4B-8E31-9474E43A5708}" Directory_="ru_Dir" Attributes="0" KeyPath="DevExpress.Data.v18.1.resources.dll_3"/>
+    <ROW Component="DevExpress.DataAccess.v18.1.UI.dll" ComponentId="{F160ED51-CB9B-4A75-8F20-09642BC26916}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.DataAccess.v18.1.UI.dll"/>
+    <ROW Component="DevExpress.DataAccess.v18.1.UI.resources.dll" ComponentId="{57C8B59A-EBC3-416D-91ED-D00E2E65FD93}" Directory_="de_Dir" Attributes="0" KeyPath="DevExpress.DataAccess.v18.1.UI.resources.dll"/>
+    <ROW Component="DevExpress.DataAccess.v18.1.UI.resources.dll_1" ComponentId="{43209536-44BE-4EC1-AE96-D8122A788E97}" Directory_="es_Dir" Attributes="0" KeyPath="DevExpress.DataAccess.v18.1.UI.resources.dll_1"/>
+    <ROW Component="DevExpress.DataAccess.v18.1.UI.resources.dll_2" ComponentId="{4EB010B2-8118-44CC-AC40-A459080E6B4C}" Directory_="ja_Dir" Attributes="0" KeyPath="DevExpress.DataAccess.v18.1.UI.resources.dll_2"/>
+    <ROW Component="DevExpress.DataAccess.v18.1.UI.resources.dll_3" ComponentId="{E24429B8-088B-4AC3-B764-AD65E50D1B0B}" Directory_="ru_Dir" Attributes="0" KeyPath="DevExpress.DataAccess.v18.1.UI.resources.dll_3"/>
+    <ROW Component="DevExpress.DataAccess.v18.1.dll" ComponentId="{43FE5DE5-BD8C-424C-B3F8-6A0A29C050BD}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.DataAccess.v18.1.dll"/>
+    <ROW Component="DevExpress.DataAccess.v18.1.resources.dll" ComponentId="{0EF54442-1102-4CAF-9A5B-88B4FECCB000}" Directory_="de_Dir" Attributes="0" KeyPath="DevExpress.DataAccess.v18.1.resources.dll"/>
+    <ROW Component="DevExpress.DataAccess.v18.1.resources.dll_1" ComponentId="{8EEECD3F-AB4E-47FD-A6F0-BD87EE58CD63}" Directory_="es_Dir" Attributes="0" KeyPath="DevExpress.DataAccess.v18.1.resources.dll_1"/>
+    <ROW Component="DevExpress.DataAccess.v18.1.resources.dll_2" ComponentId="{9E25C590-120B-4F81-B06A-105F9032F90E}" Directory_="ja_Dir" Attributes="0" KeyPath="DevExpress.DataAccess.v18.1.resources.dll_2"/>
+    <ROW Component="DevExpress.DataAccess.v18.1.resources.dll_3" ComponentId="{1E258BB9-07FC-480E-862D-407272EC3A7F}" Directory_="ru_Dir" Attributes="0" KeyPath="DevExpress.DataAccess.v18.1.resources.dll_3"/>
+    <ROW Component="DevExpress.Diagram.v18.1.Core.dll" ComponentId="{AC819F9F-82E8-4E9F-A510-07F211095323}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.Diagram.v18.1.Core.dll"/>
+    <ROW Component="DevExpress.Diagram.v18.1.Core.resources.dll" ComponentId="{416AD6FD-A781-4D5A-9C0F-F560123B2D5E}" Directory_="de_Dir" Attributes="0" KeyPath="DevExpress.Diagram.v18.1.Core.resources.dll"/>
+    <ROW Component="DevExpress.Diagram.v18.1.Core.resources.dll_1" ComponentId="{E2961DC6-B0E6-49D7-9CD3-10C8C50E625D}" Directory_="es_Dir" Attributes="0" KeyPath="DevExpress.Diagram.v18.1.Core.resources.dll_1"/>
+    <ROW Component="DevExpress.Diagram.v18.1.Core.resources.dll_2" ComponentId="{E95433FB-80EE-43B5-BA4C-A0AE83B61E29}" Directory_="ja_Dir" Attributes="0" KeyPath="DevExpress.Diagram.v18.1.Core.resources.dll_2"/>
+    <ROW Component="DevExpress.Diagram.v18.1.Core.resources.dll_3" ComponentId="{E9D779E7-1115-4EF8-8B95-30823303E62E}" Directory_="ru_Dir" Attributes="0" KeyPath="DevExpress.Diagram.v18.1.Core.resources.dll_3"/>
+    <ROW Component="DevExpress.Images.v18.1.dll" ComponentId="{4ACE5D7F-A2A0-4E0C-B8CF-D8269788FEA6}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.Images.v18.1.dll"/>
+    <ROW Component="DevExpress.Office.v18.1.Core.dll" ComponentId="{BDD54639-DEF2-4972-A26E-08BDACF73074}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.Office.v18.1.Core.dll"/>
+    <ROW Component="DevExpress.Office.v18.1.Core.resources.dll" ComponentId="{D042E3E4-D53C-44E5-A4E0-236993A5C40B}" Directory_="de_Dir" Attributes="0" KeyPath="DevExpress.Office.v18.1.Core.resources.dll"/>
+    <ROW Component="DevExpress.Office.v18.1.Core.resources.dll_1" ComponentId="{0E7D7CC9-51A9-431E-BA06-C1E73805AC74}" Directory_="es_Dir" Attributes="0" KeyPath="DevExpress.Office.v18.1.Core.resources.dll_1"/>
+    <ROW Component="DevExpress.Office.v18.1.Core.resources.dll_2" ComponentId="{72217D3E-5F83-4B83-B56F-AF40063E9B0C}" Directory_="ja_Dir" Attributes="0" KeyPath="DevExpress.Office.v18.1.Core.resources.dll_2"/>
+    <ROW Component="DevExpress.Office.v18.1.Core.resources.dll_3" ComponentId="{E67F66F5-EE45-4849-B975-0C7EE085B8AD}" Directory_="ru_Dir" Attributes="0" KeyPath="DevExpress.Office.v18.1.Core.resources.dll_3"/>
+    <ROW Component="DevExpress.Pdf.v18.1.Core.dll" ComponentId="{C543C0DD-4D15-4484-B282-AE346FAEE845}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.Pdf.v18.1.Core.dll"/>
+    <ROW Component="DevExpress.Pdf.v18.1.Core.resources.dll" ComponentId="{59DA8F99-E232-4844-A2AC-631DEFF0C022}" Directory_="de_Dir" Attributes="0" KeyPath="DevExpress.Pdf.v18.1.Core.resources.dll"/>
+    <ROW Component="DevExpress.Pdf.v18.1.Core.resources.dll_1" ComponentId="{46C26E7E-8160-484F-B099-529D35E66951}" Directory_="es_Dir" Attributes="0" KeyPath="DevExpress.Pdf.v18.1.Core.resources.dll_1"/>
+    <ROW Component="DevExpress.Pdf.v18.1.Core.resources.dll_2" ComponentId="{71B75E53-D300-46C2-A945-BD91AF7B046E}" Directory_="ja_Dir" Attributes="0" KeyPath="DevExpress.Pdf.v18.1.Core.resources.dll_2"/>
+    <ROW Component="DevExpress.Pdf.v18.1.Core.resources.dll_3" ComponentId="{689A2B5F-3C28-42DB-A510-401C28847567}" Directory_="ru_Dir" Attributes="0" KeyPath="DevExpress.Pdf.v18.1.Core.resources.dll_3"/>
+    <ROW Component="DevExpress.PivotGrid.v18.1.Core.dll" ComponentId="{54F15F2D-51D5-4684-9D68-8EA4E3A84DF8}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.PivotGrid.v18.1.Core.dll"/>
+    <ROW Component="DevExpress.PivotGrid.v18.1.Core.resources.dll" ComponentId="{2B2863CF-687E-4B02-8E7B-BC501857BA6A}" Directory_="de_Dir" Attributes="0" KeyPath="DevExpress.PivotGrid.v18.1.Core.resources.dll"/>
+    <ROW Component="DevExpress.PivotGrid.v18.1.Core.resources.dll_1" ComponentId="{4DD25182-45F6-4941-8C02-C85AF7F7095C}" Directory_="es_Dir" Attributes="0" KeyPath="DevExpress.PivotGrid.v18.1.Core.resources.dll_1"/>
+    <ROW Component="DevExpress.PivotGrid.v18.1.Core.resources.dll_2" ComponentId="{389A699B-AF62-452E-84CE-552E51173188}" Directory_="ja_Dir" Attributes="0" KeyPath="DevExpress.PivotGrid.v18.1.Core.resources.dll_2"/>
+    <ROW Component="DevExpress.PivotGrid.v18.1.Core.resources.dll_3" ComponentId="{9ACCA8FE-7298-4C11-884F-0BAC1DCC1EDF}" Directory_="ru_Dir" Attributes="0" KeyPath="DevExpress.PivotGrid.v18.1.Core.resources.dll_3"/>
+    <ROW Component="DevExpress.Printing.v18.1.Core.dll" ComponentId="{18026EE6-AF6A-480B-BB3D-1A5296542393}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.Printing.v18.1.Core.dll"/>
+    <ROW Component="DevExpress.Printing.v18.1.Core.resources.dll" ComponentId="{0D56660D-782F-4D97-B4DA-84A39B64AF2D}" Directory_="de_Dir" Attributes="0" KeyPath="DevExpress.Printing.v18.1.Core.resources.dll"/>
+    <ROW Component="DevExpress.Printing.v18.1.Core.resources.dll_1" ComponentId="{B35FB3B3-AFC0-4240-A7E2-F7017BED9F09}" Directory_="es_Dir" Attributes="0" KeyPath="DevExpress.Printing.v18.1.Core.resources.dll_1"/>
+    <ROW Component="DevExpress.Printing.v18.1.Core.resources.dll_2" ComponentId="{4C42F4C7-99F0-4EF8-8F63-B298880A2AAC}" Directory_="ja_Dir" Attributes="0" KeyPath="DevExpress.Printing.v18.1.Core.resources.dll_2"/>
+    <ROW Component="DevExpress.Printing.v18.1.Core.resources.dll_3" ComponentId="{69316879-C3F0-4F85-AC0F-E5980AA8D165}" Directory_="ru_Dir" Attributes="0" KeyPath="DevExpress.Printing.v18.1.Core.resources.dll_3"/>
+    <ROW Component="DevExpress.RichEdit.v18.1.Core.dll" ComponentId="{5B3A7C9F-5AB8-45C1-9EBD-5A509124D942}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.RichEdit.v18.1.Core.dll"/>
+    <ROW Component="DevExpress.RichEdit.v18.1.Core.resources.dll" ComponentId="{DA616B4F-E525-45CD-9F4E-F92268E38407}" Directory_="de_Dir" Attributes="0" KeyPath="DevExpress.RichEdit.v18.1.Core.resources.dll"/>
+    <ROW Component="DevExpress.RichEdit.v18.1.Core.resources.dll_1" ComponentId="{28495DB7-4B86-412A-8E18-39A646471087}" Directory_="es_Dir" Attributes="0" KeyPath="DevExpress.RichEdit.v18.1.Core.resources.dll_1"/>
+    <ROW Component="DevExpress.RichEdit.v18.1.Core.resources.dll_2" ComponentId="{10474F88-9DDF-4048-8BD2-056F7B4A42E3}" Directory_="ja_Dir" Attributes="0" KeyPath="DevExpress.RichEdit.v18.1.Core.resources.dll_2"/>
+    <ROW Component="DevExpress.RichEdit.v18.1.Core.resources.dll_3" ComponentId="{DF0ADB53-BFC0-4FE9-957C-76BECB8A13E5}" Directory_="ru_Dir" Attributes="0" KeyPath="DevExpress.RichEdit.v18.1.Core.resources.dll_3"/>
+    <ROW Component="DevExpress.RichEdit.v18.1.Export.dll" ComponentId="{7997F97C-26D5-4F7C-90DC-1288BA48D7A0}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.RichEdit.v18.1.Export.dll"/>
+    <ROW Component="DevExpress.Sparkline.v18.1.Core.dll" ComponentId="{9D9F2A8B-0C9C-482C-BCE4-4B149ACBB39A}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.Sparkline.v18.1.Core.dll"/>
+    <ROW Component="DevExpress.Sparkline.v18.1.Core.resources.dll" ComponentId="{448DF9A9-93EB-4443-BA80-15F0F6BDA7B4}" Directory_="de_Dir" Attributes="0" KeyPath="DevExpress.Sparkline.v18.1.Core.resources.dll"/>
+    <ROW Component="DevExpress.Sparkline.v18.1.Core.resources.dll_1" ComponentId="{31D28BE8-CFB0-42D8-9D0D-CB7858EE3884}" Directory_="es_Dir" Attributes="0" KeyPath="DevExpress.Sparkline.v18.1.Core.resources.dll_1"/>
+    <ROW Component="DevExpress.Sparkline.v18.1.Core.resources.dll_2" ComponentId="{B001A996-A070-4D86-8D7B-AAE0E9C8EE2B}" Directory_="ja_Dir" Attributes="0" KeyPath="DevExpress.Sparkline.v18.1.Core.resources.dll_2"/>
+    <ROW Component="DevExpress.Sparkline.v18.1.Core.resources.dll_3" ComponentId="{76F46932-5DE0-4E1D-AB8F-F403C4F1163F}" Directory_="ru_Dir" Attributes="0" KeyPath="DevExpress.Sparkline.v18.1.Core.resources.dll_3"/>
+    <ROW Component="DevExpress.Spreadsheet.v18.1.Core.dll" ComponentId="{05B11C49-2780-4793-B51E-7D8E8ED0D5AD}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.Spreadsheet.v18.1.Core.dll"/>
+    <ROW Component="DevExpress.Spreadsheet.v18.1.Core.resources.dll" ComponentId="{5BB74B94-8237-405A-892C-538CDEB10FE7}" Directory_="de_Dir" Attributes="0" KeyPath="DevExpress.Spreadsheet.v18.1.Core.resources.dll"/>
+    <ROW Component="DevExpress.Spreadsheet.v18.1.Core.resources.dll_1" ComponentId="{1627594C-BE51-41E7-A229-CC32D1C9D27D}" Directory_="es_Dir" Attributes="0" KeyPath="DevExpress.Spreadsheet.v18.1.Core.resources.dll_1"/>
+    <ROW Component="DevExpress.Spreadsheet.v18.1.Core.resources.dll_2" ComponentId="{EA16632C-3E06-47BE-9C25-21C6CF1B379B}" Directory_="ja_Dir" Attributes="0" KeyPath="DevExpress.Spreadsheet.v18.1.Core.resources.dll_2"/>
+    <ROW Component="DevExpress.Spreadsheet.v18.1.Core.resources.dll_3" ComponentId="{4C739D3D-66DF-479E-A590-9EC394231867}" Directory_="ru_Dir" Attributes="0" KeyPath="DevExpress.Spreadsheet.v18.1.Core.resources.dll_3"/>
+    <ROW Component="DevExpress.Utils.v18.1.UI.dll" ComponentId="{9247C0D8-8D7A-4981-97E9-56D3419580F5}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.Utils.v18.1.UI.dll"/>
+    <ROW Component="DevExpress.Utils.v18.1.UI.resources.dll" ComponentId="{03105B27-7A95-4116-9208-ED5230F3B2A8}" Directory_="de_Dir" Attributes="0" KeyPath="DevExpress.Utils.v18.1.UI.resources.dll"/>
+    <ROW Component="DevExpress.Utils.v18.1.UI.resources.dll_1" ComponentId="{01D5C54C-F00B-4F4C-AA02-DED4B5ADACE2}" Directory_="es_Dir" Attributes="0" KeyPath="DevExpress.Utils.v18.1.UI.resources.dll_1"/>
+    <ROW Component="DevExpress.Utils.v18.1.UI.resources.dll_2" ComponentId="{207058AF-38AF-4361-9B9E-0164692E9E02}" Directory_="ja_Dir" Attributes="0" KeyPath="DevExpress.Utils.v18.1.UI.resources.dll_2"/>
+    <ROW Component="DevExpress.Utils.v18.1.UI.resources.dll_3" ComponentId="{5DD23244-2AA4-4F18-ADA9-6943E0AFEC95}" Directory_="ru_Dir" Attributes="0" KeyPath="DevExpress.Utils.v18.1.UI.resources.dll_3"/>
+    <ROW Component="DevExpress.Utils.v18.1.dll" ComponentId="{8039069E-0FE4-48E3-91BA-32CC1F69C21D}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.Utils.v18.1.dll"/>
+    <ROW Component="DevExpress.Utils.v18.1.resources.dll" ComponentId="{E7B82776-7C4E-438F-BD00-C18DDC8C737F}" Directory_="de_Dir" Attributes="0" KeyPath="DevExpress.Utils.v18.1.resources.dll"/>
+    <ROW Component="DevExpress.Utils.v18.1.resources.dll_1" ComponentId="{60883EC2-CCE8-4547-A197-40FC073F0483}" Directory_="es_Dir" Attributes="0" KeyPath="DevExpress.Utils.v18.1.resources.dll_1"/>
+    <ROW Component="DevExpress.Utils.v18.1.resources.dll_2" ComponentId="{9962E1CB-5A48-455E-AB98-40F053EF1B75}" Directory_="ja_Dir" Attributes="0" KeyPath="DevExpress.Utils.v18.1.resources.dll_2"/>
+    <ROW Component="DevExpress.Utils.v18.1.resources.dll_3" ComponentId="{27F59DA3-18BB-4E3C-BB35-F277ABA4FD2F}" Directory_="ru_Dir" Attributes="0" KeyPath="DevExpress.Utils.v18.1.resources.dll_3"/>
+    <ROW Component="DevExpress.Xpo.v18.1.dll" ComponentId="{706A3A84-1AD0-4BAB-A77E-BE8EBC9DCB25}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.Xpo.v18.1.dll"/>
+    <ROW Component="DevExpress.Xpo.v18.1.resources.dll" ComponentId="{034405A4-ACBA-4475-BF89-260D76094746}" Directory_="de_Dir" Attributes="0" KeyPath="DevExpress.Xpo.v18.1.resources.dll"/>
+    <ROW Component="DevExpress.Xpo.v18.1.resources.dll_1" ComponentId="{706C9FE7-BBDA-4137-BFBF-2EA38018711C}" Directory_="es_Dir" Attributes="0" KeyPath="DevExpress.Xpo.v18.1.resources.dll_1"/>
+    <ROW Component="DevExpress.Xpo.v18.1.resources.dll_2" ComponentId="{AAD94D46-CE4C-437A-B673-DBF66940E806}" Directory_="ja_Dir" Attributes="0" KeyPath="DevExpress.Xpo.v18.1.resources.dll_2"/>
+    <ROW Component="DevExpress.Xpo.v18.1.resources.dll_3" ComponentId="{97C47AA2-AD63-4FE1-BA96-9DB987BBF888}" Directory_="ru_Dir" Attributes="0" KeyPath="DevExpress.Xpo.v18.1.resources.dll_3"/>
+    <ROW Component="DevExpress.XtraBars.v18.1.dll" ComponentId="{ECA28B3E-EA9D-4EF9-979E-A96567E05BDB}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.XtraBars.v18.1.dll"/>
+    <ROW Component="DevExpress.XtraBars.v18.1.resources.dll" ComponentId="{2CB2C276-A912-41B1-8DFF-705366E2A10A}" Directory_="de_Dir" Attributes="0" KeyPath="DevExpress.XtraBars.v18.1.resources.dll"/>
+    <ROW Component="DevExpress.XtraBars.v18.1.resources.dll_1" ComponentId="{12139413-D5BA-4DCF-9942-DFFC5EA62E49}" Directory_="es_Dir" Attributes="0" KeyPath="DevExpress.XtraBars.v18.1.resources.dll_1"/>
+    <ROW Component="DevExpress.XtraBars.v18.1.resources.dll_2" ComponentId="{2018D58F-593B-4FBB-8B62-01157EE42898}" Directory_="ja_Dir" Attributes="0" KeyPath="DevExpress.XtraBars.v18.1.resources.dll_2"/>
+    <ROW Component="DevExpress.XtraBars.v18.1.resources.dll_3" ComponentId="{8FA430D8-3DE6-4E94-B678-E2E17DA59BDE}" Directory_="ru_Dir" Attributes="0" KeyPath="DevExpress.XtraBars.v18.1.resources.dll_3"/>
+    <ROW Component="DevExpress.XtraCharts.v18.1.Extensions.dll" ComponentId="{68B9D4E9-2013-4DBA-B36B-7437EBAC3FA9}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.XtraCharts.v18.1.Extensions.dll"/>
+    <ROW Component="DevExpress.XtraCharts.v18.1.Wizard.dll" ComponentId="{2499B46F-CFE3-4F60-BB3C-A03C3704AE98}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.XtraCharts.v18.1.Wizard.dll"/>
+    <ROW Component="DevExpress.XtraCharts.v18.1.Wizard.resources.dll" ComponentId="{4FF042A2-F65D-4FC6-9BE5-133D52F5C155}" Directory_="de_Dir" Attributes="0" KeyPath="DevExpress.XtraCharts.v18.1.Wizard.resources.dll"/>
+    <ROW Component="DevExpress.XtraCharts.v18.1.Wizard.resources.dll_1" ComponentId="{B60BFCED-383F-44E8-87A9-71261A18EE21}" Directory_="es_Dir" Attributes="0" KeyPath="DevExpress.XtraCharts.v18.1.Wizard.resources.dll_1"/>
+    <ROW Component="DevExpress.XtraCharts.v18.1.Wizard.resources.dll_2" ComponentId="{CF239811-0EEA-4FA9-ABFA-FEB22705FF8B}" Directory_="ja_Dir" Attributes="0" KeyPath="DevExpress.XtraCharts.v18.1.Wizard.resources.dll_2"/>
+    <ROW Component="DevExpress.XtraCharts.v18.1.Wizard.resources.dll_3" ComponentId="{60E9A42B-B819-4B13-B437-57AE71DA3864}" Directory_="ru_Dir" Attributes="0" KeyPath="DevExpress.XtraCharts.v18.1.Wizard.resources.dll_3"/>
+    <ROW Component="DevExpress.XtraCharts.v18.1.dll" ComponentId="{810FAD32-F3E0-44AF-8976-86443C401FCB}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.XtraCharts.v18.1.dll"/>
+    <ROW Component="DevExpress.XtraCharts.v18.1.resources.dll" ComponentId="{A0235734-F5AA-4C56-8D61-993696DA0B00}" Directory_="de_Dir" Attributes="0" KeyPath="DevExpress.XtraCharts.v18.1.resources.dll"/>
+    <ROW Component="DevExpress.XtraCharts.v18.1.resources.dll_1" ComponentId="{C5A5B883-6410-4F41-90CA-D1D910C4CDCB}" Directory_="es_Dir" Attributes="0" KeyPath="DevExpress.XtraCharts.v18.1.resources.dll_1"/>
+    <ROW Component="DevExpress.XtraCharts.v18.1.resources.dll_2" ComponentId="{0E816082-B75C-4B1A-89EC-0725173A912E}" Directory_="ja_Dir" Attributes="0" KeyPath="DevExpress.XtraCharts.v18.1.resources.dll_2"/>
+    <ROW Component="DevExpress.XtraCharts.v18.1.resources.dll_3" ComponentId="{5B725483-F81F-4BA0-8B28-329CA45F1C76}" Directory_="ru_Dir" Attributes="0" KeyPath="DevExpress.XtraCharts.v18.1.resources.dll_3"/>
+    <ROW Component="DevExpress.XtraDiagram.v18.1.dll" ComponentId="{BDC670D0-5890-41A0-A51F-6527C05535F2}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.XtraDiagram.v18.1.dll"/>
+    <ROW Component="DevExpress.XtraEditors.v18.1.dll" ComponentId="{FBD1F76B-6676-4E56-B453-DE68489D59B6}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.XtraEditors.v18.1.dll"/>
+    <ROW Component="DevExpress.XtraEditors.v18.1.resources.dll" ComponentId="{E8C06B23-BE8A-4EA9-B1BE-CAAE22C3F89B}" Directory_="de_Dir" Attributes="0" KeyPath="DevExpress.XtraEditors.v18.1.resources.dll"/>
+    <ROW Component="DevExpress.XtraEditors.v18.1.resources.dll_1" ComponentId="{4A35C075-22BE-4D60-BBA7-CDA011DD766D}" Directory_="es_Dir" Attributes="0" KeyPath="DevExpress.XtraEditors.v18.1.resources.dll_1"/>
+    <ROW Component="DevExpress.XtraEditors.v18.1.resources.dll_2" ComponentId="{561B3C5F-7FBA-4844-A45A-7F82B138B8BA}" Directory_="ja_Dir" Attributes="0" KeyPath="DevExpress.XtraEditors.v18.1.resources.dll_2"/>
+    <ROW Component="DevExpress.XtraEditors.v18.1.resources.dll_3" ComponentId="{23031AEF-6F01-4C6F-875E-07048A3A37F0}" Directory_="ru_Dir" Attributes="0" KeyPath="DevExpress.XtraEditors.v18.1.resources.dll_3"/>
+    <ROW Component="DevExpress.XtraGauges.v18.1.Core.dll" ComponentId="{3B3F881C-7D4D-493B-8A93-FBD8C0D58E1E}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.XtraGauges.v18.1.Core.dll"/>
+    <ROW Component="DevExpress.XtraGauges.v18.1.Core.resources.dll" ComponentId="{D2C9DCCF-1F65-4738-9682-E5738DF6B9D5}" Directory_="de_Dir" Attributes="0" KeyPath="DevExpress.XtraGauges.v18.1.Core.resources.dll"/>
+    <ROW Component="DevExpress.XtraGauges.v18.1.Core.resources.dll_1" ComponentId="{62D8FC3E-4FC4-4FA5-8851-E7FE09B5EBBD}" Directory_="es_Dir" Attributes="0" KeyPath="DevExpress.XtraGauges.v18.1.Core.resources.dll_1"/>
+    <ROW Component="DevExpress.XtraGauges.v18.1.Core.resources.dll_2" ComponentId="{C84B43D8-9F80-46D5-9FCA-F2DD5FF503E9}" Directory_="ja_Dir" Attributes="0" KeyPath="DevExpress.XtraGauges.v18.1.Core.resources.dll_2"/>
+    <ROW Component="DevExpress.XtraGauges.v18.1.Core.resources.dll_3" ComponentId="{94B8456F-A167-42B3-B409-50A7D3B64BE5}" Directory_="ru_Dir" Attributes="0" KeyPath="DevExpress.XtraGauges.v18.1.Core.resources.dll_3"/>
+    <ROW Component="DevExpress.XtraGrid.v18.1.dll" ComponentId="{921F8843-C8E1-48A6-8A0C-AAF4B687ED89}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.XtraGrid.v18.1.dll"/>
+    <ROW Component="DevExpress.XtraGrid.v18.1.resources.dll" ComponentId="{17474F58-DB9F-4EBD-880F-26B040964E1C}" Directory_="de_Dir" Attributes="0" KeyPath="DevExpress.XtraGrid.v18.1.resources.dll"/>
+    <ROW Component="DevExpress.XtraGrid.v18.1.resources.dll_1" ComponentId="{CE4BD0EA-6B4A-4576-A721-DCD90A0D4FDE}" Directory_="es_Dir" Attributes="0" KeyPath="DevExpress.XtraGrid.v18.1.resources.dll_1"/>
+    <ROW Component="DevExpress.XtraGrid.v18.1.resources.dll_2" ComponentId="{62DD06AA-31FD-47AB-8A82-8A49FA4ABE44}" Directory_="ja_Dir" Attributes="0" KeyPath="DevExpress.XtraGrid.v18.1.resources.dll_2"/>
+    <ROW Component="DevExpress.XtraGrid.v18.1.resources.dll_3" ComponentId="{61B23E6B-CBE0-44BF-A162-357804B098F8}" Directory_="ru_Dir" Attributes="0" KeyPath="DevExpress.XtraGrid.v18.1.resources.dll_3"/>
+    <ROW Component="DevExpress.XtraLayout.v18.1.dll" ComponentId="{59A3BDA4-F965-4CC2-B4FD-BC12F696D6B0}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.XtraLayout.v18.1.dll"/>
+    <ROW Component="DevExpress.XtraLayout.v18.1.resources.dll" ComponentId="{8188B5BC-2363-4F1E-B9CD-623200A71B5D}" Directory_="de_Dir" Attributes="0" KeyPath="DevExpress.XtraLayout.v18.1.resources.dll"/>
+    <ROW Component="DevExpress.XtraLayout.v18.1.resources.dll_1" ComponentId="{2A173E31-1F17-40D1-9EEB-4BC47787875D}" Directory_="es_Dir" Attributes="0" KeyPath="DevExpress.XtraLayout.v18.1.resources.dll_1"/>
+    <ROW Component="DevExpress.XtraLayout.v18.1.resources.dll_2" ComponentId="{68A2D320-0EF8-4F6F-BF8E-AB5DD3B67EBB}" Directory_="ja_Dir" Attributes="0" KeyPath="DevExpress.XtraLayout.v18.1.resources.dll_2"/>
+    <ROW Component="DevExpress.XtraLayout.v18.1.resources.dll_3" ComponentId="{AFE43B89-2F01-4D12-B0EC-27B059BE756F}" Directory_="ru_Dir" Attributes="0" KeyPath="DevExpress.XtraLayout.v18.1.resources.dll_3"/>
+    <ROW Component="DevExpress.XtraNavBar.v18.1.dll" ComponentId="{2AE006D8-829E-4529-A1F8-A499BBDB18AD}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.XtraNavBar.v18.1.dll"/>
+    <ROW Component="DevExpress.XtraNavBar.v18.1.resources.dll" ComponentId="{2A620C9A-931D-4B56-BCED-5D5F0362FE49}" Directory_="de_Dir" Attributes="0" KeyPath="DevExpress.XtraNavBar.v18.1.resources.dll"/>
+    <ROW Component="DevExpress.XtraNavBar.v18.1.resources.dll_1" ComponentId="{80B80F70-A231-4D1C-9379-95EDB54174F8}" Directory_="es_Dir" Attributes="0" KeyPath="DevExpress.XtraNavBar.v18.1.resources.dll_1"/>
+    <ROW Component="DevExpress.XtraNavBar.v18.1.resources.dll_2" ComponentId="{6CA4090A-9B03-4AB7-84A4-B15A6168C4EB}" Directory_="ja_Dir" Attributes="0" KeyPath="DevExpress.XtraNavBar.v18.1.resources.dll_2"/>
+    <ROW Component="DevExpress.XtraNavBar.v18.1.resources.dll_3" ComponentId="{F91E134F-58CE-4352-9C32-38C653609079}" Directory_="ru_Dir" Attributes="0" KeyPath="DevExpress.XtraNavBar.v18.1.resources.dll_3"/>
+    <ROW Component="DevExpress.XtraPivotGrid.v18.1.dll" ComponentId="{1A67C14A-B272-4BCF-A827-0F95FB4F9835}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.XtraPivotGrid.v18.1.dll"/>
+    <ROW Component="DevExpress.XtraPivotGrid.v18.1.resources.dll" ComponentId="{EF49C9D0-4F81-4716-BD4A-B2961B727953}" Directory_="de_Dir" Attributes="0" KeyPath="DevExpress.XtraPivotGrid.v18.1.resources.dll"/>
+    <ROW Component="DevExpress.XtraPivotGrid.v18.1.resources.dll_1" ComponentId="{A0A3149C-4F04-4600-98F7-9AFAE1DDCB74}" Directory_="es_Dir" Attributes="0" KeyPath="DevExpress.XtraPivotGrid.v18.1.resources.dll_1"/>
+    <ROW Component="DevExpress.XtraPivotGrid.v18.1.resources.dll_2" ComponentId="{1F47F098-E9BA-475C-90A2-777E15B438A5}" Directory_="ja_Dir" Attributes="0" KeyPath="DevExpress.XtraPivotGrid.v18.1.resources.dll_2"/>
+    <ROW Component="DevExpress.XtraPivotGrid.v18.1.resources.dll_3" ComponentId="{C18136F1-ADAA-400B-998B-6ECF397DB849}" Directory_="ru_Dir" Attributes="0" KeyPath="DevExpress.XtraPivotGrid.v18.1.resources.dll_3"/>
+    <ROW Component="DevExpress.XtraPrinting.v18.1.dll" ComponentId="{5DBE45AC-6803-44EE-B5A4-9852A86E21ED}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.XtraPrinting.v18.1.dll"/>
+    <ROW Component="DevExpress.XtraPrinting.v18.1.resources.dll" ComponentId="{9DDC2970-724B-4C96-9146-69B891CA2161}" Directory_="de_Dir" Attributes="0" KeyPath="DevExpress.XtraPrinting.v18.1.resources.dll"/>
+    <ROW Component="DevExpress.XtraPrinting.v18.1.resources.dll_1" ComponentId="{13362866-6491-499B-B492-3B57CEB37E7C}" Directory_="es_Dir" Attributes="0" KeyPath="DevExpress.XtraPrinting.v18.1.resources.dll_1"/>
+    <ROW Component="DevExpress.XtraPrinting.v18.1.resources.dll_2" ComponentId="{4A929AF4-1685-4B3F-8770-6A1CDB811CB9}" Directory_="ja_Dir" Attributes="0" KeyPath="DevExpress.XtraPrinting.v18.1.resources.dll_2"/>
+    <ROW Component="DevExpress.XtraPrinting.v18.1.resources.dll_3" ComponentId="{B263F594-EB7D-4E39-8496-4E0E3F25D05B}" Directory_="ru_Dir" Attributes="0" KeyPath="DevExpress.XtraPrinting.v18.1.resources.dll_3"/>
+    <ROW Component="DevExpress.XtraReports.v18.1.Extensions.dll" ComponentId="{9C56677B-8D31-4698-8813-603821D5069E}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.XtraReports.v18.1.Extensions.dll"/>
+    <ROW Component="DevExpress.XtraReports.v18.1.Extensions.resources.dll" ComponentId="{4D8E97AC-894C-4F73-BC79-95497F50E1CA}" Directory_="de_Dir" Attributes="0" KeyPath="DevExpress.XtraReports.v18.1.Extensions.resources.dll"/>
+    <ROW Component="DevExpress.XtraReports.v18.1.Extensions.resources.dll_1" ComponentId="{5240CAAB-A75F-4843-A64B-6155CE248568}" Directory_="es_Dir" Attributes="0" KeyPath="DevExpress.XtraReports.v18.1.Extensions.resources.dll_1"/>
+    <ROW Component="DevExpress.XtraReports.v18.1.Extensions.resources.dll_2" ComponentId="{DC705507-4656-431B-A41E-269AD777F757}" Directory_="ja_Dir" Attributes="0" KeyPath="DevExpress.XtraReports.v18.1.Extensions.resources.dll_2"/>
+    <ROW Component="DevExpress.XtraReports.v18.1.Extensions.resources.dll_3" ComponentId="{B7920E03-50C8-4320-A1C8-9F6AD858BC63}" Directory_="ru_Dir" Attributes="0" KeyPath="DevExpress.XtraReports.v18.1.Extensions.resources.dll_3"/>
+    <ROW Component="DevExpress.XtraReports.v18.1.dll" ComponentId="{3351C32B-50AA-45B6-9FCF-8B71975EB4B8}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.XtraReports.v18.1.dll"/>
+    <ROW Component="DevExpress.XtraReports.v18.1.resources.dll" ComponentId="{805362FA-5A13-4480-993F-03DEDCD74478}" Directory_="de_Dir" Attributes="0" KeyPath="DevExpress.XtraReports.v18.1.resources.dll"/>
+    <ROW Component="DevExpress.XtraReports.v18.1.resources.dll_1" ComponentId="{6234C95B-9BF7-4CAF-AAC6-E9F7F34A4FA8}" Directory_="es_Dir" Attributes="0" KeyPath="DevExpress.XtraReports.v18.1.resources.dll_1"/>
+    <ROW Component="DevExpress.XtraReports.v18.1.resources.dll_2" ComponentId="{7FCF0300-9629-46C7-B499-3C15772B80A1}" Directory_="ja_Dir" Attributes="0" KeyPath="DevExpress.XtraReports.v18.1.resources.dll_2"/>
+    <ROW Component="DevExpress.XtraReports.v18.1.resources.dll_3" ComponentId="{10EE78CE-7864-4561-ACE3-C9FE37A76EC2}" Directory_="ru_Dir" Attributes="0" KeyPath="DevExpress.XtraReports.v18.1.resources.dll_3"/>
+    <ROW Component="DevExpress.XtraRichEdit.v18.1.dll" ComponentId="{9F4C695C-78FD-4CE1-B1E4-BE03AF138AEC}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.XtraRichEdit.v18.1.dll"/>
+    <ROW Component="DevExpress.XtraRichEdit.v18.1.resources.dll" ComponentId="{D694AA98-E45A-4502-BF72-BDC2138CBCA7}" Directory_="de_Dir" Attributes="0" KeyPath="DevExpress.XtraRichEdit.v18.1.resources.dll"/>
+    <ROW Component="DevExpress.XtraRichEdit.v18.1.resources.dll_1" ComponentId="{AB698342-9FA4-4E56-95BA-16A0BAADAD6A}" Directory_="es_Dir" Attributes="0" KeyPath="DevExpress.XtraRichEdit.v18.1.resources.dll_1"/>
+    <ROW Component="DevExpress.XtraRichEdit.v18.1.resources.dll_2" ComponentId="{6BDE6FDD-A533-4850-B52F-C631567176B4}" Directory_="ja_Dir" Attributes="0" KeyPath="DevExpress.XtraRichEdit.v18.1.resources.dll_2"/>
+    <ROW Component="DevExpress.XtraRichEdit.v18.1.resources.dll_3" ComponentId="{B1D5ABEC-73F5-4799-A412-5FABB0B900E2}" Directory_="ru_Dir" Attributes="0" KeyPath="DevExpress.XtraRichEdit.v18.1.resources.dll_3"/>
+    <ROW Component="DevExpress.XtraScheduler.v18.1.Core.dll" ComponentId="{CE1E658D-CF3F-4BCC-BA1C-A1D65656D395}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.XtraScheduler.v18.1.Core.dll"/>
+    <ROW Component="DevExpress.XtraScheduler.v18.1.Core.resources.dll" ComponentId="{8F73686D-98B4-4438-80F7-5EADF55A6281}" Directory_="de_Dir" Attributes="0" KeyPath="DevExpress.XtraScheduler.v18.1.Core.resources.dll"/>
+    <ROW Component="DevExpress.XtraScheduler.v18.1.Core.resources.dll_1" ComponentId="{E9D798B7-34FB-4B1C-9FC4-A5F89F126E4C}" Directory_="es_Dir" Attributes="0" KeyPath="DevExpress.XtraScheduler.v18.1.Core.resources.dll_1"/>
+    <ROW Component="DevExpress.XtraScheduler.v18.1.Core.resources.dll_2" ComponentId="{2C6A5E47-FF08-4760-8D50-1CEBD2F14977}" Directory_="ja_Dir" Attributes="0" KeyPath="DevExpress.XtraScheduler.v18.1.Core.resources.dll_2"/>
+    <ROW Component="DevExpress.XtraScheduler.v18.1.Core.resources.dll_3" ComponentId="{683BFC16-335A-451E-A9A7-E4758FDEBA77}" Directory_="ru_Dir" Attributes="0" KeyPath="DevExpress.XtraScheduler.v18.1.Core.resources.dll_3"/>
+    <ROW Component="DevExpress.XtraScheduler.v18.1.dll" ComponentId="{72D40B5D-EA09-4A2D-9282-7FFEB00345D6}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.XtraScheduler.v18.1.dll"/>
+    <ROW Component="DevExpress.XtraScheduler.v18.1.resources.dll" ComponentId="{24B21DCC-8A45-433F-BD18-57EEF885E8F4}" Directory_="de_Dir" Attributes="0" KeyPath="DevExpress.XtraScheduler.v18.1.resources.dll"/>
+    <ROW Component="DevExpress.XtraScheduler.v18.1.resources.dll_1" ComponentId="{03F355D8-456E-4D9E-AC4B-CB7C7794D5B2}" Directory_="es_Dir" Attributes="0" KeyPath="DevExpress.XtraScheduler.v18.1.resources.dll_1"/>
+    <ROW Component="DevExpress.XtraScheduler.v18.1.resources.dll_2" ComponentId="{A8454569-DF54-41F3-852B-3ECC0FE75166}" Directory_="ja_Dir" Attributes="0" KeyPath="DevExpress.XtraScheduler.v18.1.resources.dll_2"/>
+    <ROW Component="DevExpress.XtraScheduler.v18.1.resources.dll_3" ComponentId="{804C219D-B69C-4986-BF5E-88B6A9073E73}" Directory_="ru_Dir" Attributes="0" KeyPath="DevExpress.XtraScheduler.v18.1.resources.dll_3"/>
+    <ROW Component="DevExpress.XtraSpreadsheet.v18.1.dll" ComponentId="{3E42398E-8037-4294-917B-4738BE93118F}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.XtraSpreadsheet.v18.1.dll"/>
+    <ROW Component="DevExpress.XtraSpreadsheet.v18.1.resources.dll" ComponentId="{524A52D3-D640-440F-B794-C9CBE4CFC182}" Directory_="de_Dir" Attributes="0" KeyPath="DevExpress.XtraSpreadsheet.v18.1.resources.dll"/>
+    <ROW Component="DevExpress.XtraSpreadsheet.v18.1.resources.dll_1" ComponentId="{10626F2E-E32F-4A50-845F-A9569157D198}" Directory_="es_Dir" Attributes="0" KeyPath="DevExpress.XtraSpreadsheet.v18.1.resources.dll_1"/>
+    <ROW Component="DevExpress.XtraSpreadsheet.v18.1.resources.dll_2" ComponentId="{9E813D6E-69C9-4EBF-AE8A-A7A1AEA922AE}" Directory_="ja_Dir" Attributes="0" KeyPath="DevExpress.XtraSpreadsheet.v18.1.resources.dll_2"/>
+    <ROW Component="DevExpress.XtraSpreadsheet.v18.1.resources.dll_3" ComponentId="{96A2279C-61FE-4250-935A-AE544E7ED1B2}" Directory_="ru_Dir" Attributes="0" KeyPath="DevExpress.XtraSpreadsheet.v18.1.resources.dll_3"/>
+    <ROW Component="DevExpress.XtraSpreadsheet.v18.1.xml" ComponentId="{614EB577-F568-41DF-816A-63A794533334}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.XtraSpreadsheet.v18.1.xml" Type="0"/>
+    <ROW Component="DevExpress.XtraTreeList.v18.1.dll" ComponentId="{7DC887F9-7CA8-4530-9A64-A52D95AF1026}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.XtraTreeList.v18.1.dll"/>
+    <ROW Component="DevExpress.XtraTreeList.v18.1.resources.dll" ComponentId="{1C596AE2-2E29-4FBA-83BE-32B900087ACF}" Directory_="de_Dir" Attributes="0" KeyPath="DevExpress.XtraTreeList.v18.1.resources.dll"/>
+    <ROW Component="DevExpress.XtraTreeList.v18.1.resources.dll_1" ComponentId="{CBADBE43-D1BA-4ABE-89A2-27759887001E}" Directory_="es_Dir" Attributes="0" KeyPath="DevExpress.XtraTreeList.v18.1.resources.dll_1"/>
+    <ROW Component="DevExpress.XtraTreeList.v18.1.resources.dll_2" ComponentId="{988C22B4-B3F7-481B-880B-AEE56B0BDCDF}" Directory_="ja_Dir" Attributes="0" KeyPath="DevExpress.XtraTreeList.v18.1.resources.dll_2"/>
+    <ROW Component="DevExpress.XtraTreeList.v18.1.resources.dll_3" ComponentId="{319CA8BA-6612-43C0-A91F-D908716297B6}" Directory_="ru_Dir" Attributes="0" KeyPath="DevExpress.XtraTreeList.v18.1.resources.dll_3"/>
+    <ROW Component="DevExpress.XtraVerticalGrid.v18.1.dll" ComponentId="{1974D8C5-0D56-46C5-89AC-4BD0C461A7D3}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.XtraVerticalGrid.v18.1.dll"/>
+    <ROW Component="DevExpress.XtraVerticalGrid.v18.1.resources.dll" ComponentId="{EBCD74B5-EA0A-4202-9E9B-43FEF9CBBF5C}" Directory_="de_Dir" Attributes="0" KeyPath="DevExpress.XtraVerticalGrid.v18.1.resources.dll"/>
+    <ROW Component="DevExpress.XtraVerticalGrid.v18.1.resources.dll_1" ComponentId="{2F262675-1C25-4C0E-9CA6-A0B13FAD7985}" Directory_="es_Dir" Attributes="0" KeyPath="DevExpress.XtraVerticalGrid.v18.1.resources.dll_1"/>
+    <ROW Component="DevExpress.XtraVerticalGrid.v18.1.resources.dll_2" ComponentId="{55F2D308-8BD7-4263-BB38-6E8173C6D86F}" Directory_="ja_Dir" Attributes="0" KeyPath="DevExpress.XtraVerticalGrid.v18.1.resources.dll_2"/>
+    <ROW Component="DevExpress.XtraVerticalGrid.v18.1.resources.dll_3" ComponentId="{A5A98688-B8F3-4131-84E5-28B7D7BA3921}" Directory_="ru_Dir" Attributes="0" KeyPath="DevExpress.XtraVerticalGrid.v18.1.resources.dll_3"/>
+    <ROW Component="ProductInformation" ComponentId="{88E4F37E-82B9-4E11-97A7-DBB5CB670A30}" Directory_="APPDIR" Attributes="4" KeyPath="Version"/>
+    <ROW Component="QuanLyThuVien.exe" ComponentId="{8A8D47E6-4F17-4971-B20E-E48DE2F918F7}" Directory_="APPDIR" Attributes="0" KeyPath="QuanLyThuVien.exe"/>
+    <ROW Component="QuanLyThuVien.exeShortcut.lnk" ComponentId="{BB64C404-17D5-4DD3-BCF3-01D33B2EF5C8}" Directory_="SHORTCUTDIR" Attributes="0" KeyPath="QuanLyThuVien.exeShortcut.lnk" Type="0"/>
+    <ROW Component="SQLCMD.EXE" ComponentId="{53826D3D-ADA8-4458-9442-8DFE76A55A05}" Directory_="Data_Dir" Attributes="256" KeyPath="SQLCMD.EXE"/>
+    <ROW Component="batchparser.dll" ComponentId="{568D1C02-E9EC-41CD-A433-9A666B75E038}" Directory_="Data_Dir" Attributes="256" KeyPath="batchparser.dll"/>
+    <ROW Component="example.png" ComponentId="{172703D0-1B1C-423A-AF2F-270BD6629CE4}" Directory_="bookcover_Dir" Attributes="0" KeyPath="example.png" Type="0"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatsComponent">
+    <ROW Feature="MainFeature" Title="MainFeature" Description="Description" Display="1" Level="1" Directory_="APPDIR" Attributes="0"/>
+    <ATTRIBUTE name="CurrentFeature" value="MainFeature"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFilesComponent">
+    <ROW File="batchparser.dll" Component_="batchparser.dll" FileName="BATCHP~1.DLL|batchparser.dll" Attributes="2" SourcePath="..\..\..\Data\batchparser.dll" SelfReg="false"/>
+    <ROW File="Createdatabase.bat" Component_="Createdatabase.bat" FileName="CREATE~1.BAT|Create database.bat" Attributes="0" SourcePath="..\..\..\Data\Create database.bat" SelfReg="false"/>
+    <ROW File="Data.sql" Component_="Createdatabase.bat" FileName="Data.sql" Attributes="0" SourcePath="..\..\..\Data\Data.sql" SelfReg="false"/>
+    <ROW File="DataReport1.sql" Component_="Createdatabase.bat" FileName="DATARE~1.SQL|DataReport1.sql" Attributes="0" SourcePath="..\..\..\Data\DataReport1.sql" SelfReg="false"/>
+    <ROW File="DataReport2.sql" Component_="Createdatabase.bat" FileName="DATARE~2.SQL|DataReport2.sql" Attributes="0" SourcePath="..\..\..\Data\DataReport2.sql" SelfReg="false"/>
+    <ROW File="SQLCMD.EXE" Component_="SQLCMD.EXE" FileName="SQLCMD.EXE" Attributes="2" SourcePath="..\..\..\Data\SQLCMD.EXE" SelfReg="false" DigSign="true"/>
+    <ROW File="SQLCMD.rll" Component_="Createdatabase.bat" FileName="SQLCMD.rll" Attributes="2" SourcePath="..\..\..\Data\SQLCMD.rll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraSpreadsheet.v18.1.dll" Component_="DevExpress.XtraSpreadsheet.v18.1.dll" FileName="DEVEXP~1.DLL|DevExpress.XtraSpreadsheet.v18.1.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\DevExpress.XtraSpreadsheet.v18.1.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraSpreadsheet.v18.1.xml" Component_="DevExpress.XtraSpreadsheet.v18.1.xml" FileName="DEVEXP~1.XML|DevExpress.XtraSpreadsheet.v18.1.xml" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\DevExpress.XtraSpreadsheet.v18.1.xml" SelfReg="false"/>
+    <ROW File="DevExpress.XtraTreeList.v18.1.dll" Component_="DevExpress.XtraTreeList.v18.1.dll" FileName="DEVEXP~2.DLL|DevExpress.XtraTreeList.v18.1.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\DevExpress.XtraTreeList.v18.1.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraTreeList.v18.1.xml" Component_="DevExpress.XtraSpreadsheet.v18.1.xml" FileName="DEVEXP~2.XML|DevExpress.XtraTreeList.v18.1.xml" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\DevExpress.XtraTreeList.v18.1.xml" SelfReg="false"/>
+    <ROW File="DevExpress.XtraVerticalGrid.v18.1.dll" Component_="DevExpress.XtraVerticalGrid.v18.1.dll" FileName="DEVEXP~3.DLL|DevExpress.XtraVerticalGrid.v18.1.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\DevExpress.XtraVerticalGrid.v18.1.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraVerticalGrid.v18.1.xml" Component_="DevExpress.XtraSpreadsheet.v18.1.xml" FileName="DEVEXP~3.XML|DevExpress.XtraVerticalGrid.v18.1.xml" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\DevExpress.XtraVerticalGrid.v18.1.xml" SelfReg="false"/>
+    <ROW File="QuanLyThuVien.exe" Component_="QuanLyThuVien.exe" FileName="QUANLY~1.EXE|QuanLyThuVien.exe" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\QuanLyThuVien.exe" SelfReg="false" DigSign="true"/>
+    <ROW File="example.png" Component_="example.png" FileName="example.png" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\bookcover\example.png" SelfReg="false"/>
+    <ROW File="S001" Component_="example.png" FileName="S001" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\bookcover\S001" SelfReg="false"/>
+    <ROW File="S010" Component_="example.png" FileName="S010" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\bookcover\S010" SelfReg="false"/>
+    <ROW File="DevExpress.Data.v18.1.resources.dll" Component_="DevExpress.Data.v18.1.resources.dll" FileName="DEVEXP~1.DLL|DevExpress.Data.v18.1.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\de\DevExpress.Data.v18.1.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.DataAccess.v18.1.resources.dll" Component_="DevExpress.DataAccess.v18.1.resources.dll" FileName="DEVEXP~2.DLL|DevExpress.DataAccess.v18.1.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\de\DevExpress.DataAccess.v18.1.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.DataAccess.v18.1.UI.resources.dll" Component_="DevExpress.DataAccess.v18.1.UI.resources.dll" FileName="DEVEXP~3.DLL|DevExpress.DataAccess.v18.1.UI.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\de\DevExpress.DataAccess.v18.1.UI.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.Diagram.v18.1.Core.resources.dll" Component_="DevExpress.Diagram.v18.1.Core.resources.dll" FileName="DEVEXP~4.DLL|DevExpress.Diagram.v18.1.Core.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\de\DevExpress.Diagram.v18.1.Core.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.Office.v18.1.Core.resources.dll" Component_="DevExpress.Office.v18.1.Core.resources.dll" FileName="DEVEXP~5.DLL|DevExpress.Office.v18.1.Core.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\de\DevExpress.Office.v18.1.Core.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.Pdf.v18.1.Core.resources.dll" Component_="DevExpress.Pdf.v18.1.Core.resources.dll" FileName="DEVEXP~6.DLL|DevExpress.Pdf.v18.1.Core.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\de\DevExpress.Pdf.v18.1.Core.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.PivotGrid.v18.1.Core.resources.dll" Component_="DevExpress.PivotGrid.v18.1.Core.resources.dll" FileName="DEVEXP~7.DLL|DevExpress.PivotGrid.v18.1.Core.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\de\DevExpress.PivotGrid.v18.1.Core.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.Printing.v18.1.Core.resources.dll" Component_="DevExpress.Printing.v18.1.Core.resources.dll" FileName="DEVEXP~8.DLL|DevExpress.Printing.v18.1.Core.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\de\DevExpress.Printing.v18.1.Core.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.RichEdit.v18.1.Core.resources.dll" Component_="DevExpress.RichEdit.v18.1.Core.resources.dll" FileName="DEVEXP~9.DLL|DevExpress.RichEdit.v18.1.Core.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\de\DevExpress.RichEdit.v18.1.Core.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.Sparkline.v18.1.Core.resources.dll" Component_="DevExpress.Sparkline.v18.1.Core.resources.dll" FileName="DEVEX~10.DLL|DevExpress.Sparkline.v18.1.Core.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\de\DevExpress.Sparkline.v18.1.Core.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.Spreadsheet.v18.1.Core.resources.dll" Component_="DevExpress.Spreadsheet.v18.1.Core.resources.dll" FileName="DEVEX~11.DLL|DevExpress.Spreadsheet.v18.1.Core.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\de\DevExpress.Spreadsheet.v18.1.Core.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.Utils.v18.1.resources.dll" Component_="DevExpress.Utils.v18.1.resources.dll" FileName="DEVEX~12.DLL|DevExpress.Utils.v18.1.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\de\DevExpress.Utils.v18.1.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.Utils.v18.1.UI.resources.dll" Component_="DevExpress.Utils.v18.1.UI.resources.dll" FileName="DEVEX~13.DLL|DevExpress.Utils.v18.1.UI.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\de\DevExpress.Utils.v18.1.UI.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.Xpo.v18.1.resources.dll" Component_="DevExpress.Xpo.v18.1.resources.dll" FileName="DEVEX~14.DLL|DevExpress.Xpo.v18.1.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\de\DevExpress.Xpo.v18.1.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraBars.v18.1.resources.dll" Component_="DevExpress.XtraBars.v18.1.resources.dll" FileName="DEVEX~15.DLL|DevExpress.XtraBars.v18.1.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\de\DevExpress.XtraBars.v18.1.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraCharts.v18.1.resources.dll" Component_="DevExpress.XtraCharts.v18.1.resources.dll" FileName="DEVEX~16.DLL|DevExpress.XtraCharts.v18.1.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\de\DevExpress.XtraCharts.v18.1.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraCharts.v18.1.Wizard.resources.dll" Component_="DevExpress.XtraCharts.v18.1.Wizard.resources.dll" FileName="DEVEX~17.DLL|DevExpress.XtraCharts.v18.1.Wizard.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\de\DevExpress.XtraCharts.v18.1.Wizard.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraEditors.v18.1.resources.dll" Component_="DevExpress.XtraEditors.v18.1.resources.dll" FileName="DEVEX~18.DLL|DevExpress.XtraEditors.v18.1.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\de\DevExpress.XtraEditors.v18.1.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraGauges.v18.1.Core.resources.dll" Component_="DevExpress.XtraGauges.v18.1.Core.resources.dll" FileName="DEVEX~19.DLL|DevExpress.XtraGauges.v18.1.Core.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\de\DevExpress.XtraGauges.v18.1.Core.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraGrid.v18.1.resources.dll" Component_="DevExpress.XtraGrid.v18.1.resources.dll" FileName="DEVEX~20.DLL|DevExpress.XtraGrid.v18.1.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\de\DevExpress.XtraGrid.v18.1.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraLayout.v18.1.resources.dll" Component_="DevExpress.XtraLayout.v18.1.resources.dll" FileName="DEVEX~21.DLL|DevExpress.XtraLayout.v18.1.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\de\DevExpress.XtraLayout.v18.1.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraNavBar.v18.1.resources.dll" Component_="DevExpress.XtraNavBar.v18.1.resources.dll" FileName="DEVEX~22.DLL|DevExpress.XtraNavBar.v18.1.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\de\DevExpress.XtraNavBar.v18.1.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraPivotGrid.v18.1.resources.dll" Component_="DevExpress.XtraPivotGrid.v18.1.resources.dll" FileName="DEVEX~23.DLL|DevExpress.XtraPivotGrid.v18.1.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\de\DevExpress.XtraPivotGrid.v18.1.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraPrinting.v18.1.resources.dll" Component_="DevExpress.XtraPrinting.v18.1.resources.dll" FileName="DEVEX~24.DLL|DevExpress.XtraPrinting.v18.1.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\de\DevExpress.XtraPrinting.v18.1.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraReports.v18.1.Extensions.resources.dll" Component_="DevExpress.XtraReports.v18.1.Extensions.resources.dll" FileName="DEVEX~25.DLL|DevExpress.XtraReports.v18.1.Extensions.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\de\DevExpress.XtraReports.v18.1.Extensions.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraReports.v18.1.resources.dll" Component_="DevExpress.XtraReports.v18.1.resources.dll" FileName="DEVEX~26.DLL|DevExpress.XtraReports.v18.1.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\de\DevExpress.XtraReports.v18.1.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraRichEdit.v18.1.resources.dll" Component_="DevExpress.XtraRichEdit.v18.1.resources.dll" FileName="DEVEX~27.DLL|DevExpress.XtraRichEdit.v18.1.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\de\DevExpress.XtraRichEdit.v18.1.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraScheduler.v18.1.Core.resources.dll" Component_="DevExpress.XtraScheduler.v18.1.Core.resources.dll" FileName="DEVEX~28.DLL|DevExpress.XtraScheduler.v18.1.Core.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\de\DevExpress.XtraScheduler.v18.1.Core.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraScheduler.v18.1.resources.dll" Component_="DevExpress.XtraScheduler.v18.1.resources.dll" FileName="DEVEX~29.DLL|DevExpress.XtraScheduler.v18.1.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\de\DevExpress.XtraScheduler.v18.1.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraSpreadsheet.v18.1.resources.dll" Component_="DevExpress.XtraSpreadsheet.v18.1.resources.dll" FileName="DEVEX~30.DLL|DevExpress.XtraSpreadsheet.v18.1.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\de\DevExpress.XtraSpreadsheet.v18.1.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraTreeList.v18.1.resources.dll" Component_="DevExpress.XtraTreeList.v18.1.resources.dll" FileName="DEVEX~31.DLL|DevExpress.XtraTreeList.v18.1.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\de\DevExpress.XtraTreeList.v18.1.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraVerticalGrid.v18.1.resources.dll" Component_="DevExpress.XtraVerticalGrid.v18.1.resources.dll" FileName="DEVEX~32.DLL|DevExpress.XtraVerticalGrid.v18.1.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\de\DevExpress.XtraVerticalGrid.v18.1.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.Data.v18.1.resources.dll_1" Component_="DevExpress.Data.v18.1.resources.dll_1" FileName="DEVEXP~1.DLL|DevExpress.Data.v18.1.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\es\DevExpress.Data.v18.1.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.DataAccess.v18.1.resources.dll_1" Component_="DevExpress.DataAccess.v18.1.resources.dll_1" FileName="DEVEXP~2.DLL|DevExpress.DataAccess.v18.1.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\es\DevExpress.DataAccess.v18.1.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.DataAccess.v18.1.UI.resources.dll_1" Component_="DevExpress.DataAccess.v18.1.UI.resources.dll_1" FileName="DEVEXP~3.DLL|DevExpress.DataAccess.v18.1.UI.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\es\DevExpress.DataAccess.v18.1.UI.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.Diagram.v18.1.Core.resources.dll_1" Component_="DevExpress.Diagram.v18.1.Core.resources.dll_1" FileName="DEVEXP~4.DLL|DevExpress.Diagram.v18.1.Core.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\es\DevExpress.Diagram.v18.1.Core.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.Office.v18.1.Core.resources.dll_1" Component_="DevExpress.Office.v18.1.Core.resources.dll_1" FileName="DEVEXP~5.DLL|DevExpress.Office.v18.1.Core.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\es\DevExpress.Office.v18.1.Core.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.Pdf.v18.1.Core.resources.dll_1" Component_="DevExpress.Pdf.v18.1.Core.resources.dll_1" FileName="DEVEXP~6.DLL|DevExpress.Pdf.v18.1.Core.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\es\DevExpress.Pdf.v18.1.Core.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.PivotGrid.v18.1.Core.resources.dll_1" Component_="DevExpress.PivotGrid.v18.1.Core.resources.dll_1" FileName="DEVEXP~7.DLL|DevExpress.PivotGrid.v18.1.Core.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\es\DevExpress.PivotGrid.v18.1.Core.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.Printing.v18.1.Core.resources.dll_1" Component_="DevExpress.Printing.v18.1.Core.resources.dll_1" FileName="DEVEXP~8.DLL|DevExpress.Printing.v18.1.Core.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\es\DevExpress.Printing.v18.1.Core.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.RichEdit.v18.1.Core.resources.dll_1" Component_="DevExpress.RichEdit.v18.1.Core.resources.dll_1" FileName="DEVEXP~9.DLL|DevExpress.RichEdit.v18.1.Core.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\es\DevExpress.RichEdit.v18.1.Core.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.Sparkline.v18.1.Core.resources.dll_1" Component_="DevExpress.Sparkline.v18.1.Core.resources.dll_1" FileName="DEVEX~10.DLL|DevExpress.Sparkline.v18.1.Core.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\es\DevExpress.Sparkline.v18.1.Core.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.Spreadsheet.v18.1.Core.resources.dll_1" Component_="DevExpress.Spreadsheet.v18.1.Core.resources.dll_1" FileName="DEVEX~11.DLL|DevExpress.Spreadsheet.v18.1.Core.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\es\DevExpress.Spreadsheet.v18.1.Core.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.Utils.v18.1.resources.dll_1" Component_="DevExpress.Utils.v18.1.resources.dll_1" FileName="DEVEX~12.DLL|DevExpress.Utils.v18.1.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\es\DevExpress.Utils.v18.1.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.Utils.v18.1.UI.resources.dll_1" Component_="DevExpress.Utils.v18.1.UI.resources.dll_1" FileName="DEVEX~13.DLL|DevExpress.Utils.v18.1.UI.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\es\DevExpress.Utils.v18.1.UI.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.Xpo.v18.1.resources.dll_1" Component_="DevExpress.Xpo.v18.1.resources.dll_1" FileName="DEVEX~14.DLL|DevExpress.Xpo.v18.1.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\es\DevExpress.Xpo.v18.1.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraBars.v18.1.resources.dll_1" Component_="DevExpress.XtraBars.v18.1.resources.dll_1" FileName="DEVEX~15.DLL|DevExpress.XtraBars.v18.1.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\es\DevExpress.XtraBars.v18.1.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraCharts.v18.1.resources.dll_1" Component_="DevExpress.XtraCharts.v18.1.resources.dll_1" FileName="DEVEX~16.DLL|DevExpress.XtraCharts.v18.1.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\es\DevExpress.XtraCharts.v18.1.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraCharts.v18.1.Wizard.resources.dll_1" Component_="DevExpress.XtraCharts.v18.1.Wizard.resources.dll_1" FileName="DEVEX~17.DLL|DevExpress.XtraCharts.v18.1.Wizard.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\es\DevExpress.XtraCharts.v18.1.Wizard.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraEditors.v18.1.resources.dll_1" Component_="DevExpress.XtraEditors.v18.1.resources.dll_1" FileName="DEVEX~18.DLL|DevExpress.XtraEditors.v18.1.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\es\DevExpress.XtraEditors.v18.1.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraGauges.v18.1.Core.resources.dll_1" Component_="DevExpress.XtraGauges.v18.1.Core.resources.dll_1" FileName="DEVEX~19.DLL|DevExpress.XtraGauges.v18.1.Core.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\es\DevExpress.XtraGauges.v18.1.Core.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraGrid.v18.1.resources.dll_1" Component_="DevExpress.XtraGrid.v18.1.resources.dll_1" FileName="DEVEX~20.DLL|DevExpress.XtraGrid.v18.1.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\es\DevExpress.XtraGrid.v18.1.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraLayout.v18.1.resources.dll_1" Component_="DevExpress.XtraLayout.v18.1.resources.dll_1" FileName="DEVEX~21.DLL|DevExpress.XtraLayout.v18.1.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\es\DevExpress.XtraLayout.v18.1.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraNavBar.v18.1.resources.dll_1" Component_="DevExpress.XtraNavBar.v18.1.resources.dll_1" FileName="DEVEX~22.DLL|DevExpress.XtraNavBar.v18.1.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\es\DevExpress.XtraNavBar.v18.1.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraPivotGrid.v18.1.resources.dll_1" Component_="DevExpress.XtraPivotGrid.v18.1.resources.dll_1" FileName="DEVEX~23.DLL|DevExpress.XtraPivotGrid.v18.1.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\es\DevExpress.XtraPivotGrid.v18.1.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraPrinting.v18.1.resources.dll_1" Component_="DevExpress.XtraPrinting.v18.1.resources.dll_1" FileName="DEVEX~24.DLL|DevExpress.XtraPrinting.v18.1.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\es\DevExpress.XtraPrinting.v18.1.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraReports.v18.1.Extensions.resources.dll_1" Component_="DevExpress.XtraReports.v18.1.Extensions.resources.dll_1" FileName="DEVEX~25.DLL|DevExpress.XtraReports.v18.1.Extensions.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\es\DevExpress.XtraReports.v18.1.Extensions.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraReports.v18.1.resources.dll_1" Component_="DevExpress.XtraReports.v18.1.resources.dll_1" FileName="DEVEX~26.DLL|DevExpress.XtraReports.v18.1.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\es\DevExpress.XtraReports.v18.1.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraRichEdit.v18.1.resources.dll_1" Component_="DevExpress.XtraRichEdit.v18.1.resources.dll_1" FileName="DEVEX~27.DLL|DevExpress.XtraRichEdit.v18.1.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\es\DevExpress.XtraRichEdit.v18.1.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraScheduler.v18.1.Core.resources.dll_1" Component_="DevExpress.XtraScheduler.v18.1.Core.resources.dll_1" FileName="DEVEX~28.DLL|DevExpress.XtraScheduler.v18.1.Core.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\es\DevExpress.XtraScheduler.v18.1.Core.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraScheduler.v18.1.resources.dll_1" Component_="DevExpress.XtraScheduler.v18.1.resources.dll_1" FileName="DEVEX~29.DLL|DevExpress.XtraScheduler.v18.1.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\es\DevExpress.XtraScheduler.v18.1.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraSpreadsheet.v18.1.resources.dll_1" Component_="DevExpress.XtraSpreadsheet.v18.1.resources.dll_1" FileName="DEVEX~30.DLL|DevExpress.XtraSpreadsheet.v18.1.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\es\DevExpress.XtraSpreadsheet.v18.1.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraTreeList.v18.1.resources.dll_1" Component_="DevExpress.XtraTreeList.v18.1.resources.dll_1" FileName="DEVEX~31.DLL|DevExpress.XtraTreeList.v18.1.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\es\DevExpress.XtraTreeList.v18.1.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraVerticalGrid.v18.1.resources.dll_1" Component_="DevExpress.XtraVerticalGrid.v18.1.resources.dll_1" FileName="DEVEX~32.DLL|DevExpress.XtraVerticalGrid.v18.1.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\es\DevExpress.XtraVerticalGrid.v18.1.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.Data.v18.1.resources.dll_2" Component_="DevExpress.Data.v18.1.resources.dll_2" FileName="DEVEXP~1.DLL|DevExpress.Data.v18.1.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\ja\DevExpress.Data.v18.1.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.DataAccess.v18.1.resources.dll_2" Component_="DevExpress.DataAccess.v18.1.resources.dll_2" FileName="DEVEXP~2.DLL|DevExpress.DataAccess.v18.1.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\ja\DevExpress.DataAccess.v18.1.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.DataAccess.v18.1.UI.resources.dll_2" Component_="DevExpress.DataAccess.v18.1.UI.resources.dll_2" FileName="DEVEXP~3.DLL|DevExpress.DataAccess.v18.1.UI.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\ja\DevExpress.DataAccess.v18.1.UI.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.Diagram.v18.1.Core.resources.dll_2" Component_="DevExpress.Diagram.v18.1.Core.resources.dll_2" FileName="DEVEXP~4.DLL|DevExpress.Diagram.v18.1.Core.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\ja\DevExpress.Diagram.v18.1.Core.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.Office.v18.1.Core.resources.dll_2" Component_="DevExpress.Office.v18.1.Core.resources.dll_2" FileName="DEVEXP~5.DLL|DevExpress.Office.v18.1.Core.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\ja\DevExpress.Office.v18.1.Core.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.Pdf.v18.1.Core.resources.dll_2" Component_="DevExpress.Pdf.v18.1.Core.resources.dll_2" FileName="DEVEXP~6.DLL|DevExpress.Pdf.v18.1.Core.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\ja\DevExpress.Pdf.v18.1.Core.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.PivotGrid.v18.1.Core.resources.dll_2" Component_="DevExpress.PivotGrid.v18.1.Core.resources.dll_2" FileName="DEVEXP~7.DLL|DevExpress.PivotGrid.v18.1.Core.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\ja\DevExpress.PivotGrid.v18.1.Core.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.Printing.v18.1.Core.resources.dll_2" Component_="DevExpress.Printing.v18.1.Core.resources.dll_2" FileName="DEVEXP~8.DLL|DevExpress.Printing.v18.1.Core.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\ja\DevExpress.Printing.v18.1.Core.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.RichEdit.v18.1.Core.resources.dll_2" Component_="DevExpress.RichEdit.v18.1.Core.resources.dll_2" FileName="DEVEXP~9.DLL|DevExpress.RichEdit.v18.1.Core.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\ja\DevExpress.RichEdit.v18.1.Core.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.Sparkline.v18.1.Core.resources.dll_2" Component_="DevExpress.Sparkline.v18.1.Core.resources.dll_2" FileName="DEVEX~10.DLL|DevExpress.Sparkline.v18.1.Core.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\ja\DevExpress.Sparkline.v18.1.Core.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.Spreadsheet.v18.1.Core.resources.dll_2" Component_="DevExpress.Spreadsheet.v18.1.Core.resources.dll_2" FileName="DEVEX~11.DLL|DevExpress.Spreadsheet.v18.1.Core.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\ja\DevExpress.Spreadsheet.v18.1.Core.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.Utils.v18.1.resources.dll_2" Component_="DevExpress.Utils.v18.1.resources.dll_2" FileName="DEVEX~12.DLL|DevExpress.Utils.v18.1.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\ja\DevExpress.Utils.v18.1.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.Utils.v18.1.UI.resources.dll_2" Component_="DevExpress.Utils.v18.1.UI.resources.dll_2" FileName="DEVEX~13.DLL|DevExpress.Utils.v18.1.UI.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\ja\DevExpress.Utils.v18.1.UI.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.Xpo.v18.1.resources.dll_2" Component_="DevExpress.Xpo.v18.1.resources.dll_2" FileName="DEVEX~14.DLL|DevExpress.Xpo.v18.1.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\ja\DevExpress.Xpo.v18.1.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraBars.v18.1.resources.dll_2" Component_="DevExpress.XtraBars.v18.1.resources.dll_2" FileName="DEVEX~15.DLL|DevExpress.XtraBars.v18.1.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\ja\DevExpress.XtraBars.v18.1.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraCharts.v18.1.resources.dll_2" Component_="DevExpress.XtraCharts.v18.1.resources.dll_2" FileName="DEVEX~16.DLL|DevExpress.XtraCharts.v18.1.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\ja\DevExpress.XtraCharts.v18.1.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraCharts.v18.1.Wizard.resources.dll_2" Component_="DevExpress.XtraCharts.v18.1.Wizard.resources.dll_2" FileName="DEVEX~17.DLL|DevExpress.XtraCharts.v18.1.Wizard.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\ja\DevExpress.XtraCharts.v18.1.Wizard.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraEditors.v18.1.resources.dll_2" Component_="DevExpress.XtraEditors.v18.1.resources.dll_2" FileName="DEVEX~18.DLL|DevExpress.XtraEditors.v18.1.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\ja\DevExpress.XtraEditors.v18.1.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraGauges.v18.1.Core.resources.dll_2" Component_="DevExpress.XtraGauges.v18.1.Core.resources.dll_2" FileName="DEVEX~19.DLL|DevExpress.XtraGauges.v18.1.Core.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\ja\DevExpress.XtraGauges.v18.1.Core.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraGrid.v18.1.resources.dll_2" Component_="DevExpress.XtraGrid.v18.1.resources.dll_2" FileName="DEVEX~20.DLL|DevExpress.XtraGrid.v18.1.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\ja\DevExpress.XtraGrid.v18.1.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraLayout.v18.1.resources.dll_2" Component_="DevExpress.XtraLayout.v18.1.resources.dll_2" FileName="DEVEX~21.DLL|DevExpress.XtraLayout.v18.1.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\ja\DevExpress.XtraLayout.v18.1.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraNavBar.v18.1.resources.dll_2" Component_="DevExpress.XtraNavBar.v18.1.resources.dll_2" FileName="DEVEX~22.DLL|DevExpress.XtraNavBar.v18.1.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\ja\DevExpress.XtraNavBar.v18.1.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraPivotGrid.v18.1.resources.dll_2" Component_="DevExpress.XtraPivotGrid.v18.1.resources.dll_2" FileName="DEVEX~23.DLL|DevExpress.XtraPivotGrid.v18.1.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\ja\DevExpress.XtraPivotGrid.v18.1.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraPrinting.v18.1.resources.dll_2" Component_="DevExpress.XtraPrinting.v18.1.resources.dll_2" FileName="DEVEX~24.DLL|DevExpress.XtraPrinting.v18.1.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\ja\DevExpress.XtraPrinting.v18.1.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraReports.v18.1.Extensions.resources.dll_2" Component_="DevExpress.XtraReports.v18.1.Extensions.resources.dll_2" FileName="DEVEX~25.DLL|DevExpress.XtraReports.v18.1.Extensions.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\ja\DevExpress.XtraReports.v18.1.Extensions.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraReports.v18.1.resources.dll_2" Component_="DevExpress.XtraReports.v18.1.resources.dll_2" FileName="DEVEX~26.DLL|DevExpress.XtraReports.v18.1.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\ja\DevExpress.XtraReports.v18.1.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraRichEdit.v18.1.resources.dll_2" Component_="DevExpress.XtraRichEdit.v18.1.resources.dll_2" FileName="DEVEX~27.DLL|DevExpress.XtraRichEdit.v18.1.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\ja\DevExpress.XtraRichEdit.v18.1.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraScheduler.v18.1.Core.resources.dll_2" Component_="DevExpress.XtraScheduler.v18.1.Core.resources.dll_2" FileName="DEVEX~28.DLL|DevExpress.XtraScheduler.v18.1.Core.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\ja\DevExpress.XtraScheduler.v18.1.Core.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraScheduler.v18.1.resources.dll_2" Component_="DevExpress.XtraScheduler.v18.1.resources.dll_2" FileName="DEVEX~29.DLL|DevExpress.XtraScheduler.v18.1.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\ja\DevExpress.XtraScheduler.v18.1.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraSpreadsheet.v18.1.resources.dll_2" Component_="DevExpress.XtraSpreadsheet.v18.1.resources.dll_2" FileName="DEVEX~30.DLL|DevExpress.XtraSpreadsheet.v18.1.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\ja\DevExpress.XtraSpreadsheet.v18.1.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraTreeList.v18.1.resources.dll_2" Component_="DevExpress.XtraTreeList.v18.1.resources.dll_2" FileName="DEVEX~31.DLL|DevExpress.XtraTreeList.v18.1.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\ja\DevExpress.XtraTreeList.v18.1.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraVerticalGrid.v18.1.resources.dll_2" Component_="DevExpress.XtraVerticalGrid.v18.1.resources.dll_2" FileName="DEVEX~32.DLL|DevExpress.XtraVerticalGrid.v18.1.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\ja\DevExpress.XtraVerticalGrid.v18.1.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.Data.v18.1.resources.dll_3" Component_="DevExpress.Data.v18.1.resources.dll_3" FileName="DEVEXP~1.DLL|DevExpress.Data.v18.1.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\ru\DevExpress.Data.v18.1.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.DataAccess.v18.1.resources.dll_3" Component_="DevExpress.DataAccess.v18.1.resources.dll_3" FileName="DEVEXP~2.DLL|DevExpress.DataAccess.v18.1.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\ru\DevExpress.DataAccess.v18.1.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.DataAccess.v18.1.UI.resources.dll_3" Component_="DevExpress.DataAccess.v18.1.UI.resources.dll_3" FileName="DEVEXP~3.DLL|DevExpress.DataAccess.v18.1.UI.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\ru\DevExpress.DataAccess.v18.1.UI.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.Diagram.v18.1.Core.resources.dll_3" Component_="DevExpress.Diagram.v18.1.Core.resources.dll_3" FileName="DEVEXP~4.DLL|DevExpress.Diagram.v18.1.Core.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\ru\DevExpress.Diagram.v18.1.Core.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.Office.v18.1.Core.resources.dll_3" Component_="DevExpress.Office.v18.1.Core.resources.dll_3" FileName="DEVEXP~5.DLL|DevExpress.Office.v18.1.Core.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\ru\DevExpress.Office.v18.1.Core.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.Pdf.v18.1.Core.resources.dll_3" Component_="DevExpress.Pdf.v18.1.Core.resources.dll_3" FileName="DEVEXP~6.DLL|DevExpress.Pdf.v18.1.Core.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\ru\DevExpress.Pdf.v18.1.Core.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.PivotGrid.v18.1.Core.resources.dll_3" Component_="DevExpress.PivotGrid.v18.1.Core.resources.dll_3" FileName="DEVEXP~7.DLL|DevExpress.PivotGrid.v18.1.Core.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\ru\DevExpress.PivotGrid.v18.1.Core.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.Printing.v18.1.Core.resources.dll_3" Component_="DevExpress.Printing.v18.1.Core.resources.dll_3" FileName="DEVEXP~8.DLL|DevExpress.Printing.v18.1.Core.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\ru\DevExpress.Printing.v18.1.Core.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.RichEdit.v18.1.Core.resources.dll_3" Component_="DevExpress.RichEdit.v18.1.Core.resources.dll_3" FileName="DEVEXP~9.DLL|DevExpress.RichEdit.v18.1.Core.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\ru\DevExpress.RichEdit.v18.1.Core.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.Sparkline.v18.1.Core.resources.dll_3" Component_="DevExpress.Sparkline.v18.1.Core.resources.dll_3" FileName="DEVEX~10.DLL|DevExpress.Sparkline.v18.1.Core.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\ru\DevExpress.Sparkline.v18.1.Core.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.Spreadsheet.v18.1.Core.resources.dll_3" Component_="DevExpress.Spreadsheet.v18.1.Core.resources.dll_3" FileName="DEVEX~11.DLL|DevExpress.Spreadsheet.v18.1.Core.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\ru\DevExpress.Spreadsheet.v18.1.Core.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.Utils.v18.1.resources.dll_3" Component_="DevExpress.Utils.v18.1.resources.dll_3" FileName="DEVEX~12.DLL|DevExpress.Utils.v18.1.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\ru\DevExpress.Utils.v18.1.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.Utils.v18.1.UI.resources.dll_3" Component_="DevExpress.Utils.v18.1.UI.resources.dll_3" FileName="DEVEX~13.DLL|DevExpress.Utils.v18.1.UI.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\ru\DevExpress.Utils.v18.1.UI.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.Xpo.v18.1.resources.dll_3" Component_="DevExpress.Xpo.v18.1.resources.dll_3" FileName="DEVEX~14.DLL|DevExpress.Xpo.v18.1.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\ru\DevExpress.Xpo.v18.1.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraBars.v18.1.resources.dll_3" Component_="DevExpress.XtraBars.v18.1.resources.dll_3" FileName="DEVEX~15.DLL|DevExpress.XtraBars.v18.1.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\ru\DevExpress.XtraBars.v18.1.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraCharts.v18.1.resources.dll_3" Component_="DevExpress.XtraCharts.v18.1.resources.dll_3" FileName="DEVEX~16.DLL|DevExpress.XtraCharts.v18.1.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\ru\DevExpress.XtraCharts.v18.1.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraCharts.v18.1.Wizard.resources.dll_3" Component_="DevExpress.XtraCharts.v18.1.Wizard.resources.dll_3" FileName="DEVEX~17.DLL|DevExpress.XtraCharts.v18.1.Wizard.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\ru\DevExpress.XtraCharts.v18.1.Wizard.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraEditors.v18.1.resources.dll_3" Component_="DevExpress.XtraEditors.v18.1.resources.dll_3" FileName="DEVEX~18.DLL|DevExpress.XtraEditors.v18.1.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\ru\DevExpress.XtraEditors.v18.1.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraGauges.v18.1.Core.resources.dll_3" Component_="DevExpress.XtraGauges.v18.1.Core.resources.dll_3" FileName="DEVEX~19.DLL|DevExpress.XtraGauges.v18.1.Core.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\ru\DevExpress.XtraGauges.v18.1.Core.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraGrid.v18.1.resources.dll_3" Component_="DevExpress.XtraGrid.v18.1.resources.dll_3" FileName="DEVEX~20.DLL|DevExpress.XtraGrid.v18.1.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\ru\DevExpress.XtraGrid.v18.1.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraLayout.v18.1.resources.dll_3" Component_="DevExpress.XtraLayout.v18.1.resources.dll_3" FileName="DEVEX~21.DLL|DevExpress.XtraLayout.v18.1.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\ru\DevExpress.XtraLayout.v18.1.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraNavBar.v18.1.resources.dll_3" Component_="DevExpress.XtraNavBar.v18.1.resources.dll_3" FileName="DEVEX~22.DLL|DevExpress.XtraNavBar.v18.1.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\ru\DevExpress.XtraNavBar.v18.1.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraPivotGrid.v18.1.resources.dll_3" Component_="DevExpress.XtraPivotGrid.v18.1.resources.dll_3" FileName="DEVEX~23.DLL|DevExpress.XtraPivotGrid.v18.1.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\ru\DevExpress.XtraPivotGrid.v18.1.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraPrinting.v18.1.resources.dll_3" Component_="DevExpress.XtraPrinting.v18.1.resources.dll_3" FileName="DEVEX~24.DLL|DevExpress.XtraPrinting.v18.1.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\ru\DevExpress.XtraPrinting.v18.1.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraReports.v18.1.Extensions.resources.dll_3" Component_="DevExpress.XtraReports.v18.1.Extensions.resources.dll_3" FileName="DEVEX~25.DLL|DevExpress.XtraReports.v18.1.Extensions.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\ru\DevExpress.XtraReports.v18.1.Extensions.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraReports.v18.1.resources.dll_3" Component_="DevExpress.XtraReports.v18.1.resources.dll_3" FileName="DEVEX~26.DLL|DevExpress.XtraReports.v18.1.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\ru\DevExpress.XtraReports.v18.1.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraRichEdit.v18.1.resources.dll_3" Component_="DevExpress.XtraRichEdit.v18.1.resources.dll_3" FileName="DEVEX~27.DLL|DevExpress.XtraRichEdit.v18.1.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\ru\DevExpress.XtraRichEdit.v18.1.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraScheduler.v18.1.Core.resources.dll_3" Component_="DevExpress.XtraScheduler.v18.1.Core.resources.dll_3" FileName="DEVEX~28.DLL|DevExpress.XtraScheduler.v18.1.Core.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\ru\DevExpress.XtraScheduler.v18.1.Core.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraScheduler.v18.1.resources.dll_3" Component_="DevExpress.XtraScheduler.v18.1.resources.dll_3" FileName="DEVEX~29.DLL|DevExpress.XtraScheduler.v18.1.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\ru\DevExpress.XtraScheduler.v18.1.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraSpreadsheet.v18.1.resources.dll_3" Component_="DevExpress.XtraSpreadsheet.v18.1.resources.dll_3" FileName="DEVEX~30.DLL|DevExpress.XtraSpreadsheet.v18.1.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\ru\DevExpress.XtraSpreadsheet.v18.1.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraTreeList.v18.1.resources.dll_3" Component_="DevExpress.XtraTreeList.v18.1.resources.dll_3" FileName="DEVEX~31.DLL|DevExpress.XtraTreeList.v18.1.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\ru\DevExpress.XtraTreeList.v18.1.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraVerticalGrid.v18.1.resources.dll_3" Component_="DevExpress.XtraVerticalGrid.v18.1.resources.dll_3" FileName="DEVEX~32.DLL|DevExpress.XtraVerticalGrid.v18.1.resources.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\ru\DevExpress.XtraVerticalGrid.v18.1.resources.dll" SelfReg="false"/>
+    <ROW File="DevExpress.Charts.v18.1.Core.dll" Component_="DevExpress.Charts.v18.1.Core.dll" FileName="DEVEXP~4.DLL|DevExpress.Charts.v18.1.Core.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\DevExpress.Charts.v18.1.Core.dll" SelfReg="false"/>
+    <ROW File="DevExpress.CodeParser.v18.1.dll" Component_="DevExpress.CodeParser.v18.1.dll" FileName="DEVEXP~5.DLL|DevExpress.CodeParser.v18.1.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\DevExpress.CodeParser.v18.1.dll" SelfReg="false"/>
+    <ROW File="DevExpress.Data.v18.1.dll" Component_="DevExpress.Data.v18.1.dll" FileName="DEVEXP~6.DLL|DevExpress.Data.v18.1.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\DevExpress.Data.v18.1.dll" SelfReg="false"/>
+    <ROW File="DevExpress.Data.v18.1.xml" Component_="DevExpress.XtraSpreadsheet.v18.1.xml" FileName="DEVEXP~4.XML|DevExpress.Data.v18.1.xml" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\DevExpress.Data.v18.1.xml" SelfReg="false"/>
+    <ROW File="DevExpress.DataAccess.v18.1.dll" Component_="DevExpress.DataAccess.v18.1.dll" FileName="DEVEXP~7.DLL|DevExpress.DataAccess.v18.1.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\DevExpress.DataAccess.v18.1.dll" SelfReg="false"/>
+    <ROW File="DevExpress.DataAccess.v18.1.UI.dll" Component_="DevExpress.DataAccess.v18.1.UI.dll" FileName="DEVEXP~8.DLL|DevExpress.DataAccess.v18.1.UI.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\DevExpress.DataAccess.v18.1.UI.dll" SelfReg="false"/>
+    <ROW File="DevExpress.DataAccess.v18.1.UI.xml" Component_="DevExpress.XtraSpreadsheet.v18.1.xml" FileName="DEVEXP~5.XML|DevExpress.DataAccess.v18.1.UI.xml" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\DevExpress.DataAccess.v18.1.UI.xml" SelfReg="false"/>
+    <ROW File="DevExpress.DataAccess.v18.1.xml" Component_="DevExpress.XtraSpreadsheet.v18.1.xml" FileName="DEVEXP~6.XML|DevExpress.DataAccess.v18.1.xml" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\DevExpress.DataAccess.v18.1.xml" SelfReg="false"/>
+    <ROW File="DevExpress.Diagram.v18.1.Core.dll" Component_="DevExpress.Diagram.v18.1.Core.dll" FileName="DEVEXP~9.DLL|DevExpress.Diagram.v18.1.Core.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\DevExpress.Diagram.v18.1.Core.dll" SelfReg="false"/>
+    <ROW File="DevExpress.Diagram.v18.1.Core.xml" Component_="DevExpress.XtraSpreadsheet.v18.1.xml" FileName="DEVEXP~7.XML|DevExpress.Diagram.v18.1.Core.xml" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\DevExpress.Diagram.v18.1.Core.xml" SelfReg="false"/>
+    <ROW File="DevExpress.Images.v18.1.dll" Component_="DevExpress.Images.v18.1.dll" FileName="DEVEX~10.DLL|DevExpress.Images.v18.1.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\DevExpress.Images.v18.1.dll" SelfReg="false"/>
+    <ROW File="DevExpress.Office.v18.1.Core.dll" Component_="DevExpress.Office.v18.1.Core.dll" FileName="DEVEX~11.DLL|DevExpress.Office.v18.1.Core.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\DevExpress.Office.v18.1.Core.dll" SelfReg="false"/>
+    <ROW File="DevExpress.Office.v18.1.Core.xml" Component_="DevExpress.XtraSpreadsheet.v18.1.xml" FileName="DEVEXP~8.XML|DevExpress.Office.v18.1.Core.xml" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\DevExpress.Office.v18.1.Core.xml" SelfReg="false"/>
+    <ROW File="DevExpress.Pdf.v18.1.Core.dll" Component_="DevExpress.Pdf.v18.1.Core.dll" FileName="DEVEX~12.DLL|DevExpress.Pdf.v18.1.Core.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\DevExpress.Pdf.v18.1.Core.dll" SelfReg="false"/>
+    <ROW File="DevExpress.Pdf.v18.1.Core.xml" Component_="DevExpress.XtraSpreadsheet.v18.1.xml" FileName="DEVEXP~9.XML|DevExpress.Pdf.v18.1.Core.xml" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\DevExpress.Pdf.v18.1.Core.xml" SelfReg="false"/>
+    <ROW File="DevExpress.PivotGrid.v18.1.Core.dll" Component_="DevExpress.PivotGrid.v18.1.Core.dll" FileName="DEVEX~13.DLL|DevExpress.PivotGrid.v18.1.Core.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\DevExpress.PivotGrid.v18.1.Core.dll" SelfReg="false"/>
+    <ROW File="DevExpress.PivotGrid.v18.1.Core.xml" Component_="DevExpress.XtraSpreadsheet.v18.1.xml" FileName="DEVEX~10.XML|DevExpress.PivotGrid.v18.1.Core.xml" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\DevExpress.PivotGrid.v18.1.Core.xml" SelfReg="false"/>
+    <ROW File="DevExpress.Printing.v18.1.Core.dll" Component_="DevExpress.Printing.v18.1.Core.dll" FileName="DEVEX~14.DLL|DevExpress.Printing.v18.1.Core.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\DevExpress.Printing.v18.1.Core.dll" SelfReg="false"/>
+    <ROW File="DevExpress.Printing.v18.1.Core.xml" Component_="DevExpress.XtraSpreadsheet.v18.1.xml" FileName="DEVEX~11.XML|DevExpress.Printing.v18.1.Core.xml" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\DevExpress.Printing.v18.1.Core.xml" SelfReg="false"/>
+    <ROW File="DevExpress.RichEdit.v18.1.Core.dll" Component_="DevExpress.RichEdit.v18.1.Core.dll" FileName="DEVEX~15.DLL|DevExpress.RichEdit.v18.1.Core.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\DevExpress.RichEdit.v18.1.Core.dll" SelfReg="false"/>
+    <ROW File="DevExpress.RichEdit.v18.1.Core.xml" Component_="DevExpress.XtraSpreadsheet.v18.1.xml" FileName="DEVEX~12.XML|DevExpress.RichEdit.v18.1.Core.xml" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\DevExpress.RichEdit.v18.1.Core.xml" SelfReg="false"/>
+    <ROW File="DevExpress.RichEdit.v18.1.Export.dll" Component_="DevExpress.RichEdit.v18.1.Export.dll" FileName="DEVEX~16.DLL|DevExpress.RichEdit.v18.1.Export.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\DevExpress.RichEdit.v18.1.Export.dll" SelfReg="false"/>
+    <ROW File="DevExpress.Sparkline.v18.1.Core.dll" Component_="DevExpress.Sparkline.v18.1.Core.dll" FileName="DEVEX~17.DLL|DevExpress.Sparkline.v18.1.Core.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\DevExpress.Sparkline.v18.1.Core.dll" SelfReg="false"/>
+    <ROW File="DevExpress.Sparkline.v18.1.Core.xml" Component_="DevExpress.XtraSpreadsheet.v18.1.xml" FileName="DEVEX~13.XML|DevExpress.Sparkline.v18.1.Core.xml" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\DevExpress.Sparkline.v18.1.Core.xml" SelfReg="false"/>
+    <ROW File="DevExpress.Spreadsheet.v18.1.Core.dll" Component_="DevExpress.Spreadsheet.v18.1.Core.dll" FileName="DEVEX~18.DLL|DevExpress.Spreadsheet.v18.1.Core.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\DevExpress.Spreadsheet.v18.1.Core.dll" SelfReg="false"/>
+    <ROW File="DevExpress.Spreadsheet.v18.1.Core.xml" Component_="DevExpress.XtraSpreadsheet.v18.1.xml" FileName="DEVEX~14.XML|DevExpress.Spreadsheet.v18.1.Core.xml" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\DevExpress.Spreadsheet.v18.1.Core.xml" SelfReg="false"/>
+    <ROW File="DevExpress.Utils.v18.1.dll" Component_="DevExpress.Utils.v18.1.dll" FileName="DEVEX~19.DLL|DevExpress.Utils.v18.1.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\DevExpress.Utils.v18.1.dll" SelfReg="false"/>
+    <ROW File="DevExpress.Utils.v18.1.UI.dll" Component_="DevExpress.Utils.v18.1.UI.dll" FileName="DEVEX~20.DLL|DevExpress.Utils.v18.1.UI.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\DevExpress.Utils.v18.1.UI.dll" SelfReg="false"/>
+    <ROW File="DevExpress.Utils.v18.1.UI.xml" Component_="DevExpress.XtraSpreadsheet.v18.1.xml" FileName="DEVEX~15.XML|DevExpress.Utils.v18.1.UI.xml" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\DevExpress.Utils.v18.1.UI.xml" SelfReg="false"/>
+    <ROW File="DevExpress.Utils.v18.1.xml" Component_="DevExpress.XtraSpreadsheet.v18.1.xml" FileName="DEVEX~16.XML|DevExpress.Utils.v18.1.xml" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\DevExpress.Utils.v18.1.xml" SelfReg="false"/>
+    <ROW File="DevExpress.Xpo.v18.1.dll" Component_="DevExpress.Xpo.v18.1.dll" FileName="DEVEX~21.DLL|DevExpress.Xpo.v18.1.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\DevExpress.Xpo.v18.1.dll" SelfReg="false"/>
+    <ROW File="DevExpress.Xpo.v18.1.xml" Component_="DevExpress.XtraSpreadsheet.v18.1.xml" FileName="DEVEX~17.XML|DevExpress.Xpo.v18.1.xml" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\DevExpress.Xpo.v18.1.xml" SelfReg="false"/>
+    <ROW File="DevExpress.XtraBars.v18.1.dll" Component_="DevExpress.XtraBars.v18.1.dll" FileName="DEVEX~22.DLL|DevExpress.XtraBars.v18.1.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\DevExpress.XtraBars.v18.1.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraBars.v18.1.xml" Component_="DevExpress.XtraSpreadsheet.v18.1.xml" FileName="DEVEX~18.XML|DevExpress.XtraBars.v18.1.xml" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\DevExpress.XtraBars.v18.1.xml" SelfReg="false"/>
+    <ROW File="DevExpress.XtraCharts.v18.1.dll" Component_="DevExpress.XtraCharts.v18.1.dll" FileName="DEVEX~23.DLL|DevExpress.XtraCharts.v18.1.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\DevExpress.XtraCharts.v18.1.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraCharts.v18.1.Extensions.dll" Component_="DevExpress.XtraCharts.v18.1.Extensions.dll" FileName="DEVEX~24.DLL|DevExpress.XtraCharts.v18.1.Extensions.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\DevExpress.XtraCharts.v18.1.Extensions.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraCharts.v18.1.Wizard.dll" Component_="DevExpress.XtraCharts.v18.1.Wizard.dll" FileName="DEVEX~25.DLL|DevExpress.XtraCharts.v18.1.Wizard.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\DevExpress.XtraCharts.v18.1.Wizard.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraCharts.v18.1.Wizard.xml" Component_="DevExpress.XtraSpreadsheet.v18.1.xml" FileName="DEVEX~19.XML|DevExpress.XtraCharts.v18.1.Wizard.xml" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\DevExpress.XtraCharts.v18.1.Wizard.xml" SelfReg="false"/>
+    <ROW File="DevExpress.XtraCharts.v18.1.xml" Component_="DevExpress.XtraSpreadsheet.v18.1.xml" FileName="DEVEX~20.XML|DevExpress.XtraCharts.v18.1.xml" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\DevExpress.XtraCharts.v18.1.xml" SelfReg="false"/>
+    <ROW File="DevExpress.XtraDiagram.v18.1.dll" Component_="DevExpress.XtraDiagram.v18.1.dll" FileName="DEVEX~26.DLL|DevExpress.XtraDiagram.v18.1.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\DevExpress.XtraDiagram.v18.1.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraDiagram.v18.1.xml" Component_="DevExpress.XtraSpreadsheet.v18.1.xml" FileName="DEVEX~21.XML|DevExpress.XtraDiagram.v18.1.xml" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\DevExpress.XtraDiagram.v18.1.xml" SelfReg="false"/>
+    <ROW File="DevExpress.XtraEditors.v18.1.dll" Component_="DevExpress.XtraEditors.v18.1.dll" FileName="DEVEX~27.DLL|DevExpress.XtraEditors.v18.1.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\DevExpress.XtraEditors.v18.1.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraEditors.v18.1.xml" Component_="DevExpress.XtraSpreadsheet.v18.1.xml" FileName="DEVEX~22.XML|DevExpress.XtraEditors.v18.1.xml" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\DevExpress.XtraEditors.v18.1.xml" SelfReg="false"/>
+    <ROW File="DevExpress.XtraGauges.v18.1.Core.dll" Component_="DevExpress.XtraGauges.v18.1.Core.dll" FileName="DEVEX~28.DLL|DevExpress.XtraGauges.v18.1.Core.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\DevExpress.XtraGauges.v18.1.Core.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraGauges.v18.1.Core.xml" Component_="DevExpress.XtraSpreadsheet.v18.1.xml" FileName="DEVEX~23.XML|DevExpress.XtraGauges.v18.1.Core.xml" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\DevExpress.XtraGauges.v18.1.Core.xml" SelfReg="false"/>
+    <ROW File="DevExpress.XtraGrid.v18.1.dll" Component_="DevExpress.XtraGrid.v18.1.dll" FileName="DEVEX~29.DLL|DevExpress.XtraGrid.v18.1.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\DevExpress.XtraGrid.v18.1.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraGrid.v18.1.xml" Component_="DevExpress.XtraSpreadsheet.v18.1.xml" FileName="DEVEX~24.XML|DevExpress.XtraGrid.v18.1.xml" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\DevExpress.XtraGrid.v18.1.xml" SelfReg="false"/>
+    <ROW File="DevExpress.XtraLayout.v18.1.dll" Component_="DevExpress.XtraLayout.v18.1.dll" FileName="DEVEX~30.DLL|DevExpress.XtraLayout.v18.1.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\DevExpress.XtraLayout.v18.1.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraLayout.v18.1.xml" Component_="DevExpress.XtraSpreadsheet.v18.1.xml" FileName="DEVEX~25.XML|DevExpress.XtraLayout.v18.1.xml" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\DevExpress.XtraLayout.v18.1.xml" SelfReg="false"/>
+    <ROW File="DevExpress.XtraNavBar.v18.1.dll" Component_="DevExpress.XtraNavBar.v18.1.dll" FileName="DEVEX~31.DLL|DevExpress.XtraNavBar.v18.1.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\DevExpress.XtraNavBar.v18.1.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraNavBar.v18.1.xml" Component_="DevExpress.XtraSpreadsheet.v18.1.xml" FileName="DEVEX~26.XML|DevExpress.XtraNavBar.v18.1.xml" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\DevExpress.XtraNavBar.v18.1.xml" SelfReg="false"/>
+    <ROW File="DevExpress.XtraPivotGrid.v18.1.dll" Component_="DevExpress.XtraPivotGrid.v18.1.dll" FileName="DEVEX~32.DLL|DevExpress.XtraPivotGrid.v18.1.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\DevExpress.XtraPivotGrid.v18.1.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraPivotGrid.v18.1.xml" Component_="DevExpress.XtraSpreadsheet.v18.1.xml" FileName="DEVEX~27.XML|DevExpress.XtraPivotGrid.v18.1.xml" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\DevExpress.XtraPivotGrid.v18.1.xml" SelfReg="false"/>
+    <ROW File="DevExpress.XtraPrinting.v18.1.dll" Component_="DevExpress.XtraPrinting.v18.1.dll" FileName="DEVEX~33.DLL|DevExpress.XtraPrinting.v18.1.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\DevExpress.XtraPrinting.v18.1.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraPrinting.v18.1.xml" Component_="DevExpress.XtraSpreadsheet.v18.1.xml" FileName="DEVEX~28.XML|DevExpress.XtraPrinting.v18.1.xml" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\DevExpress.XtraPrinting.v18.1.xml" SelfReg="false"/>
+    <ROW File="DevExpress.XtraReports.v18.1.dll" Component_="DevExpress.XtraReports.v18.1.dll" FileName="DEVEX~34.DLL|DevExpress.XtraReports.v18.1.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\DevExpress.XtraReports.v18.1.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraReports.v18.1.Extensions.dll" Component_="DevExpress.XtraReports.v18.1.Extensions.dll" FileName="DEVEX~35.DLL|DevExpress.XtraReports.v18.1.Extensions.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\DevExpress.XtraReports.v18.1.Extensions.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraReports.v18.1.Extensions.xml" Component_="DevExpress.XtraSpreadsheet.v18.1.xml" FileName="DEVEX~29.XML|DevExpress.XtraReports.v18.1.Extensions.xml" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\DevExpress.XtraReports.v18.1.Extensions.xml" SelfReg="false"/>
+    <ROW File="DevExpress.XtraReports.v18.1.xml" Component_="DevExpress.XtraSpreadsheet.v18.1.xml" FileName="DEVEX~30.XML|DevExpress.XtraReports.v18.1.xml" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\DevExpress.XtraReports.v18.1.xml" SelfReg="false"/>
+    <ROW File="DevExpress.XtraRichEdit.v18.1.dll" Component_="DevExpress.XtraRichEdit.v18.1.dll" FileName="DEVEX~36.DLL|DevExpress.XtraRichEdit.v18.1.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\DevExpress.XtraRichEdit.v18.1.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraRichEdit.v18.1.xml" Component_="DevExpress.XtraSpreadsheet.v18.1.xml" FileName="DEVEX~31.XML|DevExpress.XtraRichEdit.v18.1.xml" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\DevExpress.XtraRichEdit.v18.1.xml" SelfReg="false"/>
+    <ROW File="DevExpress.XtraScheduler.v18.1.Core.dll" Component_="DevExpress.XtraScheduler.v18.1.Core.dll" FileName="DEVEX~37.DLL|DevExpress.XtraScheduler.v18.1.Core.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\DevExpress.XtraScheduler.v18.1.Core.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraScheduler.v18.1.Core.xml" Component_="DevExpress.XtraSpreadsheet.v18.1.xml" FileName="DEVEX~32.XML|DevExpress.XtraScheduler.v18.1.Core.xml" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\DevExpress.XtraScheduler.v18.1.Core.xml" SelfReg="false"/>
+    <ROW File="DevExpress.XtraScheduler.v18.1.dll" Component_="DevExpress.XtraScheduler.v18.1.dll" FileName="DEVEX~38.DLL|DevExpress.XtraScheduler.v18.1.dll" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\DevExpress.XtraScheduler.v18.1.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraScheduler.v18.1.xml" Component_="DevExpress.XtraSpreadsheet.v18.1.xml" FileName="DEVEX~33.XML|DevExpress.XtraScheduler.v18.1.xml" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\DevExpress.XtraScheduler.v18.1.xml" SelfReg="false"/>
+    <ROW File="QuanLyThuVien.exe.config" Component_="DevExpress.XtraSpreadsheet.v18.1.xml" FileName="QUANLY~1.CON|QuanLyThuVien.exe.config" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\QuanLyThuVien.exe.config" SelfReg="false"/>
+    <ROW File="QuanLyThuVien.vshost.exe.config" Component_="DevExpress.XtraSpreadsheet.v18.1.xml" FileName="QUANLY~2.CON|QuanLyThuVien.vshost.exe.config" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\QuanLyThuVien.vshost.exe.config" SelfReg="false"/>
+    <ROW File="QuanLyThuVien.exeShortcut.lnk" Component_="QuanLyThuVien.exeShortcut.lnk" FileName="LIBRAR~1.LNK|Library Management.lnk" Attributes="0" SourcePath="..\QuanLyThuVien\bin\Debug\QuanLyThuVien.exe - Shortcut.lnk" SelfReg="false"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.BootstrOptComponent">
+    <ROW BootstrOptKey="GlobalOptions" DownloadFolder="[AppDataFolder][|Manufacturer]\[|ProductName]\prerequisites" Options="2"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.BootstrapperUISequenceComponent">
+    <ROW Action="AI_DetectSoftware" Sequence="101"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.BuildComponent">
+    <ROW BuildKey="DefaultBuild" BuildName="DefaultBuild" BuildOrder="1" BuildType="0" Languages="en" InstallationType="4" UseLargeSchema="true"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.DictionaryComponent">
+    <ROW Path="&lt;AI_DICTS&gt;ui.ail"/>
+    <ROW Path="&lt;AI_DICTS&gt;ui_en.ail"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.FragmentComponent">
+    <ROW Fragment="CommonUI.aip" Path="&lt;AI_FRAGS&gt;CommonUI.aip"/>
+    <ROW Fragment="FolderDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\FolderDlg.aip"/>
+    <ROW Fragment="MaintenanceTypeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\MaintenanceTypeDlg.aip"/>
+    <ROW Fragment="MaintenanceWelcomeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\MaintenanceWelcomeDlg.aip"/>
+    <ROW Fragment="SequenceDialogs.aip" Path="&lt;AI_THEMES&gt;classic\fragments\SequenceDialogs.aip"/>
+    <ROW Fragment="Sequences.aip" Path="&lt;AI_FRAGS&gt;Sequences.aip"/>
+    <ROW Fragment="StaticUIStrings.aip" Path="&lt;AI_FRAGS&gt;StaticUIStrings.aip"/>
+    <ROW Fragment="UI.aip" Path="&lt;AI_THEMES&gt;classic\fragments\UI.aip"/>
+    <ROW Fragment="Validation.aip" Path="&lt;AI_FRAGS&gt;Validation.aip"/>
+    <ROW Fragment="VerifyRemoveDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\VerifyRemoveDlg.aip"/>
+    <ROW Fragment="VerifyRepairDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\VerifyRepairDlg.aip"/>
+    <ROW Fragment="WelcomeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\WelcomeDlg.aip"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiBinaryComponent">
+    <ROW Name="SoftwareDetector.dll" SourcePath="&lt;AI_CUSTACTS&gt;SoftwareDetector.dll"/>
+    <ROW Name="aicustact.dll" SourcePath="&lt;AI_CUSTACTS&gt;aicustact.dll"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiControlEventComponent">
+    <ROW Dialog_="WelcomeDlg" Control_="Next" Event="NewDialog" Argument="FolderDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="FolderDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_INSTALL" Ordering="201"/>
+    <ROW Dialog_="FolderDlg" Control_="Back" Event="NewDialog" Argument="WelcomeDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="MaintenanceWelcomeDlg" Control_="Next" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT" Ordering="99"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_MAINT" Ordering="198"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="CustomizeDlg" Condition="AI_MAINT" Ordering="202"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_INSTALL" Ordering="197"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="FolderDlg" Condition="AI_INSTALL" Ordering="201"/>
+    <ROW Dialog_="CustomizeDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_MAINT" Ordering="101"/>
+    <ROW Dialog_="CustomizeDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT" Ordering="1"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="ChangeButton" Event="NewDialog" Argument="CustomizeDlg" Condition="AI_MAINT" Ordering="501"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceWelcomeDlg" Condition="AI_MAINT" Ordering="1"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="RemoveButton" Event="NewDialog" Argument="VerifyRemoveDlg" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="601"/>
+    <ROW Dialog_="VerifyRemoveDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="1"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="RepairButton" Event="NewDialog" Argument="VerifyRepairDlg" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="601"/>
+    <ROW Dialog_="VerifyRepairDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="1"/>
+    <ROW Dialog_="VerifyRepairDlg" Control_="Repair" Event="EndDialog" Argument="Return" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="399" Options="1"/>
+    <ROW Dialog_="VerifyRemoveDlg" Control_="Remove" Event="EndDialog" Argument="Return" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="299" Options="1"/>
+    <ROW Dialog_="PatchWelcomeDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_PATCH" Ordering="201"/>
+    <ROW Dialog_="ResumeDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_RESUME" Ordering="299"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_PATCH" Ordering="199"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="PatchWelcomeDlg" Condition="AI_PATCH" Ordering="203"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCustActComponent">
+    <ROW Action="AI_DOWNGRADE" Type="19" Target="4010"/>
+    <ROW Action="AI_DetectSoftware" Type="257" Source="SoftwareDetector.dll" Target="OnDetectSoftware"/>
+    <ROW Action="AI_DpiContentScale" Type="1" Source="aicustact.dll" Target="DpiContentScale"/>
+    <ROW Action="AI_EnableDebugLog" Type="321" Source="aicustact.dll" Target="EnableDebugLog"/>
+    <ROW Action="AI_InstallModeCheck" Type="1" Source="aicustact.dll" Target="UpdateInstallMode" WithoutSeq="true"/>
+    <ROW Action="AI_PREPARE_UPGRADE" Type="65" Source="aicustact.dll" Target="PrepareUpgrade"/>
+    <ROW Action="AI_RESTORE_LOCATION" Type="65" Source="aicustact.dll" Target="RestoreLocation"/>
+    <ROW Action="AI_ResolveKnownFolders" Type="1" Source="aicustact.dll" Target="AI_ResolveKnownFolders"/>
+    <ROW Action="AI_SHOW_LOG" Type="65" Source="aicustact.dll" Target="LaunchLogFile" WithoutSeq="true"/>
+    <ROW Action="AI_STORE_LOCATION" Type="51" Source="ARPINSTALLLOCATION" Target="[APPDIR]"/>
+    <ROW Action="SET_APPDIR" Type="307" Source="APPDIR" Target="[ProgramFilesFolder][Manufacturer]\[ProductName]"/>
+    <ROW Action="SET_SHORTCUTDIR" Type="307" Source="SHORTCUTDIR" Target="[ProgramMenuFolder][ProductName]" MultiBuildTarget="DefaultBuild:[DesktopFolder]"/>
+    <ROW Action="SET_TARGETDIR_TO_APPDIR" Type="51" Source="TARGETDIR" Target="[APPDIR]"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatCompsComponent">
+    <ROW Feature_="MainFeature" Component_="ProductInformation"/>
+    <ROW Feature_="MainFeature" Component_="batchparser.dll"/>
+    <ROW Feature_="MainFeature" Component_="Createdatabase.bat"/>
+    <ROW Feature_="MainFeature" Component_="SQLCMD.EXE"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraSpreadsheet.v18.1.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraSpreadsheet.v18.1.xml"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraTreeList.v18.1.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraVerticalGrid.v18.1.dll"/>
+    <ROW Feature_="MainFeature" Component_="QuanLyThuVien.exe"/>
+    <ROW Feature_="MainFeature" Component_="example.png"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.Data.v18.1.resources.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.DataAccess.v18.1.resources.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.DataAccess.v18.1.UI.resources.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.Diagram.v18.1.Core.resources.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.Office.v18.1.Core.resources.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.Pdf.v18.1.Core.resources.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.PivotGrid.v18.1.Core.resources.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.Printing.v18.1.Core.resources.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.RichEdit.v18.1.Core.resources.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.Sparkline.v18.1.Core.resources.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.Spreadsheet.v18.1.Core.resources.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.Utils.v18.1.resources.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.Utils.v18.1.UI.resources.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.Xpo.v18.1.resources.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraBars.v18.1.resources.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraCharts.v18.1.resources.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraCharts.v18.1.Wizard.resources.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraEditors.v18.1.resources.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraGauges.v18.1.Core.resources.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraGrid.v18.1.resources.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraLayout.v18.1.resources.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraNavBar.v18.1.resources.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraPivotGrid.v18.1.resources.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraPrinting.v18.1.resources.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraReports.v18.1.Extensions.resources.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraReports.v18.1.resources.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraRichEdit.v18.1.resources.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraScheduler.v18.1.Core.resources.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraScheduler.v18.1.resources.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraSpreadsheet.v18.1.resources.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraTreeList.v18.1.resources.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraVerticalGrid.v18.1.resources.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.Data.v18.1.resources.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.DataAccess.v18.1.resources.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.DataAccess.v18.1.UI.resources.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.Diagram.v18.1.Core.resources.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.Office.v18.1.Core.resources.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.Pdf.v18.1.Core.resources.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.PivotGrid.v18.1.Core.resources.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.Printing.v18.1.Core.resources.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.RichEdit.v18.1.Core.resources.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.Sparkline.v18.1.Core.resources.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.Spreadsheet.v18.1.Core.resources.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.Utils.v18.1.resources.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.Utils.v18.1.UI.resources.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.Xpo.v18.1.resources.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraBars.v18.1.resources.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraCharts.v18.1.resources.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraCharts.v18.1.Wizard.resources.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraEditors.v18.1.resources.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraGauges.v18.1.Core.resources.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraGrid.v18.1.resources.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraLayout.v18.1.resources.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraNavBar.v18.1.resources.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraPivotGrid.v18.1.resources.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraPrinting.v18.1.resources.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraReports.v18.1.Extensions.resources.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraReports.v18.1.resources.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraRichEdit.v18.1.resources.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraScheduler.v18.1.Core.resources.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraScheduler.v18.1.resources.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraSpreadsheet.v18.1.resources.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraTreeList.v18.1.resources.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraVerticalGrid.v18.1.resources.dll_1"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.Data.v18.1.resources.dll_2"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.DataAccess.v18.1.resources.dll_2"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.DataAccess.v18.1.UI.resources.dll_2"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.Diagram.v18.1.Core.resources.dll_2"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.Office.v18.1.Core.resources.dll_2"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.Pdf.v18.1.Core.resources.dll_2"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.PivotGrid.v18.1.Core.resources.dll_2"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.Printing.v18.1.Core.resources.dll_2"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.RichEdit.v18.1.Core.resources.dll_2"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.Sparkline.v18.1.Core.resources.dll_2"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.Spreadsheet.v18.1.Core.resources.dll_2"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.Utils.v18.1.resources.dll_2"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.Utils.v18.1.UI.resources.dll_2"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.Xpo.v18.1.resources.dll_2"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraBars.v18.1.resources.dll_2"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraCharts.v18.1.resources.dll_2"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraCharts.v18.1.Wizard.resources.dll_2"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraEditors.v18.1.resources.dll_2"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraGauges.v18.1.Core.resources.dll_2"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraGrid.v18.1.resources.dll_2"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraLayout.v18.1.resources.dll_2"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraNavBar.v18.1.resources.dll_2"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraPivotGrid.v18.1.resources.dll_2"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraPrinting.v18.1.resources.dll_2"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraReports.v18.1.Extensions.resources.dll_2"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraReports.v18.1.resources.dll_2"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraRichEdit.v18.1.resources.dll_2"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraScheduler.v18.1.Core.resources.dll_2"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraScheduler.v18.1.resources.dll_2"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraSpreadsheet.v18.1.resources.dll_2"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraTreeList.v18.1.resources.dll_2"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraVerticalGrid.v18.1.resources.dll_2"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.Data.v18.1.resources.dll_3"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.DataAccess.v18.1.resources.dll_3"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.DataAccess.v18.1.UI.resources.dll_3"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.Diagram.v18.1.Core.resources.dll_3"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.Office.v18.1.Core.resources.dll_3"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.Pdf.v18.1.Core.resources.dll_3"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.PivotGrid.v18.1.Core.resources.dll_3"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.Printing.v18.1.Core.resources.dll_3"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.RichEdit.v18.1.Core.resources.dll_3"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.Sparkline.v18.1.Core.resources.dll_3"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.Spreadsheet.v18.1.Core.resources.dll_3"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.Utils.v18.1.resources.dll_3"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.Utils.v18.1.UI.resources.dll_3"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.Xpo.v18.1.resources.dll_3"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraBars.v18.1.resources.dll_3"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraCharts.v18.1.resources.dll_3"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraCharts.v18.1.Wizard.resources.dll_3"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraEditors.v18.1.resources.dll_3"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraGauges.v18.1.Core.resources.dll_3"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraGrid.v18.1.resources.dll_3"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraLayout.v18.1.resources.dll_3"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraNavBar.v18.1.resources.dll_3"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraPivotGrid.v18.1.resources.dll_3"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraPrinting.v18.1.resources.dll_3"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraReports.v18.1.Extensions.resources.dll_3"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraReports.v18.1.resources.dll_3"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraRichEdit.v18.1.resources.dll_3"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraScheduler.v18.1.Core.resources.dll_3"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraScheduler.v18.1.resources.dll_3"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraSpreadsheet.v18.1.resources.dll_3"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraTreeList.v18.1.resources.dll_3"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraVerticalGrid.v18.1.resources.dll_3"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.Charts.v18.1.Core.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.CodeParser.v18.1.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.Data.v18.1.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.DataAccess.v18.1.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.DataAccess.v18.1.UI.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.Diagram.v18.1.Core.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.Images.v18.1.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.Office.v18.1.Core.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.Pdf.v18.1.Core.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.PivotGrid.v18.1.Core.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.Printing.v18.1.Core.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.RichEdit.v18.1.Core.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.RichEdit.v18.1.Export.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.Sparkline.v18.1.Core.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.Spreadsheet.v18.1.Core.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.Utils.v18.1.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.Utils.v18.1.UI.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.Xpo.v18.1.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraBars.v18.1.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraCharts.v18.1.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraCharts.v18.1.Extensions.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraCharts.v18.1.Wizard.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraDiagram.v18.1.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraEditors.v18.1.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraGauges.v18.1.Core.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraGrid.v18.1.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraLayout.v18.1.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraNavBar.v18.1.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraPivotGrid.v18.1.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraPrinting.v18.1.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraReports.v18.1.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraReports.v18.1.Extensions.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraRichEdit.v18.1.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraScheduler.v18.1.Core.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraScheduler.v18.1.dll"/>
+    <ROW Feature_="MainFeature" Component_="QuanLyThuVien.exeShortcut.lnk"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiIconsComponent">
+    <ROW Name="polabooks_EQx_2.exe" SourcePath="..\..\..\polabooks_icons\polabooks_EQx_2.ico" Index="0"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstExSeqComponent">
+    <ROW Action="AI_DOWNGRADE" Condition="AI_NEWERPRODUCTFOUND AND (UILevel &lt;&gt; 5)" Sequence="210"/>
+    <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="749"/>
+    <ROW Action="AI_STORE_LOCATION" Condition="(Not Installed) OR REINSTALL" Sequence="1501"/>
+    <ROW Action="AI_PREPARE_UPGRADE" Condition="AI_UPGRADE=&quot;No&quot; AND (Not Installed)" Sequence="1399"/>
+    <ROW Action="AI_ResolveKnownFolders" Sequence="52"/>
+    <ROW Action="AI_EnableDebugLog" Sequence="51"/>
+    <ROW Action="AI_DetectSoftware" Sequence="101"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstallUISequenceComponent">
+    <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="749"/>
+    <ROW Action="AI_ResolveKnownFolders" Sequence="53"/>
+    <ROW Action="AI_DpiContentScale" Sequence="52"/>
+    <ROW Action="AI_EnableDebugLog" Sequence="51"/>
+    <ROW Action="AI_DetectSoftware" Sequence="101"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiLaunchConditionsComponent">
+    <ROW Condition="(VersionNT &lt;&gt; 400)" Description="[ProductName] cannot be installed on [WindowsTypeNT40Display]." DescriptionLocId="AI.LaunchCondition.NoNT40" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="(VersionNT &lt;&gt; 500)" Description="[ProductName] cannot be installed on [WindowsTypeNT50Display]." DescriptionLocId="AI.LaunchCondition.NoNT50" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="(VersionNT64 OR ((VersionNT &lt;&gt; 501) OR (ServicePackLevel = 3))) AND ((VersionNT &lt;&gt; 502) OR (ServicePackLevel = 2))" Description="[ProductName] cannot be installed on [WindowsTypeNT5XDisplay]." DescriptionLocId="AI.LaunchCondition.NoNT5X" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="AI_DETECTED_DOTNET_VERSION &gt;= AI_REQUIRED_DOTNET_VERSION" Description="[ProductName] cannot be installed on systems with .NET Framework version lower than [AI_REQUIRED_DOTNET_DISPLAY]." DescriptionLocId="AI.LaunchCondition.DotNET" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="AI_DETECTED_SQLEXPRESS_VERSION &gt;= AI_REQUIRED_SQLEXPRESS_VERSION" Description="[ProductName] cannot be installed on systems without [AI_REQUIRED_SQLEXPRESS_DISPLAY] or higher." DescriptionLocId="AI.LaunchCondition.SQLExpress" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="VersionNT" Description="[ProductName] cannot be installed on [WindowsType9XDisplay]." DescriptionLocId="AI.LaunchCondition.No9X" IsPredefined="true" Builds="DefaultBuild"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiRegsComponent">
+    <ROW Registry="Path" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Name="Path" Value="[APPDIR]" Component_="ProductInformation"/>
+    <ROW Registry="Version" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Name="Version" Value="[ProductVersion]" Component_="ProductInformation"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiThemeComponent">
+    <ATTRIBUTE name="UsedTheme" value="classic"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiUpgradeComponent">
+    <ROW UpgradeCode="[|UpgradeCode]" VersionMin="0.0.1" VersionMax="[|ProductVersion]" Attributes="257" ActionProperty="OLDPRODUCTS"/>
+    <ROW UpgradeCode="[|UpgradeCode]" VersionMin="[|ProductVersion]" Attributes="2" ActionProperty="AI_NEWERPRODUCTFOUND"/>
+  </COMPONENT>
+</DOCUMENT>

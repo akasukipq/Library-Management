@@ -432,7 +432,7 @@
             // 
             // sqlDataSource2
             // 
-            this.sqlDataSource2.ConnectionName = "localhost_QLTV_Connection";
+            this.sqlDataSource2.ConnectionName = "QuadTree";
             this.sqlDataSource2.Name = "sqlDataSource2";
             storedProcQuery2.Name = "USP_LOADCTBCSACHTRATRE";
             queryParameter2.Name = "@ma";
